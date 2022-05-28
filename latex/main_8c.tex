@@ -1,0 +1,158 @@
+\hypertarget{main_8c}{}\doxysection{src/app/main.c File Reference}
+\label{main_8c}\index{src/app/main.c@{src/app/main.c}}
+{\ttfamily \#include $<$lmda/log.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/version.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/app/\+App\+Context.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/app/\+Plugin.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/app/\+App\+Actions.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/platform.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/platform/timing.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/input.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/input/\+Input\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/\+Game.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_application}{Application}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_application}{Application}} \mbox{\hyperlink{main_8c_a807c40e39d8fc1c930824f73879aa0b3}{Application}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a1701f76e4aa77a83ce5280229f854bca}{on\+\_\+action\+\_\+about}} (\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$action)
+\item 
+void \mbox{\hyperlink{main_8c_a6880e67ce885dc84909bec505ce4ee10}{on\+\_\+action\+\_\+quit}} (\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$action)
+\item 
+void \mbox{\hyperlink{main_8c_abb09e1eb75367f5ff1c01c8c6fe11772}{on\+\_\+action\+\_\+help}} (\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$action)
+\item 
+bool \mbox{\hyperlink{main_8c_ab068aa01770811978db0efe0e716f94a}{init\+\_\+context}} ()
+\item 
+bool \mbox{\hyperlink{main_8c_adbab4979d3670149615e9eecdfbec0d7}{load\+\_\+plugins}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a5d73d144947018c9ade3e42429ed2908}{destroy\+\_\+plugins}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a7a77bb9e200c540a08b4f6f1b784c1f3}{bind\+\_\+inputs}} ()
+\item 
+void \mbox{\hyperlink{main_8c_a46fea93bf5d63e93090fbb95b742b881}{game\+\_\+loop}} ()
+\item 
+int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_application}{Application}} \mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\+\_\+app}}
+\item 
+\mbox{\hyperlink{struct_app_context}{App\+Context}} \mbox{\hyperlink{main_8c_a144d0be28da4ea25c5ae85277946fe76}{\+\_\+ctx}}
+\item 
+bool \mbox{\hyperlink{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}{\+\_\+running}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{main_8c_a807c40e39d8fc1c930824f73879aa0b3}\label{main_8c_a807c40e39d8fc1c930824f73879aa0b3}} 
+\index{main.c@{main.c}!Application@{Application}}
+\index{Application@{Application}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Application}{Application}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_application}{Application}} \mbox{\hyperlink{struct_application}{Application}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a7a77bb9e200c540a08b4f6f1b784c1f3}\label{main_8c_a7a77bb9e200c540a08b4f6f1b784c1f3}} 
+\index{main.c@{main.c}!bind\_inputs@{bind\_inputs}}
+\index{bind\_inputs@{bind\_inputs}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{bind\_inputs()}{bind\_inputs()}}
+{\footnotesize\ttfamily void bind\+\_\+inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a5d73d144947018c9ade3e42429ed2908}\label{main_8c_a5d73d144947018c9ade3e42429ed2908}} 
+\index{main.c@{main.c}!destroy\_plugins@{destroy\_plugins}}
+\index{destroy\_plugins@{destroy\_plugins}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{destroy\_plugins()}{destroy\_plugins()}}
+{\footnotesize\ttfamily void destroy\+\_\+plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a46fea93bf5d63e93090fbb95b742b881}\label{main_8c_a46fea93bf5d63e93090fbb95b742b881}} 
+\index{main.c@{main.c}!game\_loop@{game\_loop}}
+\index{game\_loop@{game\_loop}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{game\_loop()}{game\_loop()}}
+{\footnotesize\ttfamily void game\+\_\+loop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_ab068aa01770811978db0efe0e716f94a}\label{main_8c_ab068aa01770811978db0efe0e716f94a}} 
+\index{main.c@{main.c}!init\_context@{init\_context}}
+\index{init\_context@{init\_context}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{init\_context()}{init\_context()}}
+{\footnotesize\ttfamily bool init\+\_\+context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_adbab4979d3670149615e9eecdfbec0d7}\label{main_8c_adbab4979d3670149615e9eecdfbec0d7}} 
+\index{main.c@{main.c}!load\_plugins@{load\_plugins}}
+\index{load\_plugins@{load\_plugins}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{load\_plugins()}{load\_plugins()}}
+{\footnotesize\ttfamily bool load\+\_\+plugins (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a0ddf1224851353fc92bfbff6f499fa97}\label{main_8c_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a1701f76e4aa77a83ce5280229f854bca}\label{main_8c_a1701f76e4aa77a83ce5280229f854bca}} 
+\index{main.c@{main.c}!on\_action\_about@{on\_action\_about}}
+\index{on\_action\_about@{on\_action\_about}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{on\_action\_about()}{on\_action\_about()}}
+{\footnotesize\ttfamily void on\+\_\+action\+\_\+about (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_abb09e1eb75367f5ff1c01c8c6fe11772}\label{main_8c_abb09e1eb75367f5ff1c01c8c6fe11772}} 
+\index{main.c@{main.c}!on\_action\_help@{on\_action\_help}}
+\index{on\_action\_help@{on\_action\_help}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{on\_action\_help()}{on\_action\_help()}}
+{\footnotesize\ttfamily void on\+\_\+action\+\_\+help (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a6880e67ce885dc84909bec505ce4ee10}\label{main_8c_a6880e67ce885dc84909bec505ce4ee10}} 
+\index{main.c@{main.c}!on\_action\_quit@{on\_action\_quit}}
+\index{on\_action\_quit@{on\_action\_quit}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{on\_action\_quit()}{on\_action\_quit()}}
+{\footnotesize\ttfamily void on\+\_\+action\+\_\+quit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}\label{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}} 
+\index{main.c@{main.c}!\_app@{\_app}}
+\index{\_app@{\_app}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{\_app}{\_app}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_application}{Application}} \+\_\+app}
+
+\mbox{\Hypertarget{main_8c_a144d0be28da4ea25c5ae85277946fe76}\label{main_8c_a144d0be28da4ea25c5ae85277946fe76}} 
+\index{main.c@{main.c}!\_ctx@{\_ctx}}
+\index{\_ctx@{\_ctx}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{\_ctx}{\_ctx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_app_context}{App\+Context}} \+\_\+ctx}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{  .log = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a54980bfd7749d6ddc12f1db17659d420}{log}},}
+\DoxyCodeLine{  .clock = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a3d4ea8bb852b765476f8acb1d416749c}{clock}},}
+\DoxyCodeLine{  .game = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_ae0e87c670c214e77ef4b78fffc110a25}{game}},}
+\DoxyCodeLine{  .gamePlugin = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a975587cf520301c11c7ca73398d9f375}{gamePlugin}},}
+\DoxyCodeLine{  .presPlugin = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_ac231d7b21efe853b513ca8fc29892656}{presPlugin}},}
+\DoxyCodeLine{  .input = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_abda4be551ee9302ace12207249c4e8e5}{input}},}
+\DoxyCodeLine{  .action = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a3ff2a5b955f02dd1166534c5f4027c08}{action}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}\label{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}} 
+\index{main.c@{main.c}!\_running@{\_running}}
+\index{\_running@{\_running}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
+{\footnotesize\ttfamily bool \+\_\+running}
+

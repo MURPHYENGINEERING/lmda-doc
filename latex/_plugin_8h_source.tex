@@ -1,0 +1,69 @@
+\hypertarget{_plugin_8h_source}{}\doxysection{Plugin.\+h}
+\label{_plugin_8h_source}\index{src/common/include/lmda/app/Plugin.h@{src/common/include/lmda/app/Plugin.h}}
+\mbox{\hyperlink{_plugin_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_CODE\_LMDA\_SRC\_COMMON\_INCLUDE\_LMDA\_PLATFORM\_PLUGIN\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_CODE\_LMDA\_SRC\_COMMON\_INCLUDE\_LMDA\_PLATFORM\_PLUGIN\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{fs_8h}{lmda/platform/fs.h}}>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <\mbox{\hyperlink{stddef_8h}{lmda/stddef.h}}>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{struct_plugin}{Plugin}} \mbox{\hyperlink{struct_plugin}{Plugin}};}
+\DoxyCodeLine{12 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_app_context}{AppContext}};}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} bool (*\mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{PluginInitFn}})(\mbox{\hyperlink{struct_plugin}{Plugin}}*);}
+\DoxyCodeLine{22 \textcolor{keyword}{typedef} bool (*\mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{PluginFn}})();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} \mbox{\hyperlink{_plugin_8h_ac8254d1d0c3fbbc50b6bfa9233df7711}{lmda\_plugin\_common\_init}}(\mbox{\hyperlink{struct_plugin}{Plugin}}*);}
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} \mbox{\hyperlink{_plugin_8h_af5e2fe269c1cf718179ddf9b94cef0d7}{lmda\_plugin\_common\_resume}}(\mbox{\hyperlink{struct_plugin}{Plugin}}*);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{42 \textcolor{keyword}{struct }\mbox{\hyperlink{struct_plugin}{Plugin}} \{}
+\DoxyCodeLine{43   \textcolor{keyword}{struct }\mbox{\hyperlink{struct_app_context}{AppContext}}* \mbox{\hyperlink{struct_plugin_a1576e878494e01265cbb9d1cb35bbbf1}{ctx}};}
+\DoxyCodeLine{47   \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_plugin_a6f87c19eb0859fb325c0b006726beac7}{loaded}};}
+\DoxyCodeLine{52   \textcolor{keywordtype}{bool} \mbox{\hyperlink{struct_plugin_a944447e0ac48eec56c29fe92c6f24131}{needsReload}};}
+\DoxyCodeLine{58   time\_t \mbox{\hyperlink{struct_plugin_a14324db944db132b2815c060facaa766}{loadTime}};}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{63   \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_plugin_a14254aa3924007afb4adf3f2b71728e4}{path}}[\mbox{\hyperlink{fs_8h_a4033ed62493fc82b447f663a6f71cc04}{FS\_PATH\_MAX}}];}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68   \textcolor{keywordtype}{char} \mbox{\hyperlink{struct_plugin_a58e0e718f2b4bc2c2ede1e0458d4f91b}{name}}[16];}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{73   \textcolor{keywordtype}{void}* \mbox{\hyperlink{struct_plugin_a4fc8bde3786f647c1037a3b1c4db5265}{lib}};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79   \textcolor{keywordtype}{void}* \mbox{\hyperlink{struct_plugin_a573b6fc21799c55a5cfbdbbf94177648}{state}};}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81   \textcolor{comment}{// Plugin public interface}}
+\DoxyCodeLine{82 }
+\DoxyCodeLine{88   \mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{PluginInitFn}} \mbox{\hyperlink{struct_plugin_acdf4f6a6ce24d4ac3b98416ad9a0839a}{init}};}
+\DoxyCodeLine{92   \mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{PluginFn}} \mbox{\hyperlink{struct_plugin_a0010bfbf9fa7a69c50f7343694738077}{update}};}
+\DoxyCodeLine{97   \mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{PluginFn}} \mbox{\hyperlink{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}{suspend}};}
+\DoxyCodeLine{101   \mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{PluginInitFn}} \mbox{\hyperlink{struct_plugin_a977cd0d30cd26f565a89d9ea82d77ee3}{resume}};}
+\DoxyCodeLine{105   \mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{PluginFn}} \mbox{\hyperlink{struct_plugin_a5473b65c7fa9364877a05ca294f5cdd7}{destroy}};}
+\DoxyCodeLine{106 \};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{112 \textcolor{keywordtype}{void}}
+\DoxyCodeLine{113 \mbox{\hyperlink{_plugin_8h_aaab23c5cba270b4e8a29434ef56dd236}{lm\_plugin\_init}}(\mbox{\hyperlink{struct_plugin}{Plugin}}*, \textcolor{keyword}{struct} \mbox{\hyperlink{struct_app_context}{AppContext}}*, \textcolor{keywordtype}{char} \textcolor{keyword}{const}* name, \textcolor{keywordtype}{char} \textcolor{keyword}{const}* path);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{119 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_plugin_8h_a05b7920377abadd4dd730a7e44000eb5}{lm\_plugin\_ensure\_loaded}}(\mbox{\hyperlink{struct_plugin}{Plugin}}*);}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{126 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_plugin_8h_a39556278a9c2132708d6f36911b58623}{lm\_plugin\_unload}}(\mbox{\hyperlink{struct_plugin}{Plugin}}*);}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 }
+\DoxyCodeLine{134 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_plugin_8h_abc12e9c805e745fc190cbd5e3cea5851}{lm\_plugin\_bind}}(\textcolor{keywordtype}{void}** fn, \mbox{\hyperlink{struct_plugin}{Plugin}}*, \textcolor{keywordtype}{char} \textcolor{keyword}{const}* name);}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 }
+\DoxyCodeLine{141 FILE* \mbox{\hyperlink{_plugin_8h_a36b19d6afeb027970f119160aa0eb9ae}{lm\_plugin\_lib\_get\_cache}}(\textcolor{keywordtype}{char}* cachePath);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{146 \textcolor{keywordtype}{void}* \mbox{\hyperlink{_plugin_8h_a6216ed29f28e0a867448c0c574ebe669}{lm\_plugin\_lib\_load}}(\textcolor{keywordtype}{char} \textcolor{keyword}{const}* path);}
+\DoxyCodeLine{150 \textcolor{keywordtype}{void}* \mbox{\hyperlink{_plugin_8h_aa3890010b9e1e64328c4f095d4d5d14f}{lm\_plugin\_lib\_bind}}(\textcolor{keywordtype}{void}* lib, \textcolor{keywordtype}{char} \textcolor{keyword}{const}* name);}
+\DoxyCodeLine{154 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_plugin_8h_a616a650e8ac80103fe3be5b32f50285b}{lm\_plugin\_lib\_unload}}(\textcolor{keywordtype}{void}* lib);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_\_CODE\_LMDA\_SRC\_COMMON\_INCLUDE\_LMDA\_PLATFORM\_PLUGIN\_H\_}}
+
+\end{DoxyCode}

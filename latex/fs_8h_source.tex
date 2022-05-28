@@ -1,0 +1,61 @@
+\hypertarget{fs_8h_source}{}\doxysection{fs.\+h}
+\label{fs_8h_source}\index{src/common/include/lmda/platform/fs.h@{src/common/include/lmda/platform/fs.h}}
+\mbox{\hyperlink{fs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_CODE\_LMDA\_SRC\_COMMON\_INCLUDE\_LMDA\_PLATFORM\_FS\_H\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_CODE\_LMDA\_SRC\_COMMON\_INCLUDE\_LMDA\_PLATFORM\_FS\_H\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <limits.h>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#ifdef WIN32}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11   \textcolor{comment}{// https://docs.microsoft.com/en-\/us/cpp/c-\/runtime-\/library/path-\/field-\/limits?view=msvc-\/170}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{  \#include <\mbox{\hyperlink{stddef_8h}{stddef.h}}>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{  \#ifdef \_MAX\_PATH}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{    \#define FS\_PATH\_MAX \_MAX\_PATH}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{    \#define FS\_PATH\_MAX 260}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{  \#ifdef \_MAX\_FNAME}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{    \#define FS\_NAME\_MAX \_MAX\_FNAME}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{    \#define FS\_NAME\_MAX 256}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26   \textcolor{comment}{// https://man7.org/linux/man-\/pages/man0/limits.h.0p.html}}
+\DoxyCodeLine{27   \textcolor{comment}{// see https://stackoverflow.com/a/833308/9945076}}
+\DoxyCodeLine{28   \textcolor{comment}{// The POSIX.1-\/2001 standard version of this function is broken by design,}}
+\DoxyCodeLine{29   \textcolor{comment}{// since it is impossible to determine a suitable size for the output}}
+\DoxyCodeLine{30   \textcolor{comment}{// buffer, resolved\_path. According to POSIX.1-\/2001 a buffer of size}}
+\DoxyCodeLine{31   \textcolor{comment}{// PATH\_MAX suffices, but PATH\_MAX need not be a defined constant, and may}}
+\DoxyCodeLine{32   \textcolor{comment}{// have to be obtained using pathconf(3). And asking pathconf(3) does not}}
+\DoxyCodeLine{33   \textcolor{comment}{// really help, since, on the one hand POSIX warns that the result of}}
+\DoxyCodeLine{34   \textcolor{comment}{// pathconf(3) may be huge and unsuitable for mallocing memory, and on the}}
+\DoxyCodeLine{35   \textcolor{comment}{// other hand pathconf(3) may return -\/1 to signify that PATH\_MAX is not}}
+\DoxyCodeLine{36   \textcolor{comment}{// bounded.}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{  \#ifdef PATH\_MAX}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{    \#define FS\_PATH\_MAX PATH\_MAX}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{    \#define FS\_PATH\_MAX 1024}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{  \#endif }\textcolor{comment}{// PATH\_MAX}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{  \#ifdef NAME\_MAX}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{    \#define FS\_NAME\_MAX NAME\_MAX}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{    \#define FS\_NAME\_MAX 255}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// WIN32}}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 time\_t \mbox{\hyperlink{fs_8h_a6b4f19a981f9ff913feefde085bd093a}{lm\_fs\_modified\_time}}(\textcolor{keywordtype}{char} \textcolor{keyword}{const}* path);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// \_\_CODE\_LMDA\_SRC\_COMMON\_INCLUDE\_LMDA\_PLATFORM\_FS\_H\_}}
+
+\end{DoxyCode}

@@ -1,0 +1,65 @@
+\hypertarget{input_8c}{}\doxysection{src/common/input.c File Reference}
+\label{input_8c}\index{src/common/input.c@{src/common/input.c}}
+{\ttfamily \#include $<$lmda/input.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/input/keyboard.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/input/mouse.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/input/\+Input\+Action.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{input_8c_a34f26792523e57862fe2b69b65a738b5}{lm\+\_\+input\+\_\+state\+\_\+init}} (\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$input)
+\begin{DoxyCompactList}\small\item\em Initialize the input state to all inactive controls. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input_8c_a2d8d69b0f6fd2e64cd8d8318af2ffcb9}{unbind\+\_\+action\+\_\+from}} (\mbox{\hyperlink{struct_action_binding}{Action\+Binding}} $\ast$bindings, size\+\_\+t $\ast$n\+Bindings, char const $\ast$name)
+\item 
+void \mbox{\hyperlink{input_8c_a0abfaa8243547cf71a988a80945c2988}{lm\+\_\+input\+\_\+unbind\+\_\+keys}} (\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$input, char const $\ast$action\+Name)
+\item 
+void \mbox{\hyperlink{input_8c_ae81677b7883afa2e5806a6b6291b1a74}{lm\+\_\+input\+\_\+bind\+\_\+key}} (\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$input, \mbox{\hyperlink{keyboard_8h_ad0e6e31d5953384be4ea987eb3923e02}{Virtual\+Key}} key, \mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}} mod, \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}} transition, \mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Bind an action signal to a key\textquotesingle{}s {\itshape pressed} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input_8c_a35b559f29787173b04e013b34d7eec06}{lm\+\_\+input\+\_\+bind\+\_\+mouse\+\_\+button}} (struct \mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$input, \mbox{\hyperlink{mouse_8h_ade7253f2c8330e54217bfab0f26c09e0}{Mouse\+Buttons}} button, \mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}} mod, \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}} transition, \mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$action)
+\begin{DoxyCompactList}\small\item\em Bind an action signal to a mouse button\textquotesingle{}s {\itshape pressed} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input_8c_ae81677b7883afa2e5806a6b6291b1a74}\label{input_8c_ae81677b7883afa2e5806a6b6291b1a74}} 
+\index{input.c@{input.c}!lm\_input\_bind\_key@{lm\_input\_bind\_key}}
+\index{lm\_input\_bind\_key@{lm\_input\_bind\_key}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_bind\_key()}{lm\_input\_bind\_key()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+bind\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input,  }\item[{\mbox{\hyperlink{keyboard_8h_ad0e6e31d5953384be4ea987eb3923e02}{Virtual\+Key}}}]{key,  }\item[{\mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}}}]{mod,  }\item[{\mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}}]{transition,  }\item[{\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+Bind an action signal to a key\textquotesingle{}s {\itshape pressed} state. 
+
+\mbox{\Hypertarget{input_8c_a35b559f29787173b04e013b34d7eec06}\label{input_8c_a35b559f29787173b04e013b34d7eec06}} 
+\index{input.c@{input.c}!lm\_input\_bind\_mouse\_button@{lm\_input\_bind\_mouse\_button}}
+\index{lm\_input\_bind\_mouse\_button@{lm\_input\_bind\_mouse\_button}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_bind\_mouse\_button()}{lm\_input\_bind\_mouse\_button()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+bind\+\_\+mouse\+\_\+button (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input,  }\item[{\mbox{\hyperlink{mouse_8h_ade7253f2c8330e54217bfab0f26c09e0}{Mouse\+Buttons}}}]{button,  }\item[{\mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}}}]{mod,  }\item[{\mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}}]{transition,  }\item[{\mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+Bind an action signal to a mouse button\textquotesingle{}s {\itshape pressed} state. 
+
+\mbox{\Hypertarget{input_8c_a34f26792523e57862fe2b69b65a738b5}\label{input_8c_a34f26792523e57862fe2b69b65a738b5}} 
+\index{input.c@{input.c}!lm\_input\_state\_init@{lm\_input\_state\_init}}
+\index{lm\_input\_state\_init@{lm\_input\_state\_init}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_state\_init()}{lm\_input\_state\_init()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+state\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+
+
+Initialize the input state to all inactive controls. 
+
+\mbox{\Hypertarget{input_8c_a0abfaa8243547cf71a988a80945c2988}\label{input_8c_a0abfaa8243547cf71a988a80945c2988}} 
+\index{input.c@{input.c}!lm\_input\_unbind\_keys@{lm\_input\_unbind\_keys}}
+\index{lm\_input\_unbind\_keys@{lm\_input\_unbind\_keys}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_unbind\_keys()}{lm\_input\_unbind\_keys()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+unbind\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input,  }\item[{char const $\ast$}]{action\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{input_8c_a2d8d69b0f6fd2e64cd8d8318af2ffcb9}\label{input_8c_a2d8d69b0f6fd2e64cd8d8318af2ffcb9}} 
+\index{input.c@{input.c}!unbind\_action\_from@{unbind\_action\_from}}
+\index{unbind\_action\_from@{unbind\_action\_from}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{unbind\_action\_from()}{unbind\_action\_from()}}
+{\footnotesize\ttfamily void unbind\+\_\+action\+\_\+from (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_action_binding}{Action\+Binding}} $\ast$}]{bindings,  }\item[{size\+\_\+t $\ast$}]{n\+Bindings,  }\item[{char const $\ast$}]{name }\end{DoxyParamCaption})}
+

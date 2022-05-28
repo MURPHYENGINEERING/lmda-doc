@@ -1,0 +1,97 @@
+\hypertarget{struct_sim_clock}{}\doxysection{Sim\+Clock Struct Reference}
+\label{struct_sim_clock}\index{SimClock@{SimClock}}
+
+
+{\ttfamily \#include $<$timing.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{timing_8h_a52183d06eb13da2c0f515d0cd90f9004}{tick\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}{tick}}
+\begin{DoxyCompactList}\small\item\em Current simulation iteration number, tick 0 being the first iteration. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a7efccffa3b7ef0a59d0d211e6e8e7a44}{t}}
+\begin{DoxyCompactList}\small\item\em Simulation time, i.\+e. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a23859f61fee1e9348ef481f1eb3650ca}{last\+Tick\+Real\+Time}}
+\item 
+float \mbox{\hyperlink{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}{dt}}
+\begin{DoxyCompactList}\small\item\em Time in seconds elapsed between the starts of the previous and current ticks. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_sim_clock_a9e73fc6eaab21b2296ab9fbdb0db6c6d}{tps}}
+\begin{DoxyCompactList}\small\item\em Ticks per second. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a6e7a282a46fd71b268cf5023ac2c76a2}{tps\+Accum\+Ns}}
+\begin{DoxyCompactList}\small\item\em Accumulates nanoseconds between measuring the average ticks-\/per-\/second (the {\itshape tick rate}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{timing_8h_a52183d06eb13da2c0f515d0cd90f9004}{tick\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_adb698f2cc55197b4a0cf98cb10b8ac8c}{tps\+Accum\+Ticks}}
+\begin{DoxyCompactList}\small\item\em Counts the number of terms in {\ttfamily tps\+Accum\+Ns}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}\label{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}} 
+\index{SimClock@{SimClock}!dt@{dt}}
+\index{dt@{dt}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{dt}{dt}}
+{\footnotesize\ttfamily float Sim\+Clock\+::dt}
+
+
+
+Time in seconds elapsed between the starts of the previous and current ticks. 
+
+\mbox{\Hypertarget{struct_sim_clock_a23859f61fee1e9348ef481f1eb3650ca}\label{struct_sim_clock_a23859f61fee1e9348ef481f1eb3650ca}} 
+\index{SimClock@{SimClock}!lastTickRealTime@{lastTickRealTime}}
+\index{lastTickRealTime@{lastTickRealTime}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{lastTickRealTime}{lastTickRealTime}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} Sim\+Clock\+::last\+Tick\+Real\+Time}
+
+\mbox{\Hypertarget{struct_sim_clock_a7efccffa3b7ef0a59d0d211e6e8e7a44}\label{struct_sim_clock_a7efccffa3b7ef0a59d0d211e6e8e7a44}} 
+\index{SimClock@{SimClock}!t@{t}}
+\index{t@{t}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} Sim\+Clock\+::t}
+
+
+
+Simulation time, i.\+e. 
+
+what would be read from a simulated wristwatch. \mbox{\Hypertarget{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}\label{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}} 
+\index{SimClock@{SimClock}!tick@{tick}}
+\index{tick@{tick}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a52183d06eb13da2c0f515d0cd90f9004}{tick\+\_\+t}} Sim\+Clock\+::tick}
+
+
+
+Current simulation iteration number, tick 0 being the first iteration. 
+
+\mbox{\Hypertarget{struct_sim_clock_a9e73fc6eaab21b2296ab9fbdb0db6c6d}\label{struct_sim_clock_a9e73fc6eaab21b2296ab9fbdb0db6c6d}} 
+\index{SimClock@{SimClock}!tps@{tps}}
+\index{tps@{tps}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{tps}{tps}}
+{\footnotesize\ttfamily float Sim\+Clock\+::tps}
+
+
+
+Ticks per second. 
+
+\mbox{\Hypertarget{struct_sim_clock_a6e7a282a46fd71b268cf5023ac2c76a2}\label{struct_sim_clock_a6e7a282a46fd71b268cf5023ac2c76a2}} 
+\index{SimClock@{SimClock}!tpsAccumNs@{tpsAccumNs}}
+\index{tpsAccumNs@{tpsAccumNs}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{tpsAccumNs}{tpsAccumNs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} Sim\+Clock\+::tps\+Accum\+Ns}
+
+
+
+Accumulates nanoseconds between measuring the average ticks-\/per-\/second (the {\itshape tick rate}). 
+
+The tick rate is calculated as this sum divided by the number of terms. \mbox{\Hypertarget{struct_sim_clock_adb698f2cc55197b4a0cf98cb10b8ac8c}\label{struct_sim_clock_adb698f2cc55197b4a0cf98cb10b8ac8c}} 
+\index{SimClock@{SimClock}!tpsAccumTicks@{tpsAccumTicks}}
+\index{tpsAccumTicks@{tpsAccumTicks}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{tpsAccumTicks}{tpsAccumTicks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a52183d06eb13da2c0f515d0cd90f9004}{tick\+\_\+t}} Sim\+Clock\+::tps\+Accum\+Ticks}
+
+
+
+Counts the number of terms in {\ttfamily tps\+Accum\+Ns}. 
+
+The tick rate is the accumulated time divided by this value. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/common/include/lmda/platform/\mbox{\hyperlink{timing_8h}{timing.\+h}}\end{DoxyCompactItemize}

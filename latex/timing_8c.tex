@@ -1,0 +1,43 @@
+\hypertarget{timing_8c}{}\doxysection{src/common/platform/timing.c File Reference}
+\label{timing_8c}\index{src/common/platform/timing.c@{src/common/platform/timing.c}}
+{\ttfamily \#include $<$lmda/platform/timing.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{timing_8c_a7372c54d055d9f85627906a0006911b3}{lm\+\_\+time\+\_\+start}} (\mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$clock)
+\begin{DoxyCompactList}\small\item\em Establish the current time as t=0 for {\ttfamily lm\+\_\+time\+\_\+sim\+\_\+now}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{timing_8c_acdb530e6b02a2c37dc59c12b3ea70b58}{lm\+\_\+time\+\_\+tick}} (\mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$clock)
+\item 
+void \mbox{\hyperlink{timing_8c_a66515b38a597f90310cd0f41cdf0c2ae}{lm\+\_\+time\+\_\+sleep\+\_\+until}} (\mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$clock, \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} time)
+\begin{DoxyCompactList}\small\item\em Put the current thread to sleep until the given time, with a minimum duration determined by operating system scheduling. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{timing_8c_a66515b38a597f90310cd0f41cdf0c2ae}\label{timing_8c_a66515b38a597f90310cd0f41cdf0c2ae}} 
+\index{timing.c@{timing.c}!lm\_time\_sleep\_until@{lm\_time\_sleep\_until}}
+\index{lm\_time\_sleep\_until@{lm\_time\_sleep\_until}!timing.c@{timing.c}}
+\doxysubsubsection{\texorpdfstring{lm\_time\_sleep\_until()}{lm\_time\_sleep\_until()}}
+{\footnotesize\ttfamily void lm\+\_\+time\+\_\+sleep\+\_\+until (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$}]{clock,  }\item[{\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}}}]{time }\end{DoxyParamCaption})}
+
+
+
+Put the current thread to sleep until the given time, with a minimum duration determined by operating system scheduling. 
+
+\mbox{\Hypertarget{timing_8c_a7372c54d055d9f85627906a0006911b3}\label{timing_8c_a7372c54d055d9f85627906a0006911b3}} 
+\index{timing.c@{timing.c}!lm\_time\_start@{lm\_time\_start}}
+\index{lm\_time\_start@{lm\_time\_start}!timing.c@{timing.c}}
+\doxysubsubsection{\texorpdfstring{lm\_time\_start()}{lm\_time\_start()}}
+{\footnotesize\ttfamily void lm\+\_\+time\+\_\+start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$}]{clock }\end{DoxyParamCaption})}
+
+
+
+Establish the current time as t=0 for {\ttfamily lm\+\_\+time\+\_\+sim\+\_\+now}. 
+
+\mbox{\Hypertarget{timing_8c_acdb530e6b02a2c37dc59c12b3ea70b58}\label{timing_8c_acdb530e6b02a2c37dc59c12b3ea70b58}} 
+\index{timing.c@{timing.c}!lm\_time\_tick@{lm\_time\_tick}}
+\index{lm\_time\_tick@{lm\_time\_tick}!timing.c@{timing.c}}
+\doxysubsubsection{\texorpdfstring{lm\_time\_tick()}{lm\_time\_tick()}}
+{\footnotesize\ttfamily void lm\+\_\+time\+\_\+tick (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$}]{clock }\end{DoxyParamCaption})}
+

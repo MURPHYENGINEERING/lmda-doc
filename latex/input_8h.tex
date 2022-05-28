@@ -1,0 +1,197 @@
+\hypertarget{input_8h}{}\doxysection{src/common/include/lmda/input.h File Reference}
+\label{input_8h}\index{src/common/include/lmda/input.h@{src/common/include/lmda/input.h}}
+{\ttfamily \#include $<$lmda/input/keyboard.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/input/mouse.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_keybind}{Keybind}}
+\begin{DoxyCompactList}\small\item\em Represents a keyboard key combination the state of which is being tracked by an action. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_mousebind}{Mousebind}}
+\begin{DoxyCompactList}\small\item\em Represents a mouse button combination the state of which is being tracked by an action. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_action_binding}{Action\+Binding}}
+\begin{DoxyCompactList}\small\item\em Closes over the callback for an input binding to a particular type of input device, as well as information about the state change that triggered this binding. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_input_state}{Input\+State}}
+\begin{DoxyCompactList}\small\item\em Represents the complete state of all input devices and all buffered inputs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{input_8h_a471a722662826a8c590039bbc8652126}{LM\+\_\+\+INPUTSTATE\+\_\+\+BINDINGS\+\_\+\+MAX}}~256
+\begin{DoxyCompactList}\small\item\em The maximum number of bindings any input device can support. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_keybind}{Keybind}} \mbox{\hyperlink{input_8h_aeb745f9346bff674e79de6ea0daae573}{Keybind}}
+\item 
+typedef struct \mbox{\hyperlink{struct_mousebind}{Mousebind}} \mbox{\hyperlink{input_8h_aff8743d1bbe31d29dd2e7e8fcd718142}{Mousebind}}
+\item 
+typedef enum \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}} \mbox{\hyperlink{input_8h_a4c0370a1e28ba3c2de8c0e7932e9a3b8}{Signal\+Transition}}
+\item 
+typedef enum \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0}{Input\+Device\+Type}} \mbox{\hyperlink{input_8h_aa13c985de5831767e8c6ba4da91ec1c4}{Input\+Device\+Type}}
+\item 
+typedef struct \mbox{\hyperlink{struct_action_binding}{Action\+Binding}} \mbox{\hyperlink{input_8h_ae112424b962fa617c095e4975cb80765}{Action\+Binding}}
+\item 
+typedef struct \mbox{\hyperlink{struct_input_state}{Input\+State}} \mbox{\hyperlink{input_8h_aacb60ab344dfba299564b49e4202ad8d}{Input\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}} \{ \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961deac5fd3dbee75d0e9128ec44e1e6ca7533}{LM\+\_\+\+SIGNAL\+\_\+\+RISING}}
+, \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961deacbe5d886db13571fd139fc8dd38daa5a}{LM\+\_\+\+SIGNAL\+\_\+\+FALLING}}
+, \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961deae2818883eeb798f87dc9a3de74443e01}{LM\+\_\+\+SIGNAL\+\_\+\+NOCHANGE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the direction of a a bipolar state transition. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0}{Input\+Device\+Type}} \{ \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0a5b4f525291442d2491875192a1834d43}{LM\+\_\+\+INPUT\+\_\+\+MOUSE}}
+, \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0a7642fa1dc2c2eaed01341e87e6d3f7b4}{LM\+\_\+\+INPUT\+\_\+\+KEYBOARD}}
+ \}
+\begin{DoxyCompactList}\small\item\em Each input device type identifies a unique set of binding parameters, e.\+g. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{input_8h_a5afbe88d2913ae99de543e1b161ec31a}{lm\+\_\+input\+\_\+state\+\_\+init}} (\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Initialize the input state to all inactive controls. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input_8h_a8b69b035b0a1dbea8940c978ab8f0450}{lm\+\_\+input\+\_\+bind\+\_\+key}} (\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$, \mbox{\hyperlink{keyboard_8h_ad0e6e31d5953384be4ea987eb3923e02}{Virtual\+Key}}, \mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}}, \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}, struct \mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Bind an action signal to a key\textquotesingle{}s {\itshape pressed} state. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input_8h_a2d208f7fdc44bb1764fc4035f1cc8644}{lm\+\_\+input\+\_\+unbind\+\_\+keys}} (\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$, char const $\ast$action\+Name)
+\item 
+void \mbox{\hyperlink{input_8h_a97ede95931d93d51f9378de6ec4d108f}{lm\+\_\+input\+\_\+bind\+\_\+mouse\+\_\+button}} (struct \mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$, \mbox{\hyperlink{mouse_8h_ade7253f2c8330e54217bfab0f26c09e0}{Mouse\+Buttons}}, \mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}}, \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}, struct \mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$)
+\begin{DoxyCompactList}\small\item\em Bind an action signal to a mouse button\textquotesingle{}s {\itshape pressed} state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{input_8h_a471a722662826a8c590039bbc8652126}\label{input_8h_a471a722662826a8c590039bbc8652126}} 
+\index{input.h@{input.h}!LM\_INPUTSTATE\_BINDINGS\_MAX@{LM\_INPUTSTATE\_BINDINGS\_MAX}}
+\index{LM\_INPUTSTATE\_BINDINGS\_MAX@{LM\_INPUTSTATE\_BINDINGS\_MAX}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{LM\_INPUTSTATE\_BINDINGS\_MAX}{LM\_INPUTSTATE\_BINDINGS\_MAX}}
+{\footnotesize\ttfamily \#define LM\+\_\+\+INPUTSTATE\+\_\+\+BINDINGS\+\_\+\+MAX~256}
+
+
+
+The maximum number of bindings any input device can support. 
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{input_8h_ae112424b962fa617c095e4975cb80765}\label{input_8h_ae112424b962fa617c095e4975cb80765}} 
+\index{input.h@{input.h}!ActionBinding@{ActionBinding}}
+\index{ActionBinding@{ActionBinding}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{ActionBinding}{ActionBinding}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_action_binding}{Action\+Binding}} \mbox{\hyperlink{struct_action_binding}{Action\+Binding}}}
+
+\mbox{\Hypertarget{input_8h_aa13c985de5831767e8c6ba4da91ec1c4}\label{input_8h_aa13c985de5831767e8c6ba4da91ec1c4}} 
+\index{input.h@{input.h}!InputDeviceType@{InputDeviceType}}
+\index{InputDeviceType@{InputDeviceType}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{InputDeviceType}{InputDeviceType}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0}{Input\+Device\+Type}} \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0}{Input\+Device\+Type}}}
+
+\mbox{\Hypertarget{input_8h_aacb60ab344dfba299564b49e4202ad8d}\label{input_8h_aacb60ab344dfba299564b49e4202ad8d}} 
+\index{input.h@{input.h}!InputState@{InputState}}
+\index{InputState@{InputState}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{InputState}{InputState}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_input_state}{Input\+State}} \mbox{\hyperlink{struct_input_state}{Input\+State}}}
+
+\mbox{\Hypertarget{input_8h_aeb745f9346bff674e79de6ea0daae573}\label{input_8h_aeb745f9346bff674e79de6ea0daae573}} 
+\index{input.h@{input.h}!Keybind@{Keybind}}
+\index{Keybind@{Keybind}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{Keybind}{Keybind}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_keybind}{Keybind}} \mbox{\hyperlink{struct_keybind}{Keybind}}}
+
+\mbox{\Hypertarget{input_8h_aff8743d1bbe31d29dd2e7e8fcd718142}\label{input_8h_aff8743d1bbe31d29dd2e7e8fcd718142}} 
+\index{input.h@{input.h}!Mousebind@{Mousebind}}
+\index{Mousebind@{Mousebind}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{Mousebind}{Mousebind}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_mousebind}{Mousebind}} \mbox{\hyperlink{struct_mousebind}{Mousebind}}}
+
+\mbox{\Hypertarget{input_8h_a4c0370a1e28ba3c2de8c0e7932e9a3b8}\label{input_8h_a4c0370a1e28ba3c2de8c0e7932e9a3b8}} 
+\index{input.h@{input.h}!SignalTransition@{SignalTransition}}
+\index{SignalTransition@{SignalTransition}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{SignalTransition}{SignalTransition}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}} \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{input_8h_ac9348deae9297ebe302759b9171a75d0}\label{input_8h_ac9348deae9297ebe302759b9171a75d0}} 
+\index{input.h@{input.h}!InputDeviceType@{InputDeviceType}}
+\index{InputDeviceType@{InputDeviceType}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{InputDeviceType}{InputDeviceType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{input_8h_ac9348deae9297ebe302759b9171a75d0}{Input\+Device\+Type}}}
+
+
+
+Each input device type identifies a unique set of binding parameters, e.\+g. 
+
+keys, mouse buttons, joystick hats, etc. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LM\_INPUT\_MOUSE@{LM\_INPUT\_MOUSE}!input.h@{input.h}}\index{input.h@{input.h}!LM\_INPUT\_MOUSE@{LM\_INPUT\_MOUSE}}}\mbox{\Hypertarget{input_8h_ac9348deae9297ebe302759b9171a75d0a5b4f525291442d2491875192a1834d43}\label{input_8h_ac9348deae9297ebe302759b9171a75d0a5b4f525291442d2491875192a1834d43}} 
+LM\+\_\+\+INPUT\+\_\+\+MOUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LM\_INPUT\_KEYBOARD@{LM\_INPUT\_KEYBOARD}!input.h@{input.h}}\index{input.h@{input.h}!LM\_INPUT\_KEYBOARD@{LM\_INPUT\_KEYBOARD}}}\mbox{\Hypertarget{input_8h_ac9348deae9297ebe302759b9171a75d0a7642fa1dc2c2eaed01341e87e6d3f7b4}\label{input_8h_ac9348deae9297ebe302759b9171a75d0a7642fa1dc2c2eaed01341e87e6d3f7b4}} 
+LM\+\_\+\+INPUT\+\_\+\+KEYBOARD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}\label{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}} 
+\index{input.h@{input.h}!SignalTransition@{SignalTransition}}
+\index{SignalTransition@{SignalTransition}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{SignalTransition}{SignalTransition}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}}
+
+
+
+Represents the direction of a a bipolar state transition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LM\_SIGNAL\_RISING@{LM\_SIGNAL\_RISING}!input.h@{input.h}}\index{input.h@{input.h}!LM\_SIGNAL\_RISING@{LM\_SIGNAL\_RISING}}}\mbox{\Hypertarget{input_8h_aafd1adbd2d4f12c31286e6a25ae961deac5fd3dbee75d0e9128ec44e1e6ca7533}\label{input_8h_aafd1adbd2d4f12c31286e6a25ae961deac5fd3dbee75d0e9128ec44e1e6ca7533}} 
+LM\+\_\+\+SIGNAL\+\_\+\+RISING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LM\_SIGNAL\_FALLING@{LM\_SIGNAL\_FALLING}!input.h@{input.h}}\index{input.h@{input.h}!LM\_SIGNAL\_FALLING@{LM\_SIGNAL\_FALLING}}}\mbox{\Hypertarget{input_8h_aafd1adbd2d4f12c31286e6a25ae961deacbe5d886db13571fd139fc8dd38daa5a}\label{input_8h_aafd1adbd2d4f12c31286e6a25ae961deacbe5d886db13571fd139fc8dd38daa5a}} 
+LM\+\_\+\+SIGNAL\+\_\+\+FALLING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LM\_SIGNAL\_NOCHANGE@{LM\_SIGNAL\_NOCHANGE}!input.h@{input.h}}\index{input.h@{input.h}!LM\_SIGNAL\_NOCHANGE@{LM\_SIGNAL\_NOCHANGE}}}\mbox{\Hypertarget{input_8h_aafd1adbd2d4f12c31286e6a25ae961deae2818883eeb798f87dc9a3de74443e01}\label{input_8h_aafd1adbd2d4f12c31286e6a25ae961deae2818883eeb798f87dc9a3de74443e01}} 
+LM\+\_\+\+SIGNAL\+\_\+\+NOCHANGE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{input_8h_a8b69b035b0a1dbea8940c978ab8f0450}\label{input_8h_a8b69b035b0a1dbea8940c978ab8f0450}} 
+\index{input.h@{input.h}!lm\_input\_bind\_key@{lm\_input\_bind\_key}}
+\index{lm\_input\_bind\_key@{lm\_input\_bind\_key}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_bind\_key()}{lm\_input\_bind\_key()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+bind\+\_\+key (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input,  }\item[{\mbox{\hyperlink{keyboard_8h_ad0e6e31d5953384be4ea987eb3923e02}{Virtual\+Key}}}]{key,  }\item[{\mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}}}]{mod,  }\item[{\mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}}]{transition,  }\item[{struct \mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+Bind an action signal to a key\textquotesingle{}s {\itshape pressed} state. 
+
+\mbox{\Hypertarget{input_8h_a97ede95931d93d51f9378de6ec4d108f}\label{input_8h_a97ede95931d93d51f9378de6ec4d108f}} 
+\index{input.h@{input.h}!lm\_input\_bind\_mouse\_button@{lm\_input\_bind\_mouse\_button}}
+\index{lm\_input\_bind\_mouse\_button@{lm\_input\_bind\_mouse\_button}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_bind\_mouse\_button()}{lm\_input\_bind\_mouse\_button()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+bind\+\_\+mouse\+\_\+button (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input,  }\item[{\mbox{\hyperlink{mouse_8h_ade7253f2c8330e54217bfab0f26c09e0}{Mouse\+Buttons}}}]{button,  }\item[{\mbox{\hyperlink{keyboard_8h_aa18e120fcfcae2b91aed8f59f339d4ba}{Modifier\+Keys}}}]{mod,  }\item[{\mbox{\hyperlink{input_8h_aafd1adbd2d4f12c31286e6a25ae961de}{Signal\+Transition}}}]{transition,  }\item[{struct \mbox{\hyperlink{struct_input_action}{Input\+Action}} $\ast$}]{action }\end{DoxyParamCaption})}
+
+
+
+Bind an action signal to a mouse button\textquotesingle{}s {\itshape pressed} state. 
+
+\mbox{\Hypertarget{input_8h_a5afbe88d2913ae99de543e1b161ec31a}\label{input_8h_a5afbe88d2913ae99de543e1b161ec31a}} 
+\index{input.h@{input.h}!lm\_input\_state\_init@{lm\_input\_state\_init}}
+\index{lm\_input\_state\_init@{lm\_input\_state\_init}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_state\_init()}{lm\_input\_state\_init()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+state\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input }\end{DoxyParamCaption})}
+
+
+
+Initialize the input state to all inactive controls. 
+
+\mbox{\Hypertarget{input_8h_a2d208f7fdc44bb1764fc4035f1cc8644}\label{input_8h_a2d208f7fdc44bb1764fc4035f1cc8644}} 
+\index{input.h@{input.h}!lm\_input\_unbind\_keys@{lm\_input\_unbind\_keys}}
+\index{lm\_input\_unbind\_keys@{lm\_input\_unbind\_keys}!input.h@{input.h}}
+\doxysubsubsection{\texorpdfstring{lm\_input\_unbind\_keys()}{lm\_input\_unbind\_keys()}}
+{\footnotesize\ttfamily void lm\+\_\+input\+\_\+unbind\+\_\+keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$}]{input,  }\item[{char const $\ast$}]{action\+Name }\end{DoxyParamCaption})}
+

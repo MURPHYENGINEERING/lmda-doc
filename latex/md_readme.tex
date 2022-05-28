@@ -1,0 +1,65 @@
+\hypertarget{md_readme_autotoc_md7}{}\doxysection{Code}\label{md_readme_autotoc_md7}
+\hypertarget{md_readme_autotoc_md8}{}\doxysubsection{Naming convention}\label{md_readme_autotoc_md8}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ }\\\cline{1-2}
+\endhead
+{\ttfamily MACRO\+\_\+\+NAME}   &{\ttfamily ENUM\+\_\+\+ITEM}    \\\cline{1-2}
+{\ttfamily Struct\+Name}   &{\ttfamily Type\+Name}    \\\cline{1-2}
+{\ttfamily Pointer\+Type}   &{\ttfamily pointer\+Variable}    \\\cline{1-2}
+{\ttfamily local\+Variable}   &{\ttfamily parameter\+Variable}    \\\cline{1-2}
+{\ttfamily constant\+Variable}   &{\ttfamily \+\_\+static\+Variable}    \\\cline{1-2}
+{\ttfamily private\+\_\+function()}   &{\ttfamily lm\+\_\+public\+\_\+function()}   \\\cline{1-2}
+\end{longtabu}
+
+
+With the special case of a function that\textquotesingle{}s declared in one module (the {\itshape interface} module) and defined in another (the {\itshape implementation} module)\+: {\ttfamily lmda\+\_\+interface\+\_\+function\+\_\+impl()}. Here the prefix {\ttfamily lmda} indicates the broadest scope, and the suffix {\ttfamily impl} indicates the separated declaration and definition.\hypertarget{md_readme_autotoc_md9}{}\doxysubsection{Application Design}\label{md_readme_autotoc_md9}
+At the first level, the game uses a {\bfseries{plugin}} architecture. The {\bfseries{application}} hosts two plugins\+: the {\bfseries{game plugin}} simulates the game world, and the {\bfseries{presentation plugin}} represents the game world to the outside world.
+
+There are two presentation plugins\+: the {\bfseries{SDL plugin}} implements a 2D game, and the {\bfseries{server plugin}} implements a headless server with a browser-\/accessible dashboard. The server is headless because it still runs the game plugin, meaning it still constitutes a game client playing the game; but the only inputs and outputs are from and to the network and AI.\hypertarget{md_readme_autotoc_md10}{}\doxysubsection{Project Structure}\label{md_readme_autotoc_md10}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{lmda/}
+\DoxyCodeLine{    docs/             Contents of lmda.murphysys.com}
+\DoxyCodeLine{}
+\DoxyCodeLine{   cmake/             Build utilities, e.g. detecting architecture}
+\DoxyCodeLine{     src/}
+\DoxyCodeLine{        common/       Functionality not unique to any module, e.g. logging, }
+\DoxyCodeLine{                      networking, filesystem, etc.}
+\DoxyCodeLine{}
+\DoxyCodeLine{            input/    Platform-\/independent input system with interfaces for}
+\DoxyCodeLine{                      platform-\/depenendent sourcing (e.g. from SDL).}
+\DoxyCodeLine{         }
+\DoxyCodeLine{              net/    Client/server TCP connections}
+\DoxyCodeLine{         }
+\DoxyCodeLine{         platform/    Declarations of platform-\/specific functionality that will}
+\DoxyCodeLine{                           be implemented in another module.}
+\DoxyCodeLine{}
+\DoxyCodeLine{        platform/          Definitions of platform-\/specific functionality from the}
+\DoxyCodeLine{                           common module. One of these is statically linked with common.}
+\DoxyCodeLine{}
+\DoxyCodeLine{             mac/     MacOS implementations}
+\DoxyCodeLine{}
+\DoxyCodeLine{             win/     Windows 10-\/11 implementations (and maybe earlier)}
+\DoxyCodeLine{}
+\DoxyCodeLine{        game/         Implements the game plugin, constructing and simulating the}
+\DoxyCodeLine{                      game world (strictly non-\/graphically; this plugin is common}
+\DoxyCodeLine{                      to clients and headless servers).}
+\DoxyCodeLine{}
+\DoxyCodeLine{        sdl/          Implements the presentation plugin as a 2D top-\/down game}
+\DoxyCodeLine{                      using SDL2 for graphics, audio, and input.}
+\DoxyCodeLine{}
+\DoxyCodeLine{        app/          Dynamically loads the game and presentation plugins,}
+\DoxyCodeLine{                      provides them with persistent state, and updates them in a }
+\DoxyCodeLine{                      rate-\/controlled loop. Plugins can be hot-\/reloaded to update}
+\DoxyCodeLine{                      code in-\/place without affecting state, which resides}
+\DoxyCodeLine{                      in the application.}
+
+\end{DoxyCode}
+\hypertarget{md_readme_autotoc_md11}{}\doxysubsection{Build System}\label{md_readme_autotoc_md11}

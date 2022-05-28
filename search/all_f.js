@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['path_0',['path',['../struct_plugin.html#a14254aa3924007afb4adf3f2b71728e4',1,'Plugin']]],
+  ['platform_2eh_1',['platform.h',['../platform_8h.html',1,'']]],
+  ['platform_5fmac_2ec_2',['platform_mac.c',['../platform__mac_8c.html',1,'']]],
+  ['platform_5fwin_2ec_3',['platform_win.c',['../platform__win_8c.html',1,'']]],
+  ['plugin_4',['Plugin',['../struct_plugin.html',1,'Plugin'],['../_plugin_8h.html#a2fbb5c3326275cd375be335ab6caff18',1,'Plugin():&#160;Plugin.h']]],
+  ['plugin_2ec_5',['Plugin.c',['../_plugin_8c.html',1,'']]],
+  ['plugin_2eh_6',['Plugin.h',['../_plugin_8h.html',1,'']]],
+  ['plugin_5fgame_2ec_7',['Plugin_game.c',['../_plugin__game_8c.html',1,'']]],
+  ['plugin_5fgame_2eh_8',['Plugin_game.h',['../_plugin__game_8h.html',1,'']]],
+  ['plugin_5fmac_2ec_9',['Plugin_mac.c',['../_plugin__mac_8c.html',1,'']]],
+  ['plugin_5fsdl_2ec_10',['Plugin_sdl.c',['../_plugin__sdl_8c.html',1,'']]],
+  ['plugin_5fsdl_2eh_11',['Plugin_sdl.h',['../_plugin__sdl_8h.html',1,'']]],
+  ['plugin_5fwin_2ec_12',['Plugin_win.c',['../_plugin__win_8c.html',1,'']]],
+  ['pluginfn_13',['PluginFn',['../_plugin_8h.html#a5319d4dba5919282011c319b19779653',1,'Plugin.h']]],
+  ['plugininitfn_14',['PluginInitFn',['../_plugin_8h.html#a02028dca0a911549fa4ead227dc69e75',1,'Plugin.h']]],
+  ['presplugin_15',['presPlugin',['../struct_application.html#ac231d7b21efe853b513ca8fc29892656',1,'Application::presPlugin()'],['../struct_app_context.html#a03db1be8035f2a74d58df1d78873be3b',1,'AppContext::presPlugin()']]]
+];

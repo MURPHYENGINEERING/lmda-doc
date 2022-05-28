@@ -1,0 +1,75 @@
+\hypertarget{timing__win_8c}{}\doxysection{src/platform/win/timing\+\_\+win.c File Reference}
+\label{timing__win_8c}\index{src/platform/win/timing\_win.c@{src/platform/win/timing\_win.c}}
+
+
+Windows implementation of higher-\/performance timing.  
+
+
+{\ttfamily \#include $<$lmda/app/\+App\+Context.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/platform/timing.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{timing__win_8c_a4ee0890f749b20bf9460ffced3dcbaf8}{lm\+\_\+time\+\_\+init\+\_\+platform}} ()
+\item 
+\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{timing__win_8c_af8b712cfa0890842d4e40048c97749ac}{lm\+\_\+time\+\_\+nanos}} ()
+\item 
+void \mbox{\hyperlink{timing__win_8c_a050f1e19c753340973e45f8f4d922c86}{lm\+\_\+time\+\_\+sleep\+\_\+for}} (\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Windows implementation of higher-\/performance timing. 
+
+\begin{DoxyAuthor}{Author}
+Matt Murphy (\href{mailto:matt@murphysys.com}{\texttt{ matt@murphysys.\+com}}) 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2022-\/05-\/25
+\end{DoxyDate}
+Copyright (c) 2022 Murphy Engineering LLC
+
+\href{https://docs.microsoft.com/en-us/windows/win32/sysinfo/acquiring-high-resolution-time-stamps}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/windows/win32/sysinfo/acquiring-\/high-\/resolution-\/time-\/stamps}} Acquiring high-\/resolution time stamps
+
+The primary API for native code is Query\+Performance\+Counter (QPC). QPC is independent of, and isn\textquotesingle{}t synchronized to, any external time reference.
+
+To retrieve time stamps that can be synchronized to an external time reference, such as, Coordinated Universal Time (UTC) for use in high-\/resolution time-\/of-\/day measurements, use Get\+System\+Time\+Precise\+As\+File\+Time.
+
+\href{https://docs.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter?redirectedfrom=MSDN}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/windows/win32/api/profileapi/nf-\/profileapi-\/queryperformancecounter?redirectedfrom=\+MSDN}} Query\+Performance\+Counter function (profileapi.\+h)
+
+Retrieves the current value of the performance counter, which is a high resolution (\texorpdfstring{$<$}{<}1us) time stamp that can be used for time-\/interval measurements.
+
+\href{https://docs.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/windows/win32/api/sysinfoapi/nf-\/sysinfoapi-\/getsystemtimepreciseasfiletime}} Get\+System\+Time\+Precise\+As\+File\+Time function (sysinfoapi.\+h)
+
+The Get\+System\+Time\+Precise\+As\+File\+Time function retrieves the current system date and time with the highest possible level of precision (\texorpdfstring{$<$}{<}1us). The retrieved information is in Coordinated Universal Time (UTC) format.
+
+\href{https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/windows/win32/api/minwinbase/ns-\/minwinbase-\/filetime}} FILETIME structure (minwinbase.\+h)
+
+Contains a 64-\/bit value representing the number of 100-\/nanosecond intervals since January 1, 1601 (UTC).
+
+To convert a FILETIME structure into a time that is easy to display to a user, use the File\+Time\+To\+System\+Time function. File\+Time\+To\+System\+Time\+: \href{https://docs.microsoft.com/en-us/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/windows/win32/api/timezoneapi/nf-\/timezoneapi-\/filetimetosystemtime}} SYSTEMTIME\+: \href{https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-systemtime}{\texttt{ https\+://docs.\+microsoft.\+com/en-\/us/windows/win32/api/minwinbase/ns-\/minwinbase-\/systemtime}} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{timing__win_8c_a4ee0890f749b20bf9460ffced3dcbaf8}\label{timing__win_8c_a4ee0890f749b20bf9460ffced3dcbaf8}} 
+\index{timing\_win.c@{timing\_win.c}!lm\_time\_init\_platform@{lm\_time\_init\_platform}}
+\index{lm\_time\_init\_platform@{lm\_time\_init\_platform}!timing\_win.c@{timing\_win.c}}
+\doxysubsubsection{\texorpdfstring{lm\_time\_init\_platform()}{lm\_time\_init\_platform()}}
+{\footnotesize\ttfamily void lm\+\_\+time\+\_\+init\+\_\+platform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{timing__win_8c_af8b712cfa0890842d4e40048c97749ac}\label{timing__win_8c_af8b712cfa0890842d4e40048c97749ac}} 
+\index{timing\_win.c@{timing\_win.c}!lm\_time\_nanos@{lm\_time\_nanos}}
+\index{lm\_time\_nanos@{lm\_time\_nanos}!timing\_win.c@{timing\_win.c}}
+\doxysubsubsection{\texorpdfstring{lm\_time\_nanos()}{lm\_time\_nanos()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} lm\+\_\+time\+\_\+nanos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{timing__win_8c_a050f1e19c753340973e45f8f4d922c86}\label{timing__win_8c_a050f1e19c753340973e45f8f4d922c86}} 
+\index{timing\_win.c@{timing\_win.c}!lm\_time\_sleep\_for@{lm\_time\_sleep\_for}}
+\index{lm\_time\_sleep\_for@{lm\_time\_sleep\_for}!timing\_win.c@{timing\_win.c}}
+\doxysubsubsection{\texorpdfstring{lm\_time\_sleep\_for()}{lm\_time\_sleep\_for()}}
+{\footnotesize\ttfamily void lm\+\_\+time\+\_\+sleep\+\_\+for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}}}]{time }\end{DoxyParamCaption})}
+

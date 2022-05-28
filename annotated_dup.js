@@ -15,5 +15,7 @@ var annotated_dup =
     [ "Mousebind", "struct_mousebind.html", "struct_mousebind" ],
     [ "Plugin", "struct_plugin.html", "struct_plugin" ],
     [ "SdlState", "struct_sdl_state.html", "struct_sdl_state" ],
-    [ "SimClock", "struct_sim_clock.html", "struct_sim_clock" ]
+    [ "SimClock", "struct_sim_clock.html", "struct_sim_clock" ],
+    [ "TcpConnection", "struct_tcp_connection.html", "struct_tcp_connection" ],
+    [ "TcpServer", "struct_tcp_server.html", "struct_tcp_server" ]
 ];

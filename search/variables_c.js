@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_plugin.html#a58e0e718f2b4bc2c2ede1e0458d4f91b',1,'Plugin::name()'],['../struct_input_action.html#ad76d39b6fd57d9e53fc0e99fceea6438',1,'InputAction::name()']]],
-  ['needsreload_1',['needsReload',['../struct_plugin.html#a944447e0ac48eec56c29fe92c6f24131',1,'Plugin']]],
-  ['nkeybinds_2',['nKeybinds',['../struct_input_state.html#ab5795c14a7424be23d139f51f02737ad',1,'InputState']]],
-  ['nmousebinds_3',['nMousebinds',['../struct_input_state.html#a6356c7497399d4996556ceeae24500ea',1,'InputState']]]
+  ['mod_0',['mod',['../struct_keybind.html#ada26acbb9464d669e087a005cf6f01e8',1,'Keybind::mod()'],['../struct_mousebind.html#a966d7ca3a7ca37b6126982554d64db02',1,'Mousebind::mod()']]],
+  ['mouse_1',['mouse',['../struct_input_state.html#a091ffb50caac49079b109fa7235e2136',1,'InputState']]],
+  ['mousebind_2',['mousebind',['../struct_action_binding.html#ae05284e9e85948ca06d0c3eb2abc8090',1,'ActionBinding']]],
+  ['mousebinds_3',['mousebinds',['../struct_input_state.html#ad17166d487e550042eedaa11d1d6d1f5',1,'InputState']]]
 ];

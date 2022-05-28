@@ -7,13 +7,15 @@ var searchData=
   ['plugin_4',['Plugin',['../struct_plugin.html',1,'Plugin'],['../_plugin_8h.html#a2fbb5c3326275cd375be335ab6caff18',1,'Plugin():&#160;Plugin.h']]],
   ['plugin_2ec_5',['Plugin.c',['../_plugin_8c.html',1,'']]],
   ['plugin_2eh_6',['Plugin.h',['../_plugin_8h.html',1,'']]],
-  ['plugin_5fgame_2ec_7',['Plugin_game.c',['../_plugin__game_8c.html',1,'']]],
-  ['plugin_5fgame_2eh_8',['Plugin_game.h',['../_plugin__game_8h.html',1,'']]],
+  ['plugin_5fclient_2ec_7',['Plugin_client.c',['../_plugin__client_8c.html',1,'']]],
+  ['plugin_5fgame_2ec_8',['Plugin_game.c',['../_plugin__game_8c.html',1,'']]],
   ['plugin_5fmac_2ec_9',['Plugin_mac.c',['../_plugin__mac_8c.html',1,'']]],
   ['plugin_5fsdl_2ec_10',['Plugin_sdl.c',['../_plugin__sdl_8c.html',1,'']]],
-  ['plugin_5fsdl_2eh_11',['Plugin_sdl.h',['../_plugin__sdl_8h.html',1,'']]],
+  ['plugin_5fserver_2ec_11',['Plugin_server.c',['../_plugin__server_8c.html',1,'']]],
   ['plugin_5fwin_2ec_12',['Plugin_win.c',['../_plugin__win_8c.html',1,'']]],
   ['pluginfn_13',['PluginFn',['../_plugin_8h.html#a5319d4dba5919282011c319b19779653',1,'Plugin.h']]],
   ['plugininitfn_14',['PluginInitFn',['../_plugin_8h.html#a02028dca0a911549fa4ead227dc69e75',1,'Plugin.h']]],
-  ['presplugin_15',['presPlugin',['../struct_application.html#ac231d7b21efe853b513ca8fc29892656',1,'Application::presPlugin()'],['../struct_app_context.html#a03db1be8035f2a74d58df1d78873be3b',1,'AppContext::presPlugin()']]]
+  ['plugins_15',['plugins',['../struct_application.html#a8e0cc7657c96f8d83f08bc95784684c0',1,'Application::plugins()'],['../struct_app_context.html#a21293e50877ce12966f938b348d7d1fe',1,'AppContext::plugins()']]],
+  ['plugintype_16',['PluginType',['../_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2',1,'PluginType():&#160;Plugin.h'],['../_plugin_8h.html#adbcb4be3de818941022a9c685b429fda',1,'PluginType():&#160;Plugin.h']]],
+  ['port_17',['port',['../struct_tcp_connection.html#a70e4617cd9548bae7aaf9cb4133ae1a2',1,'TcpConnection']]]
 ];

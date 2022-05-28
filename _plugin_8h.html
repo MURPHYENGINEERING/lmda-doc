@@ -102,14 +102,23 @@ $(document).ready(function(){initNavTree('_plugin_8h.html',''); initResizable();
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">Plugin.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="fs_8h_source.html">lmda/platform/fs.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="stddef_8h_source.html">lmda/stddef.h</a>&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for Plugin.h:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_plugin_8h__incl.svg" width="328" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="_plugin_8h__dep__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 </div>
 <p><a href="_plugin_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -121,6 +130,8 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:adbcb4be3de818941022a9c685b429fda"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2">PluginType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#adbcb4be3de818941022a9c685b429fda">PluginType</a></td></tr>
+<tr class="separator:adbcb4be3de818941022a9c685b429fda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbb5c3326275cd375be335ab6caff18"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_plugin.html">Plugin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#a2fbb5c3326275cd375be335ab6caff18">Plugin</a></td></tr>
 <tr class="separator:a2fbb5c3326275cd375be335ab6caff18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02028dca0a911549fa4ead227dc69e75"><td class="memItemLeft" align="right" valign="top">typedef bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#a02028dca0a911549fa4ead227dc69e75">PluginInitFn</a>) (<a class="el" href="struct_plugin.html">Plugin</a> *)</td></tr>
@@ -130,8 +141,27 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a5319d4dba5919282011c319b19779653"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of plugin functions that perform some operation without additional arguments, e.g.  <a href="_plugin_8h.html#a5319d4dba5919282011c319b19779653">More...</a><br /></td></tr>
 <tr class="separator:a5319d4dba5919282011c319b19779653"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a54e0db21fd49ff6e0178b6ebe120a6d2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2">PluginType</a> { <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2a2e14aef53aad82865280c658867bd092">LM_PLUGIN_GAME</a> = 0
+, <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2a8880ce4cf51d2291e2c86f10a5db809c">LM_PLUGIN_PRESENTATION</a>
+, <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2a6fd0611254ae5a6ee5584851b2dcd73e">LM_PLUGIN_NET</a>
+, <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2a7ee83e9793fed1b5bd6f2d685898295d">LM_PLUGIN_COUNT</a>
+ }</td></tr>
+<tr class="separator:a54e0db21fd49ff6e0178b6ebe120a6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a1644a97331ea4b1b20ef8dde10835e79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#a1644a97331ea4b1b20ef8dde10835e79">lmda_plugin_init_impl</a> (<a class="el" href="struct_plugin.html">Plugin</a> *plugin)</td></tr>
+<tr class="separator:a1644a97331ea4b1b20ef8dde10835e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6050c7ca7c7d80e935dc71c268e614c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#ad6050c7ca7c7d80e935dc71c268e614c">lmda_plugin_update_impl</a> ()</td></tr>
+<tr class="separator:ad6050c7ca7c7d80e935dc71c268e614c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c11a70fc2f27d2b327eddc4579f0442"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#a1c11a70fc2f27d2b327eddc4579f0442">lmda_plugin_suspend_impl</a> ()</td></tr>
+<tr class="separator:a1c11a70fc2f27d2b327eddc4579f0442"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af46e05ccb761cc8617b73c19c6c347a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#af46e05ccb761cc8617b73c19c6c347a3">lmda_plugin_resume_impl</a> (<a class="el" href="struct_plugin.html">Plugin</a> *plugin)</td></tr>
+<tr class="separator:af46e05ccb761cc8617b73c19c6c347a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0db071d42c10d5da02e56e1c09275452"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#a0db071d42c10d5da02e56e1c09275452">lmda_plugin_destroy_impl</a> ()</td></tr>
+<tr class="separator:a0db071d42c10d5da02e56e1c09275452"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8254d1d0c3fbbc50b6bfa9233df7711"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_plugin_8h.html#ac8254d1d0c3fbbc50b6bfa9233df7711">lmda_plugin_common_init</a> (<a class="el" href="struct_plugin.html">Plugin</a> *)</td></tr>
 <tr class="memdesc:ac8254d1d0c3fbbc50b6bfa9233df7711"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plugins must call this before anything else in their init function.  <a href="_plugin_8h.html#ac8254d1d0c3fbbc50b6bfa9233df7711">More...</a><br /></td></tr>
 <tr class="separator:ac8254d1d0c3fbbc50b6bfa9233df7711"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +238,41 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Type of plugin functions that (re)initialize the plugin from a given state. </p>
+
+</div>
+</div>
+<a id="adbcb4be3de818941022a9c685b429fda" name="adbcb4be3de818941022a9c685b429fda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbcb4be3de818941022a9c685b429fda">&#9670;&nbsp;</a></span>PluginType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2">PluginType</a> <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2">PluginType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a54e0db21fd49ff6e0178b6ebe120a6d2" name="a54e0db21fd49ff6e0178b6ebe120a6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54e0db21fd49ff6e0178b6ebe120a6d2">&#9670;&nbsp;</a></span>PluginType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2">PluginType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a54e0db21fd49ff6e0178b6ebe120a6d2a2e14aef53aad82865280c658867bd092" name="a54e0db21fd49ff6e0178b6ebe120a6d2a2e14aef53aad82865280c658867bd092"></a>LM_PLUGIN_GAME&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a54e0db21fd49ff6e0178b6ebe120a6d2a8880ce4cf51d2291e2c86f10a5db809c" name="a54e0db21fd49ff6e0178b6ebe120a6d2a8880ce4cf51d2291e2c86f10a5db809c"></a>LM_PLUGIN_PRESENTATION&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a54e0db21fd49ff6e0178b6ebe120a6d2a6fd0611254ae5a6ee5584851b2dcd73e" name="a54e0db21fd49ff6e0178b6ebe120a6d2a6fd0611254ae5a6ee5584851b2dcd73e"></a>LM_PLUGIN_NET&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a54e0db21fd49ff6e0178b6ebe120a6d2a7ee83e9793fed1b5bd6f2d685898295d" name="a54e0db21fd49ff6e0178b6ebe120a6d2a7ee83e9793fed1b5bd6f2d685898295d"></a>LM_PLUGIN_COUNT&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -460,6 +525,93 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Plugins must call this before anything else in their resume function. </p>
+
+</div>
+</div>
+<a id="a0db071d42c10d5da02e56e1c09275452" name="a0db071d42c10d5da02e56e1c09275452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0db071d42c10d5da02e56e1c09275452">&#9670;&nbsp;</a></span>lmda_plugin_destroy_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lmda_plugin_destroy_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1644a97331ea4b1b20ef8dde10835e79" name="a1644a97331ea4b1b20ef8dde10835e79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1644a97331ea4b1b20ef8dde10835e79">&#9670;&nbsp;</a></span>lmda_plugin_init_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lmda_plugin_init_impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_plugin.html">Plugin</a> *&#160;</td>
+          <td class="paramname"><em>plugin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af46e05ccb761cc8617b73c19c6c347a3" name="af46e05ccb761cc8617b73c19c6c347a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af46e05ccb761cc8617b73c19c6c347a3">&#9670;&nbsp;</a></span>lmda_plugin_resume_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lmda_plugin_resume_impl </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_plugin.html">Plugin</a> *&#160;</td>
+          <td class="paramname"><em>plugin</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1c11a70fc2f27d2b327eddc4579f0442" name="a1c11a70fc2f27d2b327eddc4579f0442"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c11a70fc2f27d2b327eddc4579f0442">&#9670;&nbsp;</a></span>lmda_plugin_suspend_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lmda_plugin_suspend_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad6050c7ca7c7d80e935dc71c268e614c" name="ad6050c7ca7c7d80e935dc71c268e614c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6050c7ca7c7d80e935dc71c268e614c">&#9670;&nbsp;</a></span>lmda_plugin_update_impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lmda_plugin_update_impl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -1,21 +1,21 @@
 \hypertarget{main_8c}{}\doxysection{src/app/main.c File Reference}
 \label{main_8c}\index{src/app/main.c@{src/app/main.c}}
-{\ttfamily \#include $<$lmda/log.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/stddef.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/version.\+h$>$}\newline
+{\ttfamily \#include $<$lmda/app/\+App\+Actions.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/app/\+App\+Context.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/app/\+Plugin.\+h$>$}\newline
-{\ttfamily \#include $<$lmda/app/\+App\+Actions.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/platform.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/platform/timing.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/input.\+h$>$}\newline
 {\ttfamily \#include $<$lmda/input/\+Input\+Action.\+h$>$}\newline
-{\ttfamily \#include $<$lmda/\+Game.\+h$>$}\newline
-{\ttfamily \#include $<$assert.\+h$>$}\newline
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
-{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
-{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+Include dependency graph for main.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,7 +25,7 @@ struct \mbox{\hyperlink{struct_application}{Application}}
 \begin{DoxyCompactItemize}
 \item 
 typedef struct \mbox{\hyperlink{struct_application}{Application}} \mbox{\hyperlink{main_8c_a807c40e39d8fc1c930824f73879aa0b3}{Application}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Stores the actual state that is referenced by the plugins across reloads. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -53,8 +53,6 @@ int \mbox{\hyperlink{main_8c_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc
 \mbox{\hyperlink{struct_application}{Application}} \mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\+\_\+app}}
 \item 
 \mbox{\hyperlink{struct_app_context}{App\+Context}} \mbox{\hyperlink{main_8c_a144d0be28da4ea25c5ae85277946fe76}{\+\_\+ctx}}
-\item 
-bool \mbox{\hyperlink{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}{\+\_\+running}}
 \end{DoxyCompactItemize}
 
 
@@ -64,6 +62,10 @@ bool \mbox{\hyperlink{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}{\+\_\+running}}
 \index{Application@{Application}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{Application}{Application}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_application}{Application}} \mbox{\hyperlink{struct_application}{Application}}}
+
+
+
+Stores the actual state that is referenced by the plugins across reloads. 
 
 
 
@@ -139,20 +141,10 @@ bool \mbox{\hyperlink{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}{\+\_\+running}}
 
 {\bfseries Initial value\+:}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{= \{}
-\DoxyCodeLine{  .log = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a54980bfd7749d6ddc12f1db17659d420}{log}},}
-\DoxyCodeLine{  .clock = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a3d4ea8bb852b765476f8acb1d416749c}{clock}},}
-\DoxyCodeLine{  .game = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_ae0e87c670c214e77ef4b78fffc110a25}{game}},}
-\DoxyCodeLine{  .gamePlugin = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a975587cf520301c11c7ca73398d9f375}{gamePlugin}},}
-\DoxyCodeLine{  .presPlugin = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_ac231d7b21efe853b513ca8fc29892656}{presPlugin}},}
-\DoxyCodeLine{  .input = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_abda4be551ee9302ace12207249c4e8e5}{input}},}
-\DoxyCodeLine{  .action = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a3ff2a5b955f02dd1166534c5f4027c08}{action}}}
-\DoxyCodeLine{\}}
+\DoxyCodeLine{= \{ .log              = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a54980bfd7749d6ddc12f1db17659d420}{log}},}
+\DoxyCodeLine{                    .clock            = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a3d4ea8bb852b765476f8acb1d416749c}{clock}},}
+\DoxyCodeLine{                    .input            = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_abda4be551ee9302ace12207249c4e8e5}{input}},}
+\DoxyCodeLine{                    .action           = \&\mbox{\hyperlink{main_8c_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9}{\_app}}.\mbox{\hyperlink{struct_application_a3ff2a5b955f02dd1166534c5f4027c08}{action}},}
+\DoxyCodeLine{                    .applicationTitle = LMDA\_APPLICATION\_TITLE \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}\label{main_8c_a665c90a6f5b8fdb743accfaaf0517e27}} 
-\index{main.c@{main.c}!\_running@{\_running}}
-\index{\_running@{\_running}!main.c@{main.c}}
-\doxysubsubsection{\texorpdfstring{\_running}{\_running}}
-{\footnotesize\ttfamily bool \+\_\+running}
-

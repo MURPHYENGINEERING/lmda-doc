@@ -12,6 +12,5 @@ var main_8c =
     [ "on_action_help", "main_8c.html#abb09e1eb75367f5ff1c01c8c6fe11772", null ],
     [ "on_action_quit", "main_8c.html#a6880e67ce885dc84909bec505ce4ee10", null ],
     [ "_app", "main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9", null ],
-    [ "_ctx", "main_8c.html#a144d0be28da4ea25c5ae85277946fe76", null ],
-    [ "_running", "main_8c.html#a665c90a6f5b8fdb743accfaaf0517e27", null ]
+    [ "_ctx", "main_8c.html#a144d0be28da4ea25c5ae85277946fe76", null ]
 ];

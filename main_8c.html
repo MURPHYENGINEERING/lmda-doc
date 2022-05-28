@@ -107,22 +107,20 @@ $(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); })
   <div class="headertitle"><div class="title">main.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="log_8h_source.html">lmda/log.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="stddef_8h_source.html">lmda/stddef.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="version_8h_source.html">lmda/version.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_app_actions_8h_source.html">lmda/app/AppActions.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_app_context_8h_source.html">lmda/app/AppContext.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_plugin_8h_source.html">lmda/app/Plugin.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_app_actions_8h_source.html">lmda/app/AppActions.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="platform_8h_source.html">lmda/platform.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="timing_8h_source.html">lmda/platform/timing.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="input_8h_source.html">lmda/input.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_input_action_8h_source.html">lmda/input/InputAction.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_game_8h_source.html">lmda/Game.h</a>&gt;</code><br />
-<code>#include &lt;assert.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
-<code>#include &lt;sys/types.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for main.c:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8c__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -132,6 +130,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a807c40e39d8fc1c930824f73879aa0b3"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_application.html">Application</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a807c40e39d8fc1c930824f73879aa0b3">Application</a></td></tr>
+<tr class="memdesc:a807c40e39d8fc1c930824f73879aa0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the actual state that is referenced by the plugins across reloads.  <a href="main_8c.html#a807c40e39d8fc1c930824f73879aa0b3">More...</a><br /></td></tr>
 <tr class="separator:a807c40e39d8fc1c930824f73879aa0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -161,8 +160,6 @@ Variables</h2></td></tr>
 <tr class="separator:a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a144d0be28da4ea25c5ae85277946fe76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_context.html">AppContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a144d0be28da4ea25c5ae85277946fe76">_ctx</a></td></tr>
 <tr class="separator:a144d0be28da4ea25c5ae85277946fe76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a665c90a6f5b8fdb743accfaaf0517e27"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a665c90a6f5b8fdb743accfaaf0517e27">_running</a></td></tr>
-<tr class="separator:a665c90a6f5b8fdb743accfaaf0517e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a807c40e39d8fc1c930824f73879aa0b3" name="a807c40e39d8fc1c930824f73879aa0b3"></a>
@@ -176,6 +173,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Stores the actual state that is referenced by the plugins across reloads. </p>
 
 </div>
 </div>
@@ -373,38 +372,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
-<div class="line">  .log = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a54980bfd7749d6ddc12f1db17659d420">log</a>,</div>
-<div class="line">  .clock = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a3d4ea8bb852b765476f8acb1d416749c">clock</a>,</div>
-<div class="line">  .game = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#ae0e87c670c214e77ef4b78fffc110a25">game</a>,</div>
-<div class="line">  .gamePlugin = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a975587cf520301c11c7ca73398d9f375">gamePlugin</a>,</div>
-<div class="line">  .presPlugin = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#ac231d7b21efe853b513ca8fc29892656">presPlugin</a>,</div>
-<div class="line">  .input = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#abda4be551ee9302ace12207249c4e8e5">input</a>,</div>
-<div class="line">  .action = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a3ff2a5b955f02dd1166534c5f4027c08">action</a></div>
-<div class="line">}</div>
-<div class="ttc" id="amain_8c_html_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"><div class="ttname"><a href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a></div><div class="ttdeci">Application _app</div><div class="ttdef"><b>Definition:</b> main.c:40</div></div>
-<div class="ttc" id="astruct_application_html_a3d4ea8bb852b765476f8acb1d416749c"><div class="ttname"><a href="struct_application.html#a3d4ea8bb852b765476f8acb1d416749c">Application::clock</a></div><div class="ttdeci">SimClock clock</div><div class="ttdef"><b>Definition:</b> main.c:32</div></div>
+<b>Initial value:</b><div class="fragment"><div class="line">= { .log              = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a54980bfd7749d6ddc12f1db17659d420">log</a>,</div>
+<div class="line">                    .clock            = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a3d4ea8bb852b765476f8acb1d416749c">clock</a>,</div>
+<div class="line">                    .input            = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#abda4be551ee9302ace12207249c4e8e5">input</a>,</div>
+<div class="line">                    .action           = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a3ff2a5b955f02dd1166534c5f4027c08">action</a>,</div>
+<div class="line">                    .applicationTitle = LMDA_APPLICATION_TITLE }</div>
+<div class="ttc" id="amain_8c_html_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"><div class="ttname"><a href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a></div><div class="ttdeci">Application _app</div><div class="ttdef"><b>Definition:</b> main.c:41</div></div>
+<div class="ttc" id="astruct_application_html_a3d4ea8bb852b765476f8acb1d416749c"><div class="ttname"><a href="struct_application.html#a3d4ea8bb852b765476f8acb1d416749c">Application::clock</a></div><div class="ttdeci">SimClock clock</div><div class="ttdef"><b>Definition:</b> main.c:34</div></div>
 <div class="ttc" id="astruct_application_html_a3ff2a5b955f02dd1166534c5f4027c08"><div class="ttname"><a href="struct_application.html#a3ff2a5b955f02dd1166534c5f4027c08">Application::action</a></div><div class="ttdeci">AppActions action</div><div class="ttdef"><b>Definition:</b> main.c:37</div></div>
-<div class="ttc" id="astruct_application_html_a54980bfd7749d6ddc12f1db17659d420"><div class="ttname"><a href="struct_application.html#a54980bfd7749d6ddc12f1db17659d420">Application::log</a></div><div class="ttdeci">LogState log</div><div class="ttdef"><b>Definition:</b> main.c:31</div></div>
-<div class="ttc" id="astruct_application_html_a975587cf520301c11c7ca73398d9f375"><div class="ttname"><a href="struct_application.html#a975587cf520301c11c7ca73398d9f375">Application::gamePlugin</a></div><div class="ttdeci">Plugin gamePlugin</div><div class="ttdef"><b>Definition:</b> main.c:34</div></div>
+<div class="ttc" id="astruct_application_html_a54980bfd7749d6ddc12f1db17659d420"><div class="ttname"><a href="struct_application.html#a54980bfd7749d6ddc12f1db17659d420">Application::log</a></div><div class="ttdeci">LogState log</div><div class="ttdef"><b>Definition:</b> main.c:33</div></div>
 <div class="ttc" id="astruct_application_html_abda4be551ee9302ace12207249c4e8e5"><div class="ttname"><a href="struct_application.html#abda4be551ee9302ace12207249c4e8e5">Application::input</a></div><div class="ttdeci">InputState input</div><div class="ttdef"><b>Definition:</b> main.c:36</div></div>
-<div class="ttc" id="astruct_application_html_ac231d7b21efe853b513ca8fc29892656"><div class="ttname"><a href="struct_application.html#ac231d7b21efe853b513ca8fc29892656">Application::presPlugin</a></div><div class="ttdeci">Plugin presPlugin</div><div class="ttdef"><b>Definition:</b> main.c:35</div></div>
-<div class="ttc" id="astruct_application_html_ae0e87c670c214e77ef4b78fffc110a25"><div class="ttname"><a href="struct_application.html#ae0e87c670c214e77ef4b78fffc110a25">Application::game</a></div><div class="ttdeci">Game game</div><div class="ttdef"><b>Definition:</b> main.c:33</div></div>
 </div><!-- fragment -->
-</div>
-</div>
-<a id="a665c90a6f5b8fdb743accfaaf0517e27" name="a665c90a6f5b8fdb743accfaaf0517e27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a665c90a6f5b8fdb743accfaaf0517e27">&#9670;&nbsp;</a></span>_running</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool _running</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
 </div>
 </div>
 </div><!-- contents -->

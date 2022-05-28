@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../struct_mouse_axes.html#a68259a0972f567119aa206c659830955',1,'MouseAxes']]]
+  ['window_0',['window',['../struct_sdl_state.html#ac1fd835e5465cc8e40fc965580b55e16',1,'SdlState']]]
 ];

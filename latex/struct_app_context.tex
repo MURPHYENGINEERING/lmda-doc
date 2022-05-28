@@ -4,6 +4,15 @@
 
 {\ttfamily \#include $<$App\+Context.\+h$>$}
 
+
+
+Collaboration diagram for App\+Context\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_app_context__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -13,13 +22,13 @@ struct \mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} $\ast$ \mbox{\hyperlink{s
 \item 
 struct \mbox{\hyperlink{struct_game}{Game}} $\ast$ \mbox{\hyperlink{struct_app_context_adecd842c489fed5ff6105046807f36d1}{game}}
 \item 
-struct \mbox{\hyperlink{struct_plugin}{Plugin}} $\ast$ \mbox{\hyperlink{struct_app_context_ac8067e398350a2b7af9091c6877c74d6}{game\+Plugin}}
-\item 
-struct \mbox{\hyperlink{struct_plugin}{Plugin}} $\ast$ \mbox{\hyperlink{struct_app_context_a03db1be8035f2a74d58df1d78873be3b}{pres\+Plugin}}
+struct \mbox{\hyperlink{struct_plugin}{Plugin}} $\ast$ \mbox{\hyperlink{struct_app_context_a21293e50877ce12966f938b348d7d1fe}{plugins}} \mbox{[}\mbox{\hyperlink{_plugin_8h_a54e0db21fd49ff6e0178b6ebe120a6d2a7ee83e9793fed1b5bd6f2d685898295d}{LM\+\_\+\+PLUGIN\+\_\+\+COUNT}}\mbox{]}
 \item 
 struct \mbox{\hyperlink{struct_input_state}{Input\+State}} $\ast$ \mbox{\hyperlink{struct_app_context_a025b6b6339d7758972e6b86257867da9}{input}}
 \item 
 struct \mbox{\hyperlink{struct_app_actions}{App\+Actions}} $\ast$ \mbox{\hyperlink{struct_app_context_ae119c44f9e6257978f4c91773d2e4681}{action}}
+\item 
+char const  $\ast$ \mbox{\hyperlink{struct_app_context_a3239f38921079f72eb98d3c834b47a99}{application\+Title}}
 \end{DoxyCompactItemize}
 
 
@@ -29,6 +38,12 @@ struct \mbox{\hyperlink{struct_app_actions}{App\+Actions}} $\ast$ \mbox{\hyperli
 \index{action@{action}!AppContext@{AppContext}}
 \doxysubsubsection{\texorpdfstring{action}{action}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{struct_app_actions}{App\+Actions}}$\ast$ App\+Context\+::action}
+
+\mbox{\Hypertarget{struct_app_context_a3239f38921079f72eb98d3c834b47a99}\label{struct_app_context_a3239f38921079f72eb98d3c834b47a99}} 
+\index{AppContext@{AppContext}!applicationTitle@{applicationTitle}}
+\index{applicationTitle@{applicationTitle}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{applicationTitle}{applicationTitle}}
+{\footnotesize\ttfamily char const$\ast$ App\+Context\+::application\+Title}
 
 \mbox{\Hypertarget{struct_app_context_aa67e054562594d98a0c7403af939f43d}\label{struct_app_context_aa67e054562594d98a0c7403af939f43d}} 
 \index{AppContext@{AppContext}!clock@{clock}}
@@ -42,12 +57,6 @@ struct \mbox{\hyperlink{struct_app_actions}{App\+Actions}} $\ast$ \mbox{\hyperli
 \doxysubsubsection{\texorpdfstring{game}{game}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{struct_game}{Game}}$\ast$ App\+Context\+::game}
 
-\mbox{\Hypertarget{struct_app_context_ac8067e398350a2b7af9091c6877c74d6}\label{struct_app_context_ac8067e398350a2b7af9091c6877c74d6}} 
-\index{AppContext@{AppContext}!gamePlugin@{gamePlugin}}
-\index{gamePlugin@{gamePlugin}!AppContext@{AppContext}}
-\doxysubsubsection{\texorpdfstring{gamePlugin}{gamePlugin}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_plugin}{Plugin}}$\ast$ App\+Context\+::game\+Plugin}
-
 \mbox{\Hypertarget{struct_app_context_a025b6b6339d7758972e6b86257867da9}\label{struct_app_context_a025b6b6339d7758972e6b86257867da9}} 
 \index{AppContext@{AppContext}!input@{input}}
 \index{input@{input}!AppContext@{AppContext}}
@@ -60,11 +69,11 @@ struct \mbox{\hyperlink{struct_app_actions}{App\+Actions}} $\ast$ \mbox{\hyperli
 \doxysubsubsection{\texorpdfstring{log}{log}}
 {\footnotesize\ttfamily struct \mbox{\hyperlink{struct_log_state}{Log\+State}}$\ast$ App\+Context\+::log}
 
-\mbox{\Hypertarget{struct_app_context_a03db1be8035f2a74d58df1d78873be3b}\label{struct_app_context_a03db1be8035f2a74d58df1d78873be3b}} 
-\index{AppContext@{AppContext}!presPlugin@{presPlugin}}
-\index{presPlugin@{presPlugin}!AppContext@{AppContext}}
-\doxysubsubsection{\texorpdfstring{presPlugin}{presPlugin}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_plugin}{Plugin}}$\ast$ App\+Context\+::pres\+Plugin}
+\mbox{\Hypertarget{struct_app_context_a21293e50877ce12966f938b348d7d1fe}\label{struct_app_context_a21293e50877ce12966f938b348d7d1fe}} 
+\index{AppContext@{AppContext}!plugins@{plugins}}
+\index{plugins@{plugins}!AppContext@{AppContext}}
+\doxysubsubsection{\texorpdfstring{plugins}{plugins}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_plugin}{Plugin}}$\ast$ App\+Context\+::plugins\mbox{[}\mbox{\hyperlink{_plugin_8h_a54e0db21fd49ff6e0178b6ebe120a6d2a7ee83e9793fed1b5bd6f2d685898295d}{LM\+\_\+\+PLUGIN\+\_\+\+COUNT}}\mbox{]}}
 
 
 

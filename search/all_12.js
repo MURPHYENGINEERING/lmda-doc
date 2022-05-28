@@ -11,8 +11,8 @@ var searchData=
   ['seconds_5ft_8',['seconds_t',['../timing_8h.html#afceaa65d4c6ef08e43b3325368d7642b',1,'timing.h']]],
   ['signaltransition_9',['SignalTransition',['../input_8h.html#aafd1adbd2d4f12c31286e6a25ae961de',1,'SignalTransition():&#160;input.h'],['../input_8h.html#a4c0370a1e28ba3c2de8c0e7932e9a3b8',1,'SignalTransition():&#160;input.h']]],
   ['simclock_10',['SimClock',['../struct_sim_clock.html',1,'SimClock'],['../timing_8h.html#a7d73623ee7bc21907bb93fb037e6bf92',1,'SimClock():&#160;timing.h']]],
-  ['state_11',['state',['../struct_plugin.html#a573b6fc21799c55a5cfbdbbf94177648',1,'Plugin::state()'],['../struct_keybind.html#ae9c9145301d783997697d8e18a4af530',1,'Keybind::state()'],['../struct_mousebind.html#aca5e7d8cd3b993899d3f254835c36aab',1,'Mousebind::state()']]],
-  ['static_5fassert_12',['STATIC_ASSERT',['../stddef_8h.html#a2b423e0cb986dc46133d7a4bbbf66605',1,'stddef.h']]],
+  ['socket_11',['socket',['../struct_tcp_connection.html#adcea0a6157b42898d11c89ddc1de9306',1,'TcpConnection']]],
+  ['state_12',['state',['../struct_plugin.html#a573b6fc21799c55a5cfbdbbf94177648',1,'Plugin::state()'],['../struct_keybind.html#ae9c9145301d783997697d8e18a4af530',1,'Keybind::state()'],['../struct_mousebind.html#aca5e7d8cd3b993899d3f254835c36aab',1,'Mousebind::state()']]],
   ['stddef_2eh_13',['stddef.h',['../stddef_8h.html',1,'']]],
   ['suspend_14',['suspend',['../struct_plugin.html#a271bdc546f0d8a2d0d835a148765dd9d',1,'Plugin']]]
 ];

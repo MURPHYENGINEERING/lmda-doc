@@ -6,14 +6,20 @@ Standard definitions used throughout all of LMDA.
 
 
 {\ttfamily \#include $<$lmda/log.\+h$>$}\newline
-{\ttfamily \#include $<$stdint.\+h$>$}\newline
-{\ttfamily \#include $<$stdbool.\+h$>$}\newline
-{\ttfamily \#include $<$assert.\+h$>$}\newline
-\doxysubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{stddef_8h_a2b423e0cb986dc46133d7a4bbbf66605}{STATIC\+\_\+\+ASSERT}}(CONDITION,  MSG)~typedef char static\+\_\+assert\+\_\+\#\#MSG\mbox{[}(CONDITION)?1\+:-\/1\mbox{]}
-\end{DoxyCompactItemize}
+Include dependency graph for stddef.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{stddef_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{stddef_8h__dep__incl}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{Detailed Description}
@@ -26,11 +32,3 @@ Matt Murphy (\href{mailto:matt@murphysys.com}{\texttt{ matt@murphysys.\+com}})
 2022-\/05-\/23
 \end{DoxyDate}
 Copyright (c) 2022 Murphy Engineering LLC 
-
-\doxysubsection{Macro Definition Documentation}
-\mbox{\Hypertarget{stddef_8h_a2b423e0cb986dc46133d7a4bbbf66605}\label{stddef_8h_a2b423e0cb986dc46133d7a4bbbf66605}} 
-\index{stddef.h@{stddef.h}!STATIC\_ASSERT@{STATIC\_ASSERT}}
-\index{STATIC\_ASSERT@{STATIC\_ASSERT}!stddef.h@{stddef.h}}
-\doxysubsubsection{\texorpdfstring{STATIC\_ASSERT}{STATIC\_ASSERT}}
-{\footnotesize\ttfamily \#define STATIC\+\_\+\+ASSERT(\begin{DoxyParamCaption}\item[{}]{CONDITION,  }\item[{}]{MSG }\end{DoxyParamCaption})~typedef char static\+\_\+assert\+\_\+\#\#MSG\mbox{[}(CONDITION)?1\+:-\/1\mbox{]}}
-

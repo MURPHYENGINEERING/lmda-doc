@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['game_0',['game',['../struct_application.html#ae0e87c670c214e77ef4b78fffc110a25',1,'Application::game()'],['../struct_app_context.html#adecd842c489fed5ff6105046807f36d1',1,'AppContext::game()']]],
-  ['gameplugin_1',['gamePlugin',['../struct_application.html#a975587cf520301c11c7ca73398d9f375',1,'Application::gamePlugin()'],['../struct_app_context.html#ac8067e398350a2b7af9091c6877c74d6',1,'AppContext::gamePlugin()']]]
+  ['file_0',['file',['../struct_log_state.html#aaf6927e7eb617bde593214d4de7779f9',1,'LogState::file()'],['../struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54',1,'LogEvent::file()']]],
+  ['fmt_1',['fmt',['../struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c',1,'LogEvent']]]
 ];

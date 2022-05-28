@@ -1,5 +1,14 @@
 \hypertarget{struct_application}{}\doxysection{Application Struct Reference}
 \label{struct_application}\index{Application@{Application}}
+
+
+Collaboration diagram for Application\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_application__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -7,15 +16,13 @@
 \item 
 \mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} \mbox{\hyperlink{struct_application_a3d4ea8bb852b765476f8acb1d416749c}{clock}}
 \item 
-\mbox{\hyperlink{struct_game}{Game}} \mbox{\hyperlink{struct_application_ae0e87c670c214e77ef4b78fffc110a25}{game}}
-\item 
-\mbox{\hyperlink{struct_plugin}{Plugin}} \mbox{\hyperlink{struct_application_a975587cf520301c11c7ca73398d9f375}{game\+Plugin}}
-\item 
-\mbox{\hyperlink{struct_plugin}{Plugin}} \mbox{\hyperlink{struct_application_ac231d7b21efe853b513ca8fc29892656}{pres\+Plugin}}
+\mbox{\hyperlink{struct_plugin}{Plugin}} \mbox{\hyperlink{struct_application_a8e0cc7657c96f8d83f08bc95784684c0}{plugins}} \mbox{[}3\mbox{]}
 \item 
 \mbox{\hyperlink{struct_input_state}{Input\+State}} \mbox{\hyperlink{struct_application_abda4be551ee9302ace12207249c4e8e5}{input}}
 \item 
 \mbox{\hyperlink{struct_app_actions}{App\+Actions}} \mbox{\hyperlink{struct_application_a3ff2a5b955f02dd1166534c5f4027c08}{action}}
+\item 
+bool \mbox{\hyperlink{struct_application_a21e699718afc803b84e3801dc20d18a9}{running}}
 \end{DoxyCompactItemize}
 
 
@@ -32,18 +39,6 @@
 \doxysubsubsection{\texorpdfstring{clock}{clock}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_sim_clock}{Sim\+Clock}} Application\+::clock}
 
-\mbox{\Hypertarget{struct_application_ae0e87c670c214e77ef4b78fffc110a25}\label{struct_application_ae0e87c670c214e77ef4b78fffc110a25}} 
-\index{Application@{Application}!game@{game}}
-\index{game@{game}!Application@{Application}}
-\doxysubsubsection{\texorpdfstring{game}{game}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_game}{Game}} Application\+::game}
-
-\mbox{\Hypertarget{struct_application_a975587cf520301c11c7ca73398d9f375}\label{struct_application_a975587cf520301c11c7ca73398d9f375}} 
-\index{Application@{Application}!gamePlugin@{gamePlugin}}
-\index{gamePlugin@{gamePlugin}!Application@{Application}}
-\doxysubsubsection{\texorpdfstring{gamePlugin}{gamePlugin}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_plugin}{Plugin}} Application\+::game\+Plugin}
-
 \mbox{\Hypertarget{struct_application_abda4be551ee9302ace12207249c4e8e5}\label{struct_application_abda4be551ee9302ace12207249c4e8e5}} 
 \index{Application@{Application}!input@{input}}
 \index{input@{input}!Application@{Application}}
@@ -56,11 +51,17 @@
 \doxysubsubsection{\texorpdfstring{log}{log}}
 {\footnotesize\ttfamily \mbox{\hyperlink{struct_log_state}{Log\+State}} Application\+::log}
 
-\mbox{\Hypertarget{struct_application_ac231d7b21efe853b513ca8fc29892656}\label{struct_application_ac231d7b21efe853b513ca8fc29892656}} 
-\index{Application@{Application}!presPlugin@{presPlugin}}
-\index{presPlugin@{presPlugin}!Application@{Application}}
-\doxysubsubsection{\texorpdfstring{presPlugin}{presPlugin}}
-{\footnotesize\ttfamily \mbox{\hyperlink{struct_plugin}{Plugin}} Application\+::pres\+Plugin}
+\mbox{\Hypertarget{struct_application_a8e0cc7657c96f8d83f08bc95784684c0}\label{struct_application_a8e0cc7657c96f8d83f08bc95784684c0}} 
+\index{Application@{Application}!plugins@{plugins}}
+\index{plugins@{plugins}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{plugins}{plugins}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_plugin}{Plugin}} Application\+::plugins\mbox{[}3\mbox{]}}
+
+\mbox{\Hypertarget{struct_application_a21e699718afc803b84e3801dc20d18a9}\label{struct_application_a21e699718afc803b84e3801dc20d18a9}} 
+\index{Application@{Application}!running@{running}}
+\index{running@{running}!Application@{Application}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily bool Application\+::running}
 
 
 

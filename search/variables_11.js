@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['scale_0',['scale',['../struct_input_axis.html#a50c06d2120920f1da1db7634b3cb9a36',1,'InputAxis']]],
-  ['scroll_1',['scroll',['../struct_mouse_axes.html#a24620bb1e454df130c62e37f67285e4f',1,'MouseAxes']]],
-  ['state_2',['state',['../struct_plugin.html#a573b6fc21799c55a5cfbdbbf94177648',1,'Plugin::state()'],['../struct_keybind.html#ae9c9145301d783997697d8e18a4af530',1,'Keybind::state()'],['../struct_mousebind.html#aca5e7d8cd3b993899d3f254835c36aab',1,'Mousebind::state()']]],
-  ['suspend_3',['suspend',['../struct_plugin.html#a271bdc546f0d8a2d0d835a148765dd9d',1,'Plugin']]]
+  ['renderer_0',['renderer',['../struct_sdl_state.html#a4a254f355a6b0d448b9515f44efc351b',1,'SdlState']]],
+  ['resume_1',['resume',['../struct_plugin.html#a977cd0d30cd26f565a89d9ea82d77ee3',1,'Plugin']]],
+  ['running_2',['running',['../struct_application.html#a21e699718afc803b84e3801dc20d18a9',1,'Application']]]
 ];

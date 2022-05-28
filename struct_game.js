@@ -1,4 +1,4 @@
 var struct_game =
 [
-    [ "i", "struct_game.html#ab692f36e9c9ea6305118da023cc51bc2", null ]
+    [ "turn", "struct_game.html#acf6f326616292a0fb562c82fa39d2295", null ]
 ];

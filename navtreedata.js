@@ -59,9 +59,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_app_actions_8h.html",
-"_hid_key_8h.html#af434a7ad5580484273b61cfa2d201a8eaf4718f26d47d25512bedafb1bde73776",
-"keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02a2fe222976b2519398d0e918a5461e1e5",
-"platform_8h.html#a4e520fb558eda0eed39263ac09665359"
+"_hid_key_8h.html#af434a7ad5580484273b61cfa2d201a8eafb523ecd7c21374ec0f9004d928b03ac",
+"keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02a105d1a38ecc41875a6c9712cd02276c7",
+"main_8c.html#a7a77bb9e200c540a08b4f6f1b784c1f3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

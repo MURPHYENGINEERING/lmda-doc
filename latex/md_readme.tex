@@ -1,5 +1,5 @@
-\hypertarget{md_readme_autotoc_md7}{}\doxysection{Code}\label{md_readme_autotoc_md7}
-\hypertarget{md_readme_autotoc_md8}{}\doxysubsection{Naming convention}\label{md_readme_autotoc_md8}
+\hypertarget{md_readme_autotoc_md1}{}\doxysection{Code}\label{md_readme_autotoc_md1}
+\hypertarget{md_readme_autotoc_md2}{}\doxysubsection{Naming convention}\label{md_readme_autotoc_md2}
 \tabulinesep=1mm
 \begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
 \hline
@@ -19,10 +19,10 @@
 \end{longtabu}
 
 
-With the special case of a function that\textquotesingle{}s declared in one module (the {\itshape interface} module) and defined in another (the {\itshape implementation} module)\+: {\ttfamily lmda\+\_\+interface\+\_\+function\+\_\+impl()}. Here the prefix {\ttfamily lmda} indicates the broadest scope, and the suffix {\ttfamily impl} indicates the separated declaration and definition.\hypertarget{md_readme_autotoc_md9}{}\doxysubsection{Application Design}\label{md_readme_autotoc_md9}
+With the special case of a function that\textquotesingle{}s declared in one module (the {\itshape interface} module) and defined in another (the {\itshape implementation} module)\+: {\ttfamily lmda\+\_\+interface\+\_\+function\+\_\+impl()}. Here the prefix {\ttfamily lmda} indicates the broadest scope, and the suffix {\ttfamily impl} indicates the separated declaration and definition.\hypertarget{md_readme_autotoc_md3}{}\doxysubsection{Application Design}\label{md_readme_autotoc_md3}
 At the first level, the game uses a {\bfseries{plugin}} architecture. The {\bfseries{application}} hosts two plugins\+: the {\bfseries{game plugin}} simulates the game world, and the {\bfseries{presentation plugin}} represents the game world to the outside world.
 
-There are two presentation plugins\+: the {\bfseries{SDL plugin}} implements a 2D game, and the {\bfseries{server plugin}} implements a headless server with a browser-\/accessible dashboard. The server is headless because it still runs the game plugin, meaning it still constitutes a game client playing the game; but the only inputs and outputs are from and to the network and AI.\hypertarget{md_readme_autotoc_md10}{}\doxysubsection{Project Structure}\label{md_readme_autotoc_md10}
+There are two presentation plugins\+: the {\bfseries{SDL plugin}} implements a 2D game, and the {\bfseries{server plugin}} implements a headless server with a browser-\/accessible dashboard. The server is headless because it still runs the game plugin, meaning it still constitutes a game client playing the game; but the only inputs and outputs are from and to the network and AI.\hypertarget{md_readme_autotoc_md4}{}\doxysubsection{Project Structure}\label{md_readme_autotoc_md4}
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{lmda/}
@@ -62,4 +62,4 @@ There are two presentation plugins\+: the {\bfseries{SDL plugin}} implements a 2
 \DoxyCodeLine{                      in the application.}
 
 \end{DoxyCode}
-\hypertarget{md_readme_autotoc_md11}{}\doxysubsection{Build System}\label{md_readme_autotoc_md11}
+\hypertarget{md_readme_autotoc_md5}{}\doxysubsection{Build System}\label{md_readme_autotoc_md5}

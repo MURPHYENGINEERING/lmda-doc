@@ -25,13 +25,12 @@
 var NAVTREE =
 [
   [ "λMDA", "index.html", [
-    [ "λMDA", "md_docs__r_e_a_d_m_e.html", null ],
     [ "λMDA", "md_readme.html", [
-      [ "Code", "md_readme.html#autotoc_md7", [
-        [ "Naming convention", "md_readme.html#autotoc_md8", null ],
-        [ "Application Design", "md_readme.html#autotoc_md9", null ],
-        [ "Project Structure", "md_readme.html#autotoc_md10", null ],
-        [ "Build System", "md_readme.html#autotoc_md11", null ]
+      [ "Code", "md_readme.html#autotoc_md1", [
+        [ "Naming convention", "md_readme.html#autotoc_md2", null ],
+        [ "Application Design", "md_readme.html#autotoc_md3", null ],
+        [ "Project Structure", "md_readme.html#autotoc_md4", null ],
+        [ "Build System", "md_readme.html#autotoc_md5", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -61,8 +60,8 @@ var NAVTREEINDEX =
 [
 "_app_actions_8h.html",
 "_hid_key_8h.html#af434a7ad5580484273b61cfa2d201a8eaf4718f26d47d25512bedafb1bde73776",
-"keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02a2987bda7a158de87f1f2b19ef593459a",
-"pages.html"
+"keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02a2fe222976b2519398d0e918a5461e1e5",
+"platform_8h.html#a4e520fb558eda0eed39263ac09665359"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

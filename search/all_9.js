@@ -1,15 +1,14 @@
 var searchData=
 [
-  ['init_0',['init',['../struct_plugin.html#acdf4f6a6ce24d4ac3b98416ad9a0839a',1,'Plugin::init()'],['../_tcp_connection__mac_8c.html#a4196542deb5209dda550d7bc6c6e8ec4',1,'init(TcpConnection *c):&#160;TcpConnection_mac.c']]],
-  ['init_5fcontext_1',['init_context',['../main_8c.html#ab068aa01770811978db0efe0e716f94a',1,'main.c']]],
-  ['input_2',['input',['../struct_application.html#abda4be551ee9302ace12207249c4e8e5',1,'Application::input()'],['../struct_app_context.html#a025b6b6339d7758972e6b86257867da9',1,'AppContext::input()']]],
-  ['input_2ec_3',['input.c',['../input_8c.html',1,'']]],
-  ['input_2eh_4',['input.h',['../input_8h.html',1,'']]],
-  ['inputaction_5',['InputAction',['../struct_input_action.html',1,'InputAction'],['../_input_action_8h.html#ae5096b068d1c4e37fff01378a2d5a340',1,'InputAction():&#160;InputAction.h']]],
-  ['inputaction_2eh_6',['InputAction.h',['../_input_action_8h.html',1,'']]],
-  ['inputactioncallback_7',['InputActionCallback',['../_input_action_8h.html#a890c8529adafbdea2fff988a0954410c',1,'InputAction.h']]],
-  ['inputaxis_8',['InputAxis',['../struct_input_axis.html',1,'InputAxis'],['../_input_axis_8h.html#a22867c502fd36f8e7bf3e0bf550adcf8',1,'InputAxis():&#160;InputAxis.h']]],
-  ['inputaxis_2eh_9',['InputAxis.h',['../_input_axis_8h.html',1,'']]],
-  ['inputdevicetype_10',['InputDeviceType',['../input_8h.html#ac9348deae9297ebe302759b9171a75d0',1,'InputDeviceType():&#160;input.h'],['../input_8h.html#aa13c985de5831767e8c6ba4da91ec1c4',1,'InputDeviceType():&#160;input.h']]],
-  ['inputstate_11',['InputState',['../struct_input_state.html',1,'InputState'],['../input_8h.html#aacb60ab344dfba299564b49e4202ad8d',1,'InputState():&#160;input.h']]]
+  ['init_0',['init',['../struct_plugin.html#abd322b580a3a507dab547ded54bca16e',1,'Plugin']]],
+  ['init_5fplugin_5fstate_5fafter_5fload_1',['init_plugin_state_after_load',['../plugin_8c.html#a56574d23dfab31146b315097ff545bb1',1,'plugin.c']]],
+  ['initialized_2',['initialized',['../struct_plugin.html#adbc83f663f8bbdb7ee5207af7f792c68',1,'Plugin']]],
+  ['input_3',['input',['../struct_context.html#a28f49f5ce90690091c7dd6c656dcfe6a',1,'Context']]],
+  ['input_2ec_4',['input.c',['../input_8c.html',1,'']]],
+  ['input_2eh_5',['input.h',['../input_8h.html',1,'']]],
+  ['inputaction_6',['InputAction',['../struct_input_action.html',1,'InputAction'],['../input_8h.html#ae5096b068d1c4e37fff01378a2d5a340',1,'InputAction():&#160;input.h']]],
+  ['inputactionargs_7',['InputActionArgs',['../struct_input_action_args.html',1,'InputActionArgs'],['../input_8h.html#addd111b309ca080dc2b13eca833abbbe',1,'InputActionArgs():&#160;input.h']]],
+  ['inputactioncallback_8',['InputActionCallback',['../input_8h.html#a27102467f31022c4656dd8d262a3b1ee',1,'input.h']]],
+  ['inputcontext_9',['InputContext',['../struct_input_context.html',1,'InputContext'],['../input_8h.html#acc74d704c48b9a014dcf5d7b8cc29464',1,'InputContext():&#160;input.h']]],
+  ['inputdevicetype_10',['InputDeviceType',['../input_8h.html#ac9348deae9297ebe302759b9171a75d0',1,'InputDeviceType():&#160;input.h'],['../input_8h.html#aa13c985de5831767e8c6ba4da91ec1c4',1,'InputDeviceType():&#160;input.h']]]
 ];

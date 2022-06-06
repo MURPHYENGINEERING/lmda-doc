@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['errormessage_0',['errorMessage',['../_plugin__win_8c.html#a7544accefb05b9c2e6fd7ef0178b2717',1,'Plugin_win.c']]]
+  ['emit_5fapp_5fbanner_0',['emit_app_banner',['../main_8c.html#af2179120f2c276a86a0cab778cdcc39c',1,'main.c']]]
 ];

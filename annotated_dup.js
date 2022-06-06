@@ -1,21 +1,23 @@
 var annotated_dup =
 [
     [ "ActionBinding", "struct_action_binding.html", "struct_action_binding" ],
-    [ "AppActions", "struct_app_actions.html", "struct_app_actions" ],
-    [ "AppContext", "struct_app_context.html", "struct_app_context" ],
-    [ "Application", "struct_application.html", "struct_application" ],
+    [ "Context", "struct_context.html", "struct_context" ],
+    [ "FontBook", "struct_font_book.html", "struct_font_book" ],
     [ "Game", "struct_game.html", "struct_game" ],
+    [ "GameContext", "struct_game_context.html", "struct_game_context" ],
+    [ "HostContext", "struct_host_context.html", "struct_host_context" ],
     [ "InputAction", "struct_input_action.html", "struct_input_action" ],
-    [ "InputAxis", "struct_input_axis.html", "struct_input_axis" ],
-    [ "InputState", "struct_input_state.html", "struct_input_state" ],
+    [ "InputActionArgs", "struct_input_action_args.html", "struct_input_action_args" ],
+    [ "InputContext", "struct_input_context.html", "struct_input_context" ],
     [ "Keybind", "struct_keybind.html", "struct_keybind" ],
     [ "LogEvent", "struct_log_event.html", "struct_log_event" ],
     [ "LogState", "struct_log_state.html", "struct_log_state" ],
     [ "MouseAxes", "struct_mouse_axes.html", "struct_mouse_axes" ],
     [ "Mousebind", "struct_mousebind.html", "struct_mousebind" ],
     [ "Plugin", "struct_plugin.html", "struct_plugin" ],
-    [ "SdlState", "struct_sdl_state.html", "struct_sdl_state" ],
+    [ "SdlContext", "struct_sdl_context.html", "struct_sdl_context" ],
+    [ "SdlMouseCursor", "struct_sdl_mouse_cursor.html", "struct_sdl_mouse_cursor" ],
     [ "SimClock", "struct_sim_clock.html", "struct_sim_clock" ],
-    [ "TcpConnection", "struct_tcp_connection.html", "struct_tcp_connection" ],
-    [ "TcpServer", "struct_tcp_server.html", "struct_tcp_server" ]
+    [ "Text", "struct_text.html", "struct_text" ],
+    [ "WallClock", "struct_wall_clock.html", "struct_wall_clock" ]
 ];

@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11"/>
     <meta name="generator" content="Doxygen 1.9.3"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>λMDA: src/common/include/lmda/log.h File Reference</title>
+    <title>λMDA: src/include/lmda/log.h File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('log_8h.html',''); initResizable(); });
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="log_8h__dep__incl.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="log_8h__dep__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="log_8h_source.html">Go to the source code of this file.</a></p>
@@ -119,23 +119,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_state.html">LogState</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to persist the log output streams between hot-reloads.  <a href="struct_log_state.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html">LogEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a log message with associated severity.  <a href="struct_log_event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:af89cb876e6e1d43cfeacdd58a7c9b78c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#af89cb876e6e1d43cfeacdd58a7c9b78c">log_trace</a>(...)&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a5b76dd51db62558b1952158ba38b723f">LOG_TRACE</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
+<tr class="memitem:af89cb876e6e1d43cfeacdd58a7c9b78c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#af89cb876e6e1d43cfeacdd58a7c9b78c">log_trace</a>(...)&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a5b76dd51db62558b1952158ba38b723f">LOG_TRACE</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
 <tr class="separator:af89cb876e6e1d43cfeacdd58a7c9b78c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa77e596ef13d2f0f75d0ac9540ed358d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#aa77e596ef13d2f0f75d0ac9540ed358d">log_debug</a>(...)&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
+<tr class="memitem:aa77e596ef13d2f0f75d0ac9540ed358d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#aa77e596ef13d2f0f75d0ac9540ed358d">log_debug</a>(...)&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</a>,  __FILE__, __LINE__, __VA_ARGS__)</td></tr>
 <tr class="separator:aa77e596ef13d2f0f75d0ac9540ed358d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1cfe5444875c8eca0ea6f6993977d6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#aa1cfe5444875c8eca0ea6f6993977d6d">log_info</a>(...)&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
+<tr class="memitem:aa1cfe5444875c8eca0ea6f6993977d6d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#aa1cfe5444875c8eca0ea6f6993977d6d">log_info</a>(...)&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
 <tr class="separator:aa1cfe5444875c8eca0ea6f6993977d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04af09851c431d178f16b24fa1aac1e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a04af09851c431d178f16b24fa1aac1e9">log_warn</a>(...)&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
+<tr class="memitem:a04af09851c431d178f16b24fa1aac1e9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a04af09851c431d178f16b24fa1aac1e9">log_warn</a>(...)&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
 <tr class="separator:a04af09851c431d178f16b24fa1aac1e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ae72553ea9805dd87a463d6f710364d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a6ae72553ea9805dd87a463d6f710364d">log_error</a>(...)&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
+<tr class="memitem:a6ae72553ea9805dd87a463d6f710364d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a6ae72553ea9805dd87a463d6f710364d">log_error</a>(...)&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
 <tr class="separator:a6ae72553ea9805dd87a463d6f710364d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a704a43b1e2ff3bb554aff101efdbeecf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a704a43b1e2ff3bb554aff101efdbeecf">log_fatal</a>(...)&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac630750884d91cb9767ef2200bbb048b">LOG_FATAL</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
+<tr class="memitem:a704a43b1e2ff3bb554aff101efdbeecf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a704a43b1e2ff3bb554aff101efdbeecf">log_fatal</a>(...)&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac630750884d91cb9767ef2200bbb048b">LOG_FATAL</a>, __FILE__, __LINE__, __VA_ARGS__)</td></tr>
 <tr class="separator:a704a43b1e2ff3bb554aff101efdbeecf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -161,14 +163,14 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a10736458177293d86f211aadeff89501"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a10736458177293d86f211aadeff89501">log_level_string</a> (int level)</td></tr>
-<tr class="separator:a10736458177293d86f211aadeff89501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc9c03c87a423057656353fc0ff2253"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#abbc9c03c87a423057656353fc0ff2253">log_level_string</a> (int level)</td></tr>
+<tr class="separator:abbc9c03c87a423057656353fc0ff2253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2493e94f152a28b2ba4e3a2e2bba65d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#af2493e94f152a28b2ba4e3a2e2bba65d">log_set_level</a> (int level)</td></tr>
 <tr class="separator:af2493e94f152a28b2ba4e3a2e2bba65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6de5d12252f1b48279d28769b7c130eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a6de5d12252f1b48279d28769b7c130eb">log_set_quiet</a> (bool enable)</td></tr>
 <tr class="separator:a6de5d12252f1b48279d28769b7c130eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac008ecbde449b2dd1bc4f8671d9a0e07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a> (int level, const char *file, int line, const char *fmt,...)</td></tr>
-<tr class="separator:ac008ecbde449b2dd1bc4f8671d9a0e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7066b4c1396e08e51e0b989afda098f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a> (int level, char const *file, int line, char const *fmt,...)</td></tr>
+<tr class="separator:ab7066b4c1396e08e51e0b989afda098f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16309b47eea60fb8f69ef568e22ab89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a16309b47eea60fb8f69ef568e22ab89f">lm_log_init</a> (<a class="el" href="struct_log_state.html">LogState</a> *log)</td></tr>
 <tr class="separator:a16309b47eea60fb8f69ef568e22ab89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b639b03a15ed21adbcd111fe9d85db3"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8h.html#a1b639b03a15ed21adbcd111fe9d85db3">lm_log_create_file</a> ()</td></tr>
@@ -186,7 +188,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ab9f002c6ffbfd511da8090213227454e">LOG_DEBUG</a>,  __FILE__, __LINE__, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -204,7 +206,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a230506cce5c68c3bac5a821c42ed3473">LOG_ERROR</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -222,7 +224,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac630750884d91cb9767ef2200bbb048b">LOG_FATAL</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac630750884d91cb9767ef2200bbb048b">LOG_FATAL</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -240,7 +242,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a6e98ff471e3ce6c4ef2d75c37ee51837">LOG_INFO</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -258,7 +260,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a5b76dd51db62558b1952158ba38b723f">LOG_TRACE</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5a5b76dd51db62558b1952158ba38b723f">LOG_TRACE</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -276,7 +278,7 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="log_8h.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a>(<a class="el" href="log_8h.html#a99fb83031ce9923c84392b4e92f956b5ac8041ffa22bc823d4726701cdb13fc13">LOG_WARN</a>, __FILE__, __LINE__, __VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -371,14 +373,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a10736458177293d86f211aadeff89501" name="a10736458177293d86f211aadeff89501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10736458177293d86f211aadeff89501">&#9670;&nbsp;</a></span>log_level_string()</h2>
+<a id="abbc9c03c87a423057656353fc0ff2253" name="abbc9c03c87a423057656353fc0ff2253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc9c03c87a423057656353fc0ff2253">&#9670;&nbsp;</a></span>log_level_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * log_level_string </td>
+          <td class="memname">char const  * log_level_string </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
@@ -389,8 +391,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac008ecbde449b2dd1bc4f8671d9a0e07" name="ac008ecbde449b2dd1bc4f8671d9a0e07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac008ecbde449b2dd1bc4f8671d9a0e07">&#9670;&nbsp;</a></span>log_log()</h2>
+<a id="ab7066b4c1396e08e51e0b989afda098f" name="ab7066b4c1396e08e51e0b989afda098f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7066b4c1396e08e51e0b989afda098f">&#9670;&nbsp;</a></span>log_log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -404,7 +406,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
@@ -416,7 +418,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -476,7 +478,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="dir_5e36f0e7e2970fdcd654af72502d804b.html">include</a></li><li class="navelem"><a class="el" href="dir_5df9484ae8cc9cc85687b6e4ac511f1a.html">lmda</a></li><li class="navelem"><a class="el" href="log_8h.html">log.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_4e4dd790e2c36dacd81b0b00e80dd1d1.html">lmda</a></li><li class="navelem"><a class="el" href="log_8h.html">log.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

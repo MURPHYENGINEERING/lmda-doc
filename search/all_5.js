@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['error_0',['error',['../struct_tcp_connection.html#a86a45e331099f19357064fb69368345b',1,'TcpConnection']]],
-  ['errormessage_1',['errorMessage',['../_plugin__win_8c.html#a7544accefb05b9c2e6fd7ef0178b2717',1,'Plugin_win.c']]]
+  ['emit_5fapp_5fbanner_0',['emit_app_banner',['../main_8c.html#af2179120f2c276a86a0cab778cdcc39c',1,'main.c']]],
+  ['event_5ftype_5fname_2eh_1',['event_type_name.h',['../event__type__name_8h.html',1,'']]]
 ];

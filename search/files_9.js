@@ -1,14 +1,5 @@
 var searchData=
 [
-  ['platform_2eh_0',['platform.h',['../platform_8h.html',1,'']]],
-  ['platform_5fmac_2ec_1',['platform_mac.c',['../platform__mac_8c.html',1,'']]],
-  ['platform_5fwin_2ec_2',['platform_win.c',['../platform__win_8c.html',1,'']]],
-  ['plugin_2ec_3',['Plugin.c',['../_plugin_8c.html',1,'']]],
-  ['plugin_2eh_4',['Plugin.h',['../_plugin_8h.html',1,'']]],
-  ['plugin_5fclient_2ec_5',['Plugin_client.c',['../_plugin__client_8c.html',1,'']]],
-  ['plugin_5fgame_2ec_6',['Plugin_game.c',['../_plugin__game_8c.html',1,'']]],
-  ['plugin_5fmac_2ec_7',['Plugin_mac.c',['../_plugin__mac_8c.html',1,'']]],
-  ['plugin_5fsdl_2ec_8',['Plugin_sdl.c',['../_plugin__sdl_8c.html',1,'']]],
-  ['plugin_5fserver_2ec_9',['Plugin_server.c',['../_plugin__server_8c.html',1,'']]],
-  ['plugin_5fwin_2ec_10',['Plugin_win.c',['../_plugin__win_8c.html',1,'']]]
+  ['readme_2emd_0',['README.md',['../cmake_2sdl2_2_r_e_a_d_m_e_8md.html',1,'']]],
+  ['readme_2emd_1',['readme.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
 ];

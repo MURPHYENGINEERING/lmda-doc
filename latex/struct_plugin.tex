@@ -2,16 +2,17 @@
 \label{struct_plugin}\index{Plugin@{Plugin}}
 
 
-A plugin packages some functionality in a form that can be swapped out live while the program is running (\char`\"{}hot reloading\char`\"{}).  
+The game plugin packages the game functionality in a form that can be hot-\/reloaded during development.  
 
 
 
 
-{\ttfamily \#include $<$Plugin.\+h$>$}
+{\ttfamily \#include $<$plugin.\+h$>$}
 
 
 
-Collaboration diagram for Plugin\+:\nopagebreak
+Collaboration diagram for Plugin\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,67 +22,87 @@ Collaboration diagram for Plugin\+:\nopagebreak
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{struct_app_context}{App\+Context}} $\ast$ \mbox{\hyperlink{struct_plugin_a1576e878494e01265cbb9d1cb35bbbf1}{ctx}}
+\mbox{\hyperlink{struct_context}{Context}} $\ast$ \mbox{\hyperlink{struct_plugin_abad129b72091e47d88d21d087109c1e2}{ctx}}
 \item 
+bool \mbox{\hyperlink{struct_plugin_ae59627c2e98e633a3a96cf773e460418}{up\+To\+Date}}
+\begin{DoxyCompactList}\small\item\em If true then the plugin version loaded is the latest available on disk. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{struct_plugin_a6f87c19eb0859fb325c0b006726beac7}{loaded}}
 \begin{DoxyCompactList}\small\item\em If false then all of the plugin functions constitute invalid operations. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{struct_plugin_a944447e0ac48eec56c29fe92c6f24131}{needs\+Reload}}
-\begin{DoxyCompactList}\small\item\em If true, then the plugin\textquotesingle{}s state has been previously initialized, regardless of whether the plugin is currently loaded. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_plugin_adbc83f663f8bbdb7ee5207af7f792c68}{initialized}}
+\begin{DoxyCompactList}\small\item\em If true then the plugin has completed its first-\/time initialization and should be resumed on subsequent reloads. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_plugin_a49156c51599afd84d7d278efba91b0ad}{ready}}
+\begin{DoxyCompactList}\small\item\em If true then the plugin is able to tick. \end{DoxyCompactList}\item 
 time\+\_\+t \mbox{\hyperlink{struct_plugin_a14324db944db132b2815c060facaa766}{load\+Time}}
 \begin{DoxyCompactList}\small\item\em The modified-\/time of the plugin library file when it was last loaded. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{struct_plugin_a14254aa3924007afb4adf3f2b71728e4}{path}} \mbox{[}\mbox{\hyperlink{fs_8h_a4033ed62493fc82b447f663a6f71cc04}{FS\+\_\+\+PATH\+\_\+\+MAX}}\mbox{]}
+char \mbox{\hyperlink{struct_plugin_ae12f7d8d719f885ece3d53d9717ea6ae}{path}} \mbox{[}\mbox{\hyperlink{fs_8h_a386d05a3c39d4b945844e20d2660524a}{LM\+\_\+\+FS\+\_\+\+PATH\+\_\+\+MAX}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em Path to the plugin\textquotesingle{}s source library file. \end{DoxyCompactList}\item 
-char \mbox{\hyperlink{struct_plugin_a58e0e718f2b4bc2c2ede1e0458d4f91b}{name}} \mbox{[}16\mbox{]}
-\begin{DoxyCompactList}\small\item\em The human readable plugin name, for debugging output. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_plugin_abd8c7e213113ac3a3f8d9f408e50c717}{cache\+Path}} \mbox{[}\mbox{\hyperlink{fs_8h_a386d05a3c39d4b945844e20d2660524a}{LM\+\_\+\+FS\+\_\+\+PATH\+\_\+\+MAX}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Path to the copy of the library file that is loaded in memory, to avoid locking the file for writing by the linker. \end{DoxyCompactList}\item 
 void $\ast$ \mbox{\hyperlink{struct_plugin_a4fc8bde3786f647c1037a3b1c4db5265}{lib}}
 \begin{DoxyCompactList}\small\item\em The module containing the plugin\textquotesingle{}s interface function implementations. \end{DoxyCompactList}\item 
-void $\ast$ \mbox{\hyperlink{struct_plugin_a573b6fc21799c55a5cfbdbbf94177648}{state}}
-\begin{DoxyCompactList}\small\item\em The plugin\textquotesingle{}s private persistent state. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{Plugin\+Init\+Fn}} \mbox{\hyperlink{struct_plugin_acdf4f6a6ce24d4ac3b98416ad9a0839a}{init}}
+\mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_abd322b580a3a507dab547ded54bca16e}{init}}
 \begin{DoxyCompactList}\small\item\em Initialize the plugin for the first time. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_a0010bfbf9fa7a69c50f7343694738077}{update}}
+\mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_afb540a014eba551212c3af7875e9c4a9}{tick}}
 \begin{DoxyCompactList}\small\item\em Perform the plugin\textquotesingle{}s per-\/tick operations. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}{suspend}}
+\mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}{suspend}}
 \begin{DoxyCompactList}\small\item\em Prepare the plugin to have its code unloaded; any static variables will need to be reinitialized, and can have their values persisted here. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{Plugin\+Init\+Fn}} \mbox{\hyperlink{struct_plugin_a977cd0d30cd26f565a89d9ea82d77ee3}{resume}}
+\mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_a408de70c39f2dfe89e688d02c13f0585}{resume}}
 \begin{DoxyCompactList}\small\item\em Restore the plugin\textquotesingle{}s state onto a new module. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_a5473b65c7fa9364877a05ca294f5cdd7}{destroy}}
+\mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} \mbox{\hyperlink{struct_plugin_a5473b65c7fa9364877a05ca294f5cdd7}{destroy}}
 \begin{DoxyCompactList}\small\item\em Free any memory allocated by the plugin for the last time. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-A plugin packages some functionality in a form that can be swapped out live while the program is running (\char`\"{}hot reloading\char`\"{}). 
-
-Plugins have transient internal state, but they also have external state that persists through hot reloads. Plugins run within an App\+Contextt, which provides an interface to their private and shared state, to the underlying platform, and to other game services. 
+The game plugin packages the game functionality in a form that can be hot-\/reloaded during development. 
 
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_plugin_a1576e878494e01265cbb9d1cb35bbbf1}\label{struct_plugin_a1576e878494e01265cbb9d1cb35bbbf1}} 
+\mbox{\Hypertarget{struct_plugin_abd8c7e213113ac3a3f8d9f408e50c717}\label{struct_plugin_abd8c7e213113ac3a3f8d9f408e50c717}} 
+\index{Plugin@{Plugin}!cachePath@{cachePath}}
+\index{cachePath@{cachePath}!Plugin@{Plugin}}
+\doxysubsubsection{\texorpdfstring{cachePath}{cachePath}}
+{\footnotesize\ttfamily char Plugin\+::cache\+Path\mbox{[}\mbox{\hyperlink{fs_8h_a386d05a3c39d4b945844e20d2660524a}{LM\+\_\+\+FS\+\_\+\+PATH\+\_\+\+MAX}}\mbox{]}}
+
+
+
+Path to the copy of the library file that is loaded in memory, to avoid locking the file for writing by the linker. 
+
+\mbox{\Hypertarget{struct_plugin_abad129b72091e47d88d21d087109c1e2}\label{struct_plugin_abad129b72091e47d88d21d087109c1e2}} 
 \index{Plugin@{Plugin}!ctx@{ctx}}
 \index{ctx@{ctx}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{ctx}{ctx}}
-{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_app_context}{App\+Context}}$\ast$ Plugin\+::ctx}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_context}{Context}}$\ast$ Plugin\+::ctx}
 
 \mbox{\Hypertarget{struct_plugin_a5473b65c7fa9364877a05ca294f5cdd7}\label{struct_plugin_a5473b65c7fa9364877a05ca294f5cdd7}} 
 \index{Plugin@{Plugin}!destroy@{destroy}}
 \index{destroy@{destroy}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{destroy}{destroy}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{Plugin\+Fn}} Plugin\+::destroy}
+{\footnotesize\ttfamily \mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} Plugin\+::destroy}
 
 
 
 Free any memory allocated by the plugin for the last time. 
 
-\mbox{\Hypertarget{struct_plugin_acdf4f6a6ce24d4ac3b98416ad9a0839a}\label{struct_plugin_acdf4f6a6ce24d4ac3b98416ad9a0839a}} 
+\mbox{\Hypertarget{struct_plugin_abd322b580a3a507dab547ded54bca16e}\label{struct_plugin_abd322b580a3a507dab547ded54bca16e}} 
 \index{Plugin@{Plugin}!init@{init}}
 \index{init@{init}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{init}{init}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{Plugin\+Init\+Fn}} Plugin\+::init}
+{\footnotesize\ttfamily \mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} Plugin\+::init}
 
 
 
 Initialize the plugin for the first time. 
 
-It should construct and populate data structures here; during resume it should only restore its awareness of them. \mbox{\Hypertarget{struct_plugin_a4fc8bde3786f647c1037a3b1c4db5265}\label{struct_plugin_a4fc8bde3786f647c1037a3b1c4db5265}} 
+It should construct and populate data structures here; during resume it should only restore its awareness of them. \mbox{\Hypertarget{struct_plugin_adbc83f663f8bbdb7ee5207af7f792c68}\label{struct_plugin_adbc83f663f8bbdb7ee5207af7f792c68}} 
+\index{Plugin@{Plugin}!initialized@{initialized}}
+\index{initialized@{initialized}!Plugin@{Plugin}}
+\doxysubsubsection{\texorpdfstring{initialized}{initialized}}
+{\footnotesize\ttfamily bool Plugin\+::initialized}
+
+
+
+If true then the plugin has completed its first-\/time initialization and should be resumed on subsequent reloads. 
+
+\mbox{\Hypertarget{struct_plugin_a4fc8bde3786f647c1037a3b1c4db5265}\label{struct_plugin_a4fc8bde3786f647c1037a3b1c4db5265}} 
 \index{Plugin@{Plugin}!lib@{lib}}
 \index{lib@{lib}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{lib}{lib}}
@@ -111,78 +132,68 @@ If false then all of the plugin functions constitute invalid operations.
 
 The modified-\/time of the plugin library file when it was last loaded. 
 
-If this value is less than the file\textquotesingle{}s current modified-\/time then the in-\/memory library is out of date and should be reloaded. \mbox{\Hypertarget{struct_plugin_a58e0e718f2b4bc2c2ede1e0458d4f91b}\label{struct_plugin_a58e0e718f2b4bc2c2ede1e0458d4f91b}} 
-\index{Plugin@{Plugin}!name@{name}}
-\index{name@{name}!Plugin@{Plugin}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily char Plugin\+::name\mbox{[}16\mbox{]}}
-
-
-
-The human readable plugin name, for debugging output. 
-
-\mbox{\Hypertarget{struct_plugin_a944447e0ac48eec56c29fe92c6f24131}\label{struct_plugin_a944447e0ac48eec56c29fe92c6f24131}} 
-\index{Plugin@{Plugin}!needsReload@{needsReload}}
-\index{needsReload@{needsReload}!Plugin@{Plugin}}
-\doxysubsubsection{\texorpdfstring{needsReload}{needsReload}}
-{\footnotesize\ttfamily bool Plugin\+::needs\+Reload}
-
-
-
-If true, then the plugin\textquotesingle{}s state has been previously initialized, regardless of whether the plugin is currently loaded. 
-
-\mbox{\Hypertarget{struct_plugin_a14254aa3924007afb4adf3f2b71728e4}\label{struct_plugin_a14254aa3924007afb4adf3f2b71728e4}} 
+If this value is less than the file\textquotesingle{}s current modified-\/time then the in-\/memory library is out of date and should be reloaded. \mbox{\Hypertarget{struct_plugin_ae12f7d8d719f885ece3d53d9717ea6ae}\label{struct_plugin_ae12f7d8d719f885ece3d53d9717ea6ae}} 
 \index{Plugin@{Plugin}!path@{path}}
 \index{path@{path}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{path}{path}}
-{\footnotesize\ttfamily char Plugin\+::path\mbox{[}\mbox{\hyperlink{fs_8h_a4033ed62493fc82b447f663a6f71cc04}{FS\+\_\+\+PATH\+\_\+\+MAX}}\mbox{]}}
+{\footnotesize\ttfamily char Plugin\+::path\mbox{[}\mbox{\hyperlink{fs_8h_a386d05a3c39d4b945844e20d2660524a}{LM\+\_\+\+FS\+\_\+\+PATH\+\_\+\+MAX}}\mbox{]}}
 
 
 
 Path to the plugin\textquotesingle{}s source library file. 
 
-\mbox{\Hypertarget{struct_plugin_a977cd0d30cd26f565a89d9ea82d77ee3}\label{struct_plugin_a977cd0d30cd26f565a89d9ea82d77ee3}} 
+\mbox{\Hypertarget{struct_plugin_a49156c51599afd84d7d278efba91b0ad}\label{struct_plugin_a49156c51599afd84d7d278efba91b0ad}} 
+\index{Plugin@{Plugin}!ready@{ready}}
+\index{ready@{ready}!Plugin@{Plugin}}
+\doxysubsubsection{\texorpdfstring{ready}{ready}}
+{\footnotesize\ttfamily bool Plugin\+::ready}
+
+
+
+If true then the plugin is able to tick. 
+
+\mbox{\Hypertarget{struct_plugin_a408de70c39f2dfe89e688d02c13f0585}\label{struct_plugin_a408de70c39f2dfe89e688d02c13f0585}} 
 \index{Plugin@{Plugin}!resume@{resume}}
 \index{resume@{resume}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{resume}{resume}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_8h_a02028dca0a911549fa4ead227dc69e75}{Plugin\+Init\+Fn}} Plugin\+::resume}
+{\footnotesize\ttfamily \mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} Plugin\+::resume}
 
 
 
 Restore the plugin\textquotesingle{}s state onto a new module. 
 
-\mbox{\Hypertarget{struct_plugin_a573b6fc21799c55a5cfbdbbf94177648}\label{struct_plugin_a573b6fc21799c55a5cfbdbbf94177648}} 
-\index{Plugin@{Plugin}!state@{state}}
-\index{state@{state}!Plugin@{Plugin}}
-\doxysubsubsection{\texorpdfstring{state}{state}}
-{\footnotesize\ttfamily void$\ast$ Plugin\+::state}
-
-
-
-The plugin\textquotesingle{}s private persistent state. 
-
-\mbox{\hyperlink{struct_plugin}{Plugin}} code receives a pointer to these data each time it\textquotesingle{}s (re)initialized. \mbox{\Hypertarget{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}\label{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}} 
+\mbox{\Hypertarget{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}\label{struct_plugin_a271bdc546f0d8a2d0d835a148765dd9d}} 
 \index{Plugin@{Plugin}!suspend@{suspend}}
 \index{suspend@{suspend}!Plugin@{Plugin}}
 \doxysubsubsection{\texorpdfstring{suspend}{suspend}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{Plugin\+Fn}} Plugin\+::suspend}
+{\footnotesize\ttfamily \mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} Plugin\+::suspend}
 
 
 
 Prepare the plugin to have its code unloaded; any static variables will need to be reinitialized, and can have their values persisted here. 
 
-\mbox{\Hypertarget{struct_plugin_a0010bfbf9fa7a69c50f7343694738077}\label{struct_plugin_a0010bfbf9fa7a69c50f7343694738077}} 
-\index{Plugin@{Plugin}!update@{update}}
-\index{update@{update}!Plugin@{Plugin}}
-\doxysubsubsection{\texorpdfstring{update}{update}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_plugin_8h_a5319d4dba5919282011c319b19779653}{Plugin\+Fn}} Plugin\+::update}
+\mbox{\Hypertarget{struct_plugin_afb540a014eba551212c3af7875e9c4a9}\label{struct_plugin_afb540a014eba551212c3af7875e9c4a9}} 
+\index{Plugin@{Plugin}!tick@{tick}}
+\index{tick@{tick}!Plugin@{Plugin}}
+\doxysubsubsection{\texorpdfstring{tick}{tick}}
+{\footnotesize\ttfamily \mbox{\hyperlink{plugin_8h_a796851cef3b291c8dffab192b415f4a3}{Plugin\+Fn}} Plugin\+::tick}
 
 
 
 Perform the plugin\textquotesingle{}s per-\/tick operations. 
 
+\mbox{\Hypertarget{struct_plugin_ae59627c2e98e633a3a96cf773e460418}\label{struct_plugin_ae59627c2e98e633a3a96cf773e460418}} 
+\index{Plugin@{Plugin}!upToDate@{upToDate}}
+\index{upToDate@{upToDate}!Plugin@{Plugin}}
+\doxysubsubsection{\texorpdfstring{upToDate}{upToDate}}
+{\footnotesize\ttfamily bool Plugin\+::up\+To\+Date}
+
+
+
+If true then the plugin version loaded is the latest available on disk. 
+
 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/common/include/lmda/app/\mbox{\hyperlink{_plugin_8h}{Plugin.\+h}}\end{DoxyCompactItemize}
+src/include/lmda/\mbox{\hyperlink{plugin_8h}{plugin.\+h}}\end{DoxyCompactItemize}

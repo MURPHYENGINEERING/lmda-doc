@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11"/>
     <meta name="generator" content="Doxygen 1.9.3"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>λMDA: src/common/include/lmda/platform.h File Reference</title>
+    <title>λMDA: src/include/lmda/platform.h File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -104,16 +104,19 @@ $(document).ready(function(){initNavTree('platform_8h.html',''); initResizable()
   <div class="headertitle"><div class="title">platform.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Declares generic platform initialization to allow platforms to do specialized setup (e.g. allocate a console on Windows).  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="version_8h_source.html">lmda/version.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for platform.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="platform_8h__incl.svg" width="178" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="platform_8h__incl.svg" width="250" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="platform_8h__dep__incl.svg" width="100%" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="platform_8h__dep__incl.svg" width="639" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="platform_8h_source.html">Go to the source code of this file.</a></p>
@@ -121,9 +124,15 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a4e520fb558eda0eed39263ac09665359"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform_8h.html#a4e520fb558eda0eed39263ac09665359">lm_platform_init</a> ()</td></tr>
+<tr class="memdesc:a4e520fb558eda0eed39263ac09665359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform platform-specific initialization (e.g.  <a href="platform_8h.html#a4e520fb558eda0eed39263ac09665359">More...</a><br /></td></tr>
 <tr class="separator:a4e520fb558eda0eed39263ac09665359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Declares generic platform initialization to allow platforms to do specialized setup (e.g. allocate a console on Windows). </p>
+<dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-06-06</dd></dl>
+<p>Copyright (c) 2022 Murphy Engineering LLC </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a4e520fb558eda0eed39263ac09665359" name="a4e520fb558eda0eed39263ac09665359"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e520fb558eda0eed39263ac09665359">&#9670;&nbsp;</a></span>lm_platform_init()</h2>
 
@@ -139,6 +148,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Perform platform-specific initialization (e.g. </p>
+<p >allocate a console on windows) </p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -146,7 +158,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="dir_5e36f0e7e2970fdcd654af72502d804b.html">include</a></li><li class="navelem"><a class="el" href="dir_5df9484ae8cc9cc85687b6e4ac511f1a.html">lmda</a></li><li class="navelem"><a class="el" href="platform_8h.html">platform.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_4e4dd790e2c36dacd81b0b00e80dd1d1.html">lmda</a></li><li class="navelem"><a class="el" href="platform_8h.html">platform.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

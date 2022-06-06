@@ -25,12 +25,18 @@
 var NAVTREE =
 [
   [ "λMDA", "index.html", [
+    [ "SDL2 CMake modules", "md_cmake_sdl2__r_e_a_d_m_e.html", [
+      [ "Details and Improvements", "md_cmake_sdl2__r_e_a_d_m_e.html#autotoc_md1", null ],
+      [ "Usage", "md_cmake_sdl2__r_e_a_d_m_e.html#autotoc_md2", [
+        [ "Modern CMake", "md_cmake_sdl2__r_e_a_d_m_e.html#autotoc_md3", null ],
+        [ "Legacy CMake", "md_cmake_sdl2__r_e_a_d_m_e.html#autotoc_md4", null ]
+      ] ],
+      [ "Special customization variables", "md_cmake_sdl2__r_e_a_d_m_e.html#autotoc_md5", null ],
+      [ "License", "md_cmake_sdl2__r_e_a_d_m_e.html#autotoc_md6", null ]
+    ] ],
     [ "λMDA", "md_readme.html", [
-      [ "Code", "md_readme.html#autotoc_md1", [
-        [ "Naming convention", "md_readme.html#autotoc_md2", null ],
-        [ "Application Design", "md_readme.html#autotoc_md3", null ],
-        [ "Project Structure", "md_readme.html#autotoc_md4", null ],
-        [ "Build System", "md_readme.html#autotoc_md5", null ]
+      [ "Code", "md_readme.html#autotoc_md8", [
+        [ "Naming convention", "md_readme.html#autotoc_md9", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
@@ -58,10 +64,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_app_actions_8h.html",
-"_hid_key_8h.html#af434a7ad5580484273b61cfa2d201a8eafb523ecd7c21374ec0f9004d928b03ac",
-"keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02a105d1a38ecc41875a6c9712cd02276c7",
-"main_8c.html#a7a77bb9e200c540a08b4f6f1b784c1f3"
+"annotated.html",
+"keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02a6e6586c60de3c77950bb7f9188fffb74",
+"struct_action_binding.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

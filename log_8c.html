@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11"/>
     <meta name="generator" content="Doxygen 1.9.3"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>λMDA: src/common/log.c File Reference</title>
+    <title>λMDA: src/game/log.c File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -105,28 +105,28 @@ $(document).ready(function(){initNavTree('log_8c.html',''); initResizable(); });
   <div class="headertitle"><div class="title">log.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Write log messages to the console and to a file.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;<a class="el" href="log_8h_source.html">lmda/log.h</a>&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;sys/stat.h&gt;</code><br />
-<code>#include &lt;time.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for log.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="log_8c__incl.svg" width="438" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="log_8c__incl.svg" width="146" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a16309b47eea60fb8f69ef568e22ab89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#a16309b47eea60fb8f69ef568e22ab89f">lm_log_init</a> (<a class="el" href="struct_log_state.html">LogState</a> *log)</td></tr>
 <tr class="separator:a16309b47eea60fb8f69ef568e22ab89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10736458177293d86f211aadeff89501"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#a10736458177293d86f211aadeff89501">log_level_string</a> (int level)</td></tr>
-<tr class="separator:a10736458177293d86f211aadeff89501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc9c03c87a423057656353fc0ff2253"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#abbc9c03c87a423057656353fc0ff2253">log_level_string</a> (int level)</td></tr>
+<tr class="separator:abbc9c03c87a423057656353fc0ff2253"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2493e94f152a28b2ba4e3a2e2bba65d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#af2493e94f152a28b2ba4e3a2e2bba65d">log_set_level</a> (int level)</td></tr>
 <tr class="separator:af2493e94f152a28b2ba4e3a2e2bba65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6de5d12252f1b48279d28769b7c130eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#a6de5d12252f1b48279d28769b7c130eb">log_set_quiet</a> (bool enable)</td></tr>
 <tr class="separator:a6de5d12252f1b48279d28769b7c130eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac008ecbde449b2dd1bc4f8671d9a0e07"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#ac008ecbde449b2dd1bc4f8671d9a0e07">log_log</a> (int level, const char *file, int line, const char *fmt,...)</td></tr>
-<tr class="separator:ac008ecbde449b2dd1bc4f8671d9a0e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7066b4c1396e08e51e0b989afda098f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#ab7066b4c1396e08e51e0b989afda098f">log_log</a> (int level, char const *file, int line, char const *fmt,...)</td></tr>
+<tr class="separator:ab7066b4c1396e08e51e0b989afda098f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b639b03a15ed21adbcd111fe9d85db3"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#a1b639b03a15ed21adbcd111fe9d85db3">lm_log_create_file</a> ()</td></tr>
 <tr class="separator:a1b639b03a15ed21adbcd111fe9d85db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -135,7 +135,11 @@ Variables</h2></td></tr>
 <tr class="memitem:a57df2f5e9b5a70bc21d0dcf92bc5e884"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_log_state.html">LogState</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="log_8c.html#a57df2f5e9b5a70bc21d0dcf92bc5e884">L</a></td></tr>
 <tr class="separator:a57df2f5e9b5a70bc21d0dcf92bc5e884"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Write log messages to the console and to a file. </p>
+<dl class="section author"><dt>Author</dt><dd>rxi, modified by Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-06-06 </dd></dl>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a1b639b03a15ed21adbcd111fe9d85db3" name="a1b639b03a15ed21adbcd111fe9d85db3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1b639b03a15ed21adbcd111fe9d85db3">&#9670;&nbsp;</a></span>lm_log_create_file()</h2>
 
@@ -171,14 +175,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a10736458177293d86f211aadeff89501" name="a10736458177293d86f211aadeff89501"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10736458177293d86f211aadeff89501">&#9670;&nbsp;</a></span>log_level_string()</h2>
+<a id="abbc9c03c87a423057656353fc0ff2253" name="abbc9c03c87a423057656353fc0ff2253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc9c03c87a423057656353fc0ff2253">&#9670;&nbsp;</a></span>log_level_string()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char * log_level_string </td>
+          <td class="memname">char const  * log_level_string </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
@@ -189,8 +193,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ac008ecbde449b2dd1bc4f8671d9a0e07" name="ac008ecbde449b2dd1bc4f8671d9a0e07"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac008ecbde449b2dd1bc4f8671d9a0e07">&#9670;&nbsp;</a></span>log_log()</h2>
+<a id="ab7066b4c1396e08e51e0b989afda098f" name="ab7066b4c1396e08e51e0b989afda098f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7066b4c1396e08e51e0b989afda098f">&#9670;&nbsp;</a></span>log_log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -204,7 +208,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
@@ -216,7 +220,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char *&#160;</td>
+          <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>fmt</em>, </td>
         </tr>
         <tr>
@@ -291,7 +295,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="log_8c.html">log.c</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_1699be727a800b1d059c6f7f2b91d2ee.html">game</a></li><li class="navelem"><a class="el" href="log_8c.html">log.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

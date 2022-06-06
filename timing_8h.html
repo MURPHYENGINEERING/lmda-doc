@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11"/>
     <meta name="generator" content="Doxygen 1.9.3"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>λMDA: src/common/include/lmda/platform/timing.h File Reference</title>
+    <title>λMDA: src/include/lmda/timing.h File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -101,32 +101,37 @@ $(document).ready(function(){initNavTree('timing_8h.html',''); initResizable(); 
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">timing.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Platform-independent high-resolution timing interface, for measurement and delays (e.g. in tick rate).  
+<p>Platform-independent high-resolution timing interface, for measurement and delays.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="stddef_8h_source.html">lmda/stddef.h</a>&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for timing.h:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="timing_8h__incl.svg" width="218" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div><div class="textblock"><div class="dynheader">
+<div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="timing_8h__dep__incl.svg" width="100%" height="406"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="timing_8h__dep__incl.svg" width="100%" height="462"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div>
 <p><a href="timing_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sim_clock.html">SimClock</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_wall_clock.html">WallClock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents real outside-world time.  <a href="struct_wall_clock.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_sim_clock.html">SimClock</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents time inside the game world.  <a href="struct_sim_clock.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a001e8c0bb62911b9612ee0f622e48f2f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a001e8c0bb62911b9612ee0f622e48f2f">LM_TIME_HHMMSSS_LEN</a>&#160;&#160;&#160;16</td></tr>
+<tr class="memdesc:a001e8c0bb62911b9612ee0f622e48f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sufficient to represent up to five digits of hours (11 years) in the form <code>hhhhh:mm:ss.xxx\0</code> where xxx is milliseconds.  <a href="timing_8h.html#a001e8c0bb62911b9612ee0f622e48f2f">More...</a><br /></td></tr>
+<tr class="separator:a001e8c0bb62911b9612ee0f622e48f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -140,6 +145,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a51db0a58da51c92fdef7dde0d62c9035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afceaa65d4c6ef08e43b3325368d7642b"><td class="memItemLeft" align="right" valign="top">typedef uint64_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#afceaa65d4c6ef08e43b3325368d7642b">seconds_t</a></td></tr>
 <tr class="separator:afceaa65d4c6ef08e43b3325368d7642b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6353504356fce1da2b3cb5ec51e6761"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_wall_clock.html">WallClock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#ae6353504356fce1da2b3cb5ec51e6761">WallClock</a></td></tr>
+<tr class="separator:ae6353504356fce1da2b3cb5ec51e6761"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d73623ee7bc21907bb93fb037e6bf92"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_sim_clock.html">SimClock</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a7d73623ee7bc21907bb93fb037e6bf92">SimClock</a></td></tr>
 <tr class="separator:a7d73623ee7bc21907bb93fb037e6bf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -148,10 +155,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a459d2ddc396e2c83b8d2a40921f539b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a459d2ddc396e2c83b8d2a40921f539b1">lm_time_start</a> (<a class="el" href="struct_sim_clock.html">SimClock</a> *)</td></tr>
 <tr class="memdesc:a459d2ddc396e2c83b8d2a40921f539b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establish the current time as t=0 for <code>lm_time_sim_now</code>.  <a href="timing_8h.html#a459d2ddc396e2c83b8d2a40921f539b1">More...</a><br /></td></tr>
 <tr class="separator:a459d2ddc396e2c83b8d2a40921f539b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43dfd78a8b6643a05d45bbcfa9970c2e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a43dfd78a8b6643a05d45bbcfa9970c2e">lm_time_suspend</a> (<a class="el" href="struct_sim_clock.html">SimClock</a> *)</td></tr>
+<tr class="separator:a43dfd78a8b6643a05d45bbcfa9970c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af68c4cf6a45da43d6c51ad4c3b8aa0ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#af68c4cf6a45da43d6c51ad4c3b8aa0ae">lm_time_resume</a> (<a class="el" href="struct_sim_clock.html">SimClock</a> *)</td></tr>
+<tr class="separator:af68c4cf6a45da43d6c51ad4c3b8aa0ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad741dbcc0d77a7a4f1b5158217b179f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#ad741dbcc0d77a7a4f1b5158217b179f4">lm_time_tick</a> (<a class="el" href="struct_sim_clock.html">SimClock</a> *)</td></tr>
 <tr class="separator:ad741dbcc0d77a7a4f1b5158217b179f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8b712cfa0890842d4e40048c97749ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#af8b712cfa0890842d4e40048c97749ac">lm_time_nanos</a> ()</td></tr>
 <tr class="separator:af8b712cfa0890842d4e40048c97749ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c021bc5dce3bb50975fa5f5514d14bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a6c021bc5dce3bb50975fa5f5514d14bc">lm_time_from_millis</a> (<a class="el" href="timing_8h.html#a42d25c067084e571eba2e86575d045f0">millis_t</a>)</td></tr>
+<tr class="separator:a6c021bc5dce3bb50975fa5f5514d14bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2d6e1ffb69457e51c7c23cd6f26eed3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#afceaa65d4c6ef08e43b3325368d7642b">seconds_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#ac2d6e1ffb69457e51c7c23cd6f26eed3">lm_time_to_seconds</a> (<a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>)</td></tr>
+<tr class="separator:ac2d6e1ffb69457e51c7c23cd6f26eed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa26e448c9f0f62cbec1dfcc58243026"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#afceaa65d4c6ef08e43b3325368d7642b">seconds_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#afa26e448c9f0f62cbec1dfcc58243026">lm_time_epoch</a> ()</td></tr>
 <tr class="memdesc:afa26e448c9f0f62cbec1dfcc58243026"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current real Epoch time (seconds elapsed since 1970-1-1).  <a href="timing_8h.html#afa26e448c9f0f62cbec1dfcc58243026">More...</a><br /></td></tr>
 <tr class="separator:afa26e448c9f0f62cbec1dfcc58243026"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,13 +175,33 @@ Functions</h2></td></tr>
 <tr class="separator:a27ce336babb2f2363674ec15455ab8a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a705fadcc58d981ebec576248e50b70e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a705fadcc58d981ebec576248e50b70e8">lm_time_sleep_for</a> (<a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>)</td></tr>
 <tr class="separator:a705fadcc58d981ebec576248e50b70e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a14c3698a5a0393530916afcd8a69d2c4"><td class="memItemLeft" align="right" valign="top">char const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing_8h.html#a14c3698a5a0393530916afcd8a69d2c4">lm_time_hhmmsss</a> (<a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> t)</td></tr>
+<tr class="memdesc:a14c3698a5a0393530916afcd8a69d2c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write the given time into the buffer, up to <code>size</code> bytes, in the form of <code>hh:mm:ss.ms</code>  <a href="timing_8h.html#a14c3698a5a0393530916afcd8a69d2c4">More...</a><br /></td></tr>
+<tr class="separator:a14c3698a5a0393530916afcd8a69d2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Platform-independent high-resolution timing interface, for measurement and delays (e.g. in tick rate). </p>
+<div class="textblock"><p >Platform-independent high-resolution timing interface, for measurement and delays. </p>
 <dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
 <dl class="section date"><dt>Date</dt><dd>2022-05-25</dd></dl>
 <p>Copyright (c) 2022 Murphy Engineering LLC </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a001e8c0bb62911b9612ee0f622e48f2f" name="a001e8c0bb62911b9612ee0f622e48f2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001e8c0bb62911b9612ee0f622e48f2f">&#9670;&nbsp;</a></span>LM_TIME_HHMMSSS_LEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LM_TIME_HHMMSSS_LEN&#160;&#160;&#160;16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sufficient to represent up to five digits of hours (11 years) in the form <code>hhhhh:mm:ss.xxx\0</code> where xxx is milliseconds. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
 <a id="a51db0a58da51c92fdef7dde0d62c9035" name="a51db0a58da51c92fdef7dde0d62c9035"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51db0a58da51c92fdef7dde0d62c9035">&#9670;&nbsp;</a></span>micros_t</h2>
 
@@ -251,6 +286,20 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ae6353504356fce1da2b3cb5ec51e6761" name="ae6353504356fce1da2b3cb5ec51e6761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6353504356fce1da2b3cb5ec51e6761">&#9670;&nbsp;</a></span>WallClock</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef struct <a class="el" href="struct_wall_clock.html">WallClock</a> <a class="el" href="struct_wall_clock.html">WallClock</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="afa26e448c9f0f62cbec1dfcc58243026" name="afa26e448c9f0f62cbec1dfcc58243026"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa26e448c9f0f62cbec1dfcc58243026">&#9670;&nbsp;</a></span>lm_time_epoch()</h2>
@@ -271,6 +320,44 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a6c021bc5dce3bb50975fa5f5514d14bc" name="a6c021bc5dce3bb50975fa5f5514d14bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c021bc5dce3bb50975fa5f5514d14bc">&#9670;&nbsp;</a></span>lm_time_from_millis()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> lm_time_from_millis </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="timing_8h.html#a42d25c067084e571eba2e86575d045f0">millis_t</a>&#160;</td>
+          <td class="paramname"><em>ms</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a14c3698a5a0393530916afcd8a69d2c4" name="a14c3698a5a0393530916afcd8a69d2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14c3698a5a0393530916afcd8a69d2c4">&#9670;&nbsp;</a></span>lm_time_hhmmsss()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char const  * lm_time_hhmmsss </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write the given time into the buffer, up to <code>size</code> bytes, in the form of <code>hh:mm:ss.ms</code> </p>
+
+</div>
+</div>
 <a id="af8b712cfa0890842d4e40048c97749ac" name="af8b712cfa0890842d4e40048c97749ac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af8b712cfa0890842d4e40048c97749ac">&#9670;&nbsp;</a></span>lm_time_nanos()</h2>
 
@@ -281,6 +368,24 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> lm_time_nanos </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af68c4cf6a45da43d6c51ad4c3b8aa0ae" name="af68c4cf6a45da43d6c51ad4c3b8aa0ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68c4cf6a45da43d6c51ad4c3b8aa0ae">&#9670;&nbsp;</a></span>lm_time_resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> lm_time_resume </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_sim_clock.html">SimClock</a> *&#160;</td>
+          <td class="paramname"><em>clock</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -356,6 +461,24 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a43dfd78a8b6643a05d45bbcfa9970c2e" name="a43dfd78a8b6643a05d45bbcfa9970c2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43dfd78a8b6643a05d45bbcfa9970c2e">&#9670;&nbsp;</a></span>lm_time_suspend()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> lm_time_suspend </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_sim_clock.html">SimClock</a> *&#160;</td>
+          <td class="paramname"><em>clock</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad741dbcc0d77a7a4f1b5158217b179f4" name="ad741dbcc0d77a7a4f1b5158217b179f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad741dbcc0d77a7a4f1b5158217b179f4">&#9670;&nbsp;</a></span>lm_time_tick()</h2>
 
@@ -374,12 +497,30 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ac2d6e1ffb69457e51c7c23cd6f26eed3" name="ac2d6e1ffb69457e51c7c23cd6f26eed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d6e1ffb69457e51c7c23cd6f26eed3">&#9670;&nbsp;</a></span>lm_time_to_seconds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="timing_8h.html#afceaa65d4c6ef08e43b3325368d7642b">seconds_t</a> lm_time_to_seconds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td>
+          <td class="paramname"><em>ns</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="dir_5e36f0e7e2970fdcd654af72502d804b.html">include</a></li><li class="navelem"><a class="el" href="dir_5df9484ae8cc9cc85687b6e4ac511f1a.html">lmda</a></li><li class="navelem"><a class="el" href="dir_d273ed727d534daadd93ce6d9a3ea2cd.html">platform</a></li><li class="navelem"><a class="el" href="timing_8h.html">timing.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_4e4dd790e2c36dacd81b0b00e80dd1d1.html">lmda</a></li><li class="navelem"><a class="el" href="timing_8h.html">timing.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

@@ -100,93 +100,68 @@ $(document).ready(function(){initNavTree('main_8c.html',''); initResizable(); })
 
 <div class="header">
   <div class="summary">
-<a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a> &#124;
 <a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">main.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="stddef_8h_source.html">lmda/stddef.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="version_8h_source.html">lmda/version.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_app_actions_8h_source.html">lmda/app/AppActions.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_app_context_8h_source.html">lmda/app/AppContext.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_plugin_8h_source.html">lmda/app/Plugin.h</a>&gt;</code><br />
+
+<p>Entrypoint to game application (i.e. game plugin host).  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="input_8h_source.html">lmda/input.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="log_8h_source.html">lmda/log.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="platform_8h_source.html">lmda/platform.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="timing_8h_source.html">lmda/platform/timing.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="input_8h_source.html">lmda/input.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_input_action_8h_source.html">lmda/input/InputAction.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="plugin_8h_source.html">lmda/plugin.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="timing_8h_source.html">lmda/timing.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="version_8h_source.html">lmda/version.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="signal_8h_source.html">signal.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for main.c:</div>
 <div class="dyncontent">
 <div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8c__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
-Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_application.html">Application</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
-Typedefs</h2></td></tr>
-<tr class="memitem:a807c40e39d8fc1c930824f73879aa0b3"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="struct_application.html">Application</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a807c40e39d8fc1c930824f73879aa0b3">Application</a></td></tr>
-<tr class="memdesc:a807c40e39d8fc1c930824f73879aa0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stores the actual state that is referenced by the plugins across reloads.  <a href="main_8c.html#a807c40e39d8fc1c930824f73879aa0b3">More...</a><br /></td></tr>
-<tr class="separator:a807c40e39d8fc1c930824f73879aa0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a1701f76e4aa77a83ce5280229f854bca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1701f76e4aa77a83ce5280229f854bca">on_action_about</a> (<a class="el" href="struct_input_action.html">InputAction</a> *action)</td></tr>
-<tr class="separator:a1701f76e4aa77a83ce5280229f854bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6880e67ce885dc84909bec505ce4ee10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a6880e67ce885dc84909bec505ce4ee10">on_action_quit</a> (<a class="el" href="struct_input_action.html">InputAction</a> *action)</td></tr>
-<tr class="separator:a6880e67ce885dc84909bec505ce4ee10"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb09e1eb75367f5ff1c01c8c6fe11772"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abb09e1eb75367f5ff1c01c8c6fe11772">on_action_help</a> (<a class="el" href="struct_input_action.html">InputAction</a> *action)</td></tr>
-<tr class="separator:abb09e1eb75367f5ff1c01c8c6fe11772"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab068aa01770811978db0efe0e716f94a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab068aa01770811978db0efe0e716f94a">init_context</a> ()</td></tr>
-<tr class="separator:ab068aa01770811978db0efe0e716f94a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbab4979d3670149615e9eecdfbec0d7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adbab4979d3670149615e9eecdfbec0d7">load_plugins</a> ()</td></tr>
-<tr class="separator:adbab4979d3670149615e9eecdfbec0d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d73d144947018c9ade3e42429ed2908"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5d73d144947018c9ade3e42429ed2908">destroy_plugins</a> ()</td></tr>
-<tr class="separator:a5d73d144947018c9ade3e42429ed2908"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a77bb9e200c540a08b4f6f1b784c1f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7a77bb9e200c540a08b4f6f1b784c1f3">bind_inputs</a> ()</td></tr>
-<tr class="separator:a7a77bb9e200c540a08b4f6f1b784c1f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46fea93bf5d63e93090fbb95b742b881"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a46fea93bf5d63e93090fbb95b742b881">game_loop</a> ()</td></tr>
-<tr class="separator:a46fea93bf5d63e93090fbb95b742b881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2179120f2c276a86a0cab778cdcc39c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af2179120f2c276a86a0cab778cdcc39c">emit_app_banner</a> ()</td></tr>
+<tr class="separator:af2179120f2c276a86a0cab778cdcc39c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01923a7e3793865c023df2e36e9802fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a01923a7e3793865c023df2e36e9802fc">lm_app_stop_interrupt_handler</a> (int signum)</td></tr>
+<tr class="memdesc:a01923a7e3793865c023df2e36e9802fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle the interrupt signal from <code>ctrl-c</code>.  <a href="main_8c.html#a01923a7e3793865c023df2e36e9802fc">More...</a><br /></td></tr>
+<tr class="separator:a01923a7e3793865c023df2e36e9802fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc45d4b886970f3ae47bbcdcca8916a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#afc45d4b886970f3ae47bbcdcca8916a2">lm_app_on_action_quit</a> (<a class="el" href="struct_input_action_args.html">InputActionArgs</a> action)</td></tr>
+<tr class="separator:afc45d4b886970f3ae47bbcdcca8916a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d0097e4ba71ebc68f77c0e3a857ee59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a1d0097e4ba71ebc68f77c0e3a857ee59">lm_app_init</a> ()</td></tr>
+<tr class="separator:a1d0097e4ba71ebc68f77c0e3a857ee59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbc6413707a5a01638a9962235fda65f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acbc6413707a5a01638a9962235fda65f">lm_app_load_plugin</a> ()</td></tr>
+<tr class="separator:acbc6413707a5a01638a9962235fda65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2996b69f96ab996b1f4d31806dc5c63"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ac2996b69f96ab996b1f4d31806dc5c63">lm_app_bind_inputs</a> ()</td></tr>
+<tr class="separator:ac2996b69f96ab996b1f4d31806dc5c63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad197e27823f4790b7bc1c0ab5385aca3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad197e27823f4790b7bc1c0ab5385aca3">lm_app_game_loop</a> ()</td></tr>
+<tr class="separator:ad197e27823f4790b7bc1c0ab5385aca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ddf1224851353fc92bfbff6f499fa97"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a> (int argc, char *argv[])</td></tr>
 <tr class="separator:a0ddf1224851353fc92bfbff6f499fa97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_application.html">Application</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a></td></tr>
-<tr class="separator:a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a144d0be28da4ea25c5ae85277946fe76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_app_context.html">AppContext</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a144d0be28da4ea25c5ae85277946fe76">_ctx</a></td></tr>
-<tr class="separator:a144d0be28da4ea25c5ae85277946fe76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cd517cba241773a24c2debc64a2ac52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_context.html">Context</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8cd517cba241773a24c2debc64a2ac52">_ctx</a></td></tr>
+<tr class="separator:a8cd517cba241773a24c2debc64a2ac52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c88d7de40ebba530ed0832ae2107f8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_plugin.html">Plugin</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a5c88d7de40ebba530ed0832ae2107f8d">_plugin</a></td></tr>
+<tr class="separator:a5c88d7de40ebba530ed0832ae2107f8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Typedef Documentation</h2>
-<a id="a807c40e39d8fc1c930824f73879aa0b3" name="a807c40e39d8fc1c930824f73879aa0b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a807c40e39d8fc1c930824f73879aa0b3">&#9670;&nbsp;</a></span>Application</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Entrypoint to game application (i.e. game plugin host). </p>
+<dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-06-06</dd></dl>
+<p>Copyright (c) 2022 Murphy Engineering LLC </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="af2179120f2c276a86a0cab778cdcc39c" name="af2179120f2c276a86a0cab778cdcc39c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2179120f2c276a86a0cab778cdcc39c">&#9670;&nbsp;</a></span>emit_app_banner()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct <a class="el" href="struct_application.html">Application</a> <a class="el" href="struct_application.html">Application</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Stores the actual state that is referenced by the plugins across reloads. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a7a77bb9e200c540a08b4f6f1b784c1f3" name="a7a77bb9e200c540a08b4f6f1b784c1f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a77bb9e200c540a08b4f6f1b784c1f3">&#9670;&nbsp;</a></span>bind_inputs()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void bind_inputs </td>
+          <td class="memname">void emit_app_banner </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -196,14 +171,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a5d73d144947018c9ade3e42429ed2908" name="a5d73d144947018c9ade3e42429ed2908"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5d73d144947018c9ade3e42429ed2908">&#9670;&nbsp;</a></span>destroy_plugins()</h2>
+<a id="ac2996b69f96ab996b1f4d31806dc5c63" name="ac2996b69f96ab996b1f4d31806dc5c63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2996b69f96ab996b1f4d31806dc5c63">&#9670;&nbsp;</a></span>lm_app_bind_inputs()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void destroy_plugins </td>
+          <td class="memname">void lm_app_bind_inputs </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -213,14 +188,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a46fea93bf5d63e93090fbb95b742b881" name="a46fea93bf5d63e93090fbb95b742b881"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46fea93bf5d63e93090fbb95b742b881">&#9670;&nbsp;</a></span>game_loop()</h2>
+<a id="ad197e27823f4790b7bc1c0ab5385aca3" name="ad197e27823f4790b7bc1c0ab5385aca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad197e27823f4790b7bc1c0ab5385aca3">&#9670;&nbsp;</a></span>lm_app_game_loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void game_loop </td>
+          <td class="memname">void lm_app_game_loop </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -230,14 +205,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="ab068aa01770811978db0efe0e716f94a" name="ab068aa01770811978db0efe0e716f94a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab068aa01770811978db0efe0e716f94a">&#9670;&nbsp;</a></span>init_context()</h2>
+<a id="a1d0097e4ba71ebc68f77c0e3a857ee59" name="a1d0097e4ba71ebc68f77c0e3a857ee59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d0097e4ba71ebc68f77c0e3a857ee59">&#9670;&nbsp;</a></span>lm_app_init()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool init_context </td>
+          <td class="memname">bool lm_app_init </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -247,20 +222,58 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="adbab4979d3670149615e9eecdfbec0d7" name="adbab4979d3670149615e9eecdfbec0d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbab4979d3670149615e9eecdfbec0d7">&#9670;&nbsp;</a></span>load_plugins()</h2>
+<a id="acbc6413707a5a01638a9962235fda65f" name="acbc6413707a5a01638a9962235fda65f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbc6413707a5a01638a9962235fda65f">&#9670;&nbsp;</a></span>lm_app_load_plugin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool load_plugins </td>
+          <td class="memname">bool lm_app_load_plugin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="afc45d4b886970f3ae47bbcdcca8916a2" name="afc45d4b886970f3ae47bbcdcca8916a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc45d4b886970f3ae47bbcdcca8916a2">&#9670;&nbsp;</a></span>lm_app_on_action_quit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lm_app_on_action_quit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_input_action_args.html">InputActionArgs</a>&#160;</td>
+          <td class="paramname"><em>action</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a01923a7e3793865c023df2e36e9802fc" name="a01923a7e3793865c023df2e36e9802fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01923a7e3793865c023df2e36e9802fc">&#9670;&nbsp;</a></span>lm_app_stop_interrupt_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void lm_app_stop_interrupt_handler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>signum</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handle the interrupt signal from <code>ctrl-c</code>. </p>
 
 </div>
 </div>
@@ -292,97 +305,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a1701f76e4aa77a83ce5280229f854bca" name="a1701f76e4aa77a83ce5280229f854bca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1701f76e4aa77a83ce5280229f854bca">&#9670;&nbsp;</a></span>on_action_about()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void on_action_about </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_input_action.html">InputAction</a> *&#160;</td>
-          <td class="paramname"><em>action</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="abb09e1eb75367f5ff1c01c8c6fe11772" name="abb09e1eb75367f5ff1c01c8c6fe11772"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abb09e1eb75367f5ff1c01c8c6fe11772">&#9670;&nbsp;</a></span>on_action_help()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void on_action_help </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_input_action.html">InputAction</a> *&#160;</td>
-          <td class="paramname"><em>action</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a6880e67ce885dc84909bec505ce4ee10" name="a6880e67ce885dc84909bec505ce4ee10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6880e67ce885dc84909bec505ce4ee10">&#9670;&nbsp;</a></span>on_action_quit()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void on_action_quit </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="struct_input_action.html">InputAction</a> *&#160;</td>
-          <td class="paramname"><em>action</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Variable Documentation</h2>
-<a id="a2a7fcb1b51f9ef29f46e0b4daa6cf5e9" name="a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">&#9670;&nbsp;</a></span>_app</h2>
+<a id="a8cd517cba241773a24c2debc64a2ac52" name="a8cd517cba241773a24c2debc64a2ac52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cd517cba241773a24c2debc64a2ac52">&#9670;&nbsp;</a></span>_ctx</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_application.html">Application</a> _app</td>
+          <td class="memname"><a class="el" href="struct_context.html">Context</a>* _ctx</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a144d0be28da4ea25c5ae85277946fe76" name="a144d0be28da4ea25c5ae85277946fe76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a144d0be28da4ea25c5ae85277946fe76">&#9670;&nbsp;</a></span>_ctx</h2>
+<a id="a5c88d7de40ebba530ed0832ae2107f8d" name="a5c88d7de40ebba530ed0832ae2107f8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c88d7de40ebba530ed0832ae2107f8d">&#9670;&nbsp;</a></span>_plugin</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="struct_app_context.html">AppContext</a> _ctx</td>
+          <td class="memname"><a class="el" href="struct_plugin.html">Plugin</a> _plugin</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Initial value:</b><div class="fragment"><div class="line">= { .log              = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a54980bfd7749d6ddc12f1db17659d420">log</a>,</div>
-<div class="line">                    .clock            = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a3d4ea8bb852b765476f8acb1d416749c">clock</a>,</div>
-<div class="line">                    .input            = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#abda4be551ee9302ace12207249c4e8e5">input</a>,</div>
-<div class="line">                    .action           = &amp;<a class="code hl_variable" href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a>.<a class="code hl_variable" href="struct_application.html#a3ff2a5b955f02dd1166534c5f4027c08">action</a>,</div>
-<div class="line">                    .applicationTitle = LMDA_APPLICATION_TITLE }</div>
-<div class="ttc" id="amain_8c_html_a2a7fcb1b51f9ef29f46e0b4daa6cf5e9"><div class="ttname"><a href="main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9">_app</a></div><div class="ttdeci">Application _app</div><div class="ttdef"><b>Definition:</b> main.c:41</div></div>
-<div class="ttc" id="astruct_application_html_a3d4ea8bb852b765476f8acb1d416749c"><div class="ttname"><a href="struct_application.html#a3d4ea8bb852b765476f8acb1d416749c">Application::clock</a></div><div class="ttdeci">SimClock clock</div><div class="ttdef"><b>Definition:</b> main.c:34</div></div>
-<div class="ttc" id="astruct_application_html_a3ff2a5b955f02dd1166534c5f4027c08"><div class="ttname"><a href="struct_application.html#a3ff2a5b955f02dd1166534c5f4027c08">Application::action</a></div><div class="ttdeci">AppActions action</div><div class="ttdef"><b>Definition:</b> main.c:37</div></div>
-<div class="ttc" id="astruct_application_html_a54980bfd7749d6ddc12f1db17659d420"><div class="ttname"><a href="struct_application.html#a54980bfd7749d6ddc12f1db17659d420">Application::log</a></div><div class="ttdeci">LogState log</div><div class="ttdef"><b>Definition:</b> main.c:33</div></div>
-<div class="ttc" id="astruct_application_html_abda4be551ee9302ace12207249c4e8e5"><div class="ttname"><a href="struct_application.html#abda4be551ee9302ace12207249c4e8e5">Application::input</a></div><div class="ttdeci">InputState input</div><div class="ttdef"><b>Definition:</b> main.c:36</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 </div><!-- contents -->

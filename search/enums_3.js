@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plugintype_0',['PluginType',['../_plugin_8h.html#a54e0db21fd49ff6e0178b6ebe120a6d2',1,'Plugin.h']]]
+  ['virtualkey_0',['VirtualKey',['../keyboard_8h.html#ad0e6e31d5953384be4ea987eb3923e02',1,'keyboard.h']]]
 ];

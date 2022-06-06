@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['nanos_5ft_0',['nanos_t',['../timing_8h.html#a818797d5ea8b3f90df635716268693c5',1,'timing.h']]]
+  ['logevent_0',['LogEvent',['../log_8h.html#a7718ddf4ae24b2ace944256c05ef3629',1,'log.h']]],
+  ['logstate_1',['LogState',['../log_8h.html#ab70eb3ac2eda7b2472a8d1b6e828d412',1,'log.h']]]
 ];

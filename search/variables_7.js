@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['game_0',['game',['../struct_app_context.html#adecd842c489fed5ff6105046807f36d1',1,'AppContext']]]
+  ['height_0',['height',['../struct_text.html#a629da0a3599577eff4a409b9500184f5',1,'Text']]],
+  ['host_1',['host',['../struct_context.html#ae53a106bfde64f9b87fe530827f04485',1,'Context']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../struct_mouse_axes.html#a68259a0972f567119aa206c659830955',1,'MouseAxes']]]
+  ['y_0',['y',['../struct_mouse_axes.html#aa9724a2ede5fab44ec01a0ed2d6b6949',1,'MouseAxes']]]
 ];

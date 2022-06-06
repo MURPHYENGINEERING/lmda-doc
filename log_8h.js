@@ -12,8 +12,8 @@ var log_8h =
     [ "LogState", "log_8h.html#ab70eb3ac2eda7b2472a8d1b6e828d412", null ],
     [ "lm_log_create_file", "log_8h.html#a1b639b03a15ed21adbcd111fe9d85db3", null ],
     [ "lm_log_init", "log_8h.html#a16309b47eea60fb8f69ef568e22ab89f", null ],
-    [ "log_level_string", "log_8h.html#a10736458177293d86f211aadeff89501", null ],
-    [ "log_log", "log_8h.html#ac008ecbde449b2dd1bc4f8671d9a0e07", null ],
+    [ "log_level_string", "log_8h.html#abbc9c03c87a423057656353fc0ff2253", null ],
+    [ "log_log", "log_8h.html#ab7066b4c1396e08e51e0b989afda098f", null ],
     [ "log_set_level", "log_8h.html#af2493e94f152a28b2ba4e3a2e2bba65d", null ],
     [ "log_set_quiet", "log_8h.html#a6de5d12252f1b48279d28769b7c130eb", null ]
 ];

@@ -2,26 +2,36 @@
 \label{struct_sim_clock}\index{SimClock@{SimClock}}
 
 
+Represents time inside the game world.  
+
+
+
+
 {\ttfamily \#include $<$timing.\+h$>$}
 
 
 
-Collaboration diagram for Sim\+Clock\+:\nopagebreak
+Collaboration diagram for Sim\+Clock\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=262pt]{struct_sim_clock__coll__graph}
+\includegraphics[width=330pt]{struct_sim_clock__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\hyperlink{struct_wall_clock}{Wall\+Clock}} \mbox{\hyperlink{struct_sim_clock_a912142b26c84e06e499ee6a78bbaab59}{real}}
+\begin{DoxyCompactList}\small\item\em Wall clock from which the simulation time is derived. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a669027027798bbb63c9dc3a8448bb70c}{period}}
+\begin{DoxyCompactList}\small\item\em Duration between ticks. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{timing_8h_a52183d06eb13da2c0f515d0cd90f9004}{tick\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}{tick}}
 \begin{DoxyCompactList}\small\item\em Current simulation iteration number, tick 0 being the first iteration. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a7efccffa3b7ef0a59d0d211e6e8e7a44}{t}}
 \begin{DoxyCompactList}\small\item\em Simulation time, i.\+e. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_a23859f61fee1e9348ef481f1eb3650ca}{last\+Tick\+Real\+Time}}
-\item 
+\mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} \mbox{\hyperlink{struct_sim_clock_acde7e3564b930c90f8fa2721e82064f1}{Dt}}
+\begin{DoxyCompactList}\small\item\em Time in nanoseconds elapsed between the starts of the previous and current ticks. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}{dt}}
 \begin{DoxyCompactList}\small\item\em Time in seconds elapsed between the starts of the previous and current ticks. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{struct_sim_clock_a9e73fc6eaab21b2296ab9fbdb0db6c6d}{tps}}
@@ -32,8 +42,21 @@ float \mbox{\hyperlink{struct_sim_clock_a9e73fc6eaab21b2296ab9fbdb0db6c6d}{tps}}
 \begin{DoxyCompactList}\small\item\em Counts the number of terms in {\ttfamily tps\+Accum\+Ns}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Represents time inside the game world. 
+
 \doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}\label{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}} 
+\mbox{\Hypertarget{struct_sim_clock_acde7e3564b930c90f8fa2721e82064f1}\label{struct_sim_clock_acde7e3564b930c90f8fa2721e82064f1}} 
+\index{SimClock@{SimClock}!Dt@{Dt}}
+\index{Dt@{Dt}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{Dt}{Dt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} Sim\+Clock\+::\+Dt}
+
+
+
+Time in nanoseconds elapsed between the starts of the previous and current ticks. 
+
+This is the basis for {\ttfamily dt}, which is the basis for all world dynamics, and is accumulated in {\ttfamily t}. \mbox{\Hypertarget{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}\label{struct_sim_clock_ad57a220a8df05d5f5890020533253e89}} 
 \index{SimClock@{SimClock}!dt@{dt}}
 \index{dt@{dt}!SimClock@{SimClock}}
 \doxysubsubsection{\texorpdfstring{dt}{dt}}
@@ -43,11 +66,25 @@ float \mbox{\hyperlink{struct_sim_clock_a9e73fc6eaab21b2296ab9fbdb0db6c6d}{tps}}
 
 Time in seconds elapsed between the starts of the previous and current ticks. 
 
-\mbox{\Hypertarget{struct_sim_clock_a23859f61fee1e9348ef481f1eb3650ca}\label{struct_sim_clock_a23859f61fee1e9348ef481f1eb3650ca}} 
-\index{SimClock@{SimClock}!lastTickRealTime@{lastTickRealTime}}
-\index{lastTickRealTime@{lastTickRealTime}!SimClock@{SimClock}}
-\doxysubsubsection{\texorpdfstring{lastTickRealTime}{lastTickRealTime}}
-{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} Sim\+Clock\+::last\+Tick\+Real\+Time}
+This is the basis for all world dynamics. \mbox{\Hypertarget{struct_sim_clock_a669027027798bbb63c9dc3a8448bb70c}\label{struct_sim_clock_a669027027798bbb63c9dc3a8448bb70c}} 
+\index{SimClock@{SimClock}!period@{period}}
+\index{period@{period}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{period}{period}}
+{\footnotesize\ttfamily \mbox{\hyperlink{timing_8h_a818797d5ea8b3f90df635716268693c5}{nanos\+\_\+t}} Sim\+Clock\+::period}
+
+
+
+Duration between ticks. 
+
+\mbox{\Hypertarget{struct_sim_clock_a912142b26c84e06e499ee6a78bbaab59}\label{struct_sim_clock_a912142b26c84e06e499ee6a78bbaab59}} 
+\index{SimClock@{SimClock}!real@{real}}
+\index{real@{real}!SimClock@{SimClock}}
+\doxysubsubsection{\texorpdfstring{real}{real}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_wall_clock}{Wall\+Clock}} Sim\+Clock\+::real}
+
+
+
+Wall clock from which the simulation time is derived. 
 
 \mbox{\Hypertarget{struct_sim_clock_a7efccffa3b7ef0a59d0d211e6e8e7a44}\label{struct_sim_clock_a7efccffa3b7ef0a59d0d211e6e8e7a44}} 
 \index{SimClock@{SimClock}!t@{t}}
@@ -59,7 +96,7 @@ Time in seconds elapsed between the starts of the previous and current ticks.
 
 Simulation time, i.\+e. 
 
-what would be read from a simulated wristwatch. \mbox{\Hypertarget{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}\label{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}} 
+what would be read from a simulated wristwatch. This is computed by accumulating the value of {\ttfamily Dt} (time between frames), which is the time reference for all simulation dynamics (as {\ttfamily dt}); so this value reflects only time that has been experienced by the world, and ignores the accumulating error that comes from timing jitter. If the nanoseconds are in {\ttfamily Dt} then they\textquotesingle{}re in {\ttfamily t}. \mbox{\Hypertarget{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}\label{struct_sim_clock_a77badbf66cf6a239cbfeb36d8d1118d7}} 
 \index{SimClock@{SimClock}!tick@{tick}}
 \index{tick@{tick}!SimClock@{SimClock}}
 \doxysubsubsection{\texorpdfstring{tick}{tick}}
@@ -103,4 +140,4 @@ The tick rate is the accumulated time divided by this value.
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/common/include/lmda/platform/\mbox{\hyperlink{timing_8h}{timing.\+h}}\end{DoxyCompactItemize}
+src/include/lmda/\mbox{\hyperlink{timing_8h}{timing.\+h}}\end{DoxyCompactItemize}

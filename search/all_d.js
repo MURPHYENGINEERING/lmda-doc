@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['name_0',['name',['../struct_plugin.html#a58e0e718f2b4bc2c2ede1e0458d4f91b',1,'Plugin::name()'],['../struct_input_action.html#ad76d39b6fd57d9e53fc0e99fceea6438',1,'InputAction::name()']]],
+  ['name_0',['name',['../struct_input_action.html#ad76d39b6fd57d9e53fc0e99fceea6438',1,'InputAction']]],
   ['nanos_5ft_1',['nanos_t',['../timing_8h.html#a818797d5ea8b3f90df635716268693c5',1,'timing.h']]],
-  ['nclients_2',['nClients',['../struct_tcp_server.html#acacbcb64078497deab6137d160319943',1,'TcpServer']]],
-  ['needsreload_3',['needsReload',['../struct_plugin.html#a944447e0ac48eec56c29fe92c6f24131',1,'Plugin']]],
-  ['nkeybinds_4',['nKeybinds',['../struct_input_state.html#ab5795c14a7424be23d139f51f02737ad',1,'InputState']]],
-  ['nmousebinds_5',['nMousebinds',['../struct_input_state.html#a6356c7497399d4996556ceeae24500ea',1,'InputState']]]
+  ['needs_5freload_2',['needs_reload',['../plugin_8c.html#a5880f04de59e901ea258921703cc5685',1,'plugin.c']]],
+  ['nkeybinds_3',['nKeybinds',['../struct_input_context.html#a1cfe358b188bf6c678b66afa2a3a83ed',1,'InputContext']]],
+  ['nmousebinds_4',['nMousebinds',['../struct_input_context.html#a2da2fa3f9a13b6716348b3198ee4ebb9',1,'InputContext']]]
 ];

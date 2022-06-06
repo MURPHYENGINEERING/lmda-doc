@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=11"/>
     <meta name="generator" content="Doxygen 1.9.3"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>λMDA: src/common/include/lmda/version.h File Reference</title>
+    <title>λMDA: src/include/lmda/version.h File Reference</title>
     <link href="tabs.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="jquery.js"></script>
     <script type="text/javascript" src="dynsections.js"></script>
@@ -104,10 +104,13 @@ $(document).ready(function(){initNavTree('version_8h.html',''); initResizable();
   <div class="headertitle"><div class="title">version.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Defines the build version; the build system labels output based on this.  
+<a href="#details">More...</a></p>
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="version_8h__dep__incl.svg" width="100%" height="473"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="version_8h__dep__incl.svg" width="639" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="version_8h_source.html">Go to the source code of this file.</a></p>
@@ -129,7 +132,12 @@ Macros</h2></td></tr>
 <tr class="memitem:aaf224e73a02f4324a148d3bd3ca228b5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="version_8h.html#aaf224e73a02f4324a148d3bd3ca228b5">LMDA_VERSION</a></td></tr>
 <tr class="separator:aaf224e73a02f4324a148d3bd3ca228b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Defines the build version; the build system labels output based on this. </p>
+<dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-06-06</dd></dl>
+<p>Copyright (c) 2022 Murphy Engineering LLC </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4be9e2a84166939ae1c35f4584ff6530" name="a4be9e2a84166939ae1c35f4584ff6530"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4be9e2a84166939ae1c35f4584ff6530">&#9670;&nbsp;</a></span>LMDA_STR</h2>
 
@@ -173,15 +181,13 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">    <span class="stringliteral">&quot;v&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#ab083c58c8ae4fa0951b650a2c9c28503">LMDA_VERSION_MAJOR</a>) \</div>
-<div class="line">    <span class="stringliteral">&quot;.&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#a250925eb42b92f8f7192c6aa7adeaf73">LMDA_VERSION_MINOR</a>) \</div>
-<div class="line">    <span class="stringliteral">&quot;.&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#a878ffbeef27864a085650e8183c50430">LMDA_VERSION_PATCH</a>) \</div>
-<div class="line">    <span class="stringliteral">&quot;-&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#aaa2d16972a88f587197768b774ae12bc">LMDA_VER_PRERELEASE</a>)</div>
-<div class="ttc" id="aversion_8h_html_a250925eb42b92f8f7192c6aa7adeaf73"><div class="ttname"><a href="version_8h.html#a250925eb42b92f8f7192c6aa7adeaf73">LMDA_VERSION_MINOR</a></div><div class="ttdeci">#define LMDA_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> version.h:7</div></div>
-<div class="ttc" id="aversion_8h_html_a4b3d6920a2c487a78a0912ed3dc1e142"><div class="ttname"><a href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a></div><div class="ttdeci">#define LMDA_XSTR(arg)</div><div class="ttdef"><b>Definition:</b> version.h:13</div></div>
-<div class="ttc" id="aversion_8h_html_a878ffbeef27864a085650e8183c50430"><div class="ttname"><a href="version_8h.html#a878ffbeef27864a085650e8183c50430">LMDA_VERSION_PATCH</a></div><div class="ttdeci">#define LMDA_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> version.h:8</div></div>
-<div class="ttc" id="aversion_8h_html_aaa2d16972a88f587197768b774ae12bc"><div class="ttname"><a href="version_8h.html#aaa2d16972a88f587197768b774ae12bc">LMDA_VER_PRERELEASE</a></div><div class="ttdeci">#define LMDA_VER_PRERELEASE</div><div class="ttdef"><b>Definition:</b> version.h:9</div></div>
-<div class="ttc" id="aversion_8h_html_ab083c58c8ae4fa0951b650a2c9c28503"><div class="ttname"><a href="version_8h.html#ab083c58c8ae4fa0951b650a2c9c28503">LMDA_VERSION_MAJOR</a></div><div class="ttdeci">#define LMDA_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> version.h:6</div></div>
+<b>Value:</b><div class="fragment"><div class="line">  <span class="stringliteral">&quot;v&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#ab083c58c8ae4fa0951b650a2c9c28503">LMDA_VERSION_MAJOR</a>) <span class="stringliteral">&quot;.&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#a250925eb42b92f8f7192c6aa7adeaf73">LMDA_VERSION_MINOR</a>) <span class="stringliteral">&quot;.&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>( \</div>
+<div class="line">      <a class="code hl_define" href="version_8h.html#a878ffbeef27864a085650e8183c50430">LMDA_VERSION_PATCH</a>) <span class="stringliteral">&quot;-&quot;</span> <a class="code hl_define" href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a>(<a class="code hl_define" href="version_8h.html#aaa2d16972a88f587197768b774ae12bc">LMDA_VER_PRERELEASE</a>)</div>
+<div class="ttc" id="aversion_8h_html_a250925eb42b92f8f7192c6aa7adeaf73"><div class="ttname"><a href="version_8h.html#a250925eb42b92f8f7192c6aa7adeaf73">LMDA_VERSION_MINOR</a></div><div class="ttdeci">#define LMDA_VERSION_MINOR</div><div class="ttdef"><b>Definition:</b> version.h:15</div></div>
+<div class="ttc" id="aversion_8h_html_a4b3d6920a2c487a78a0912ed3dc1e142"><div class="ttname"><a href="version_8h.html#a4b3d6920a2c487a78a0912ed3dc1e142">LMDA_XSTR</a></div><div class="ttdeci">#define LMDA_XSTR(arg)</div><div class="ttdef"><b>Definition:</b> version.h:21</div></div>
+<div class="ttc" id="aversion_8h_html_a878ffbeef27864a085650e8183c50430"><div class="ttname"><a href="version_8h.html#a878ffbeef27864a085650e8183c50430">LMDA_VERSION_PATCH</a></div><div class="ttdeci">#define LMDA_VERSION_PATCH</div><div class="ttdef"><b>Definition:</b> version.h:16</div></div>
+<div class="ttc" id="aversion_8h_html_aaa2d16972a88f587197768b774ae12bc"><div class="ttname"><a href="version_8h.html#aaa2d16972a88f587197768b774ae12bc">LMDA_VER_PRERELEASE</a></div><div class="ttdeci">#define LMDA_VER_PRERELEASE</div><div class="ttdef"><b>Definition:</b> version.h:17</div></div>
+<div class="ttc" id="aversion_8h_html_ab083c58c8ae4fa0951b650a2c9c28503"><div class="ttname"><a href="version_8h.html#ab083c58c8ae4fa0951b650a2c9c28503">LMDA_VERSION_MAJOR</a></div><div class="ttdeci">#define LMDA_VERSION_MAJOR</div><div class="ttdef"><b>Definition:</b> version.h:14</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -250,7 +256,7 @@ Macros</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_fdedb0aba14d44ce9d99bc100e026e6a.html">common</a></li><li class="navelem"><a class="el" href="dir_5e36f0e7e2970fdcd654af72502d804b.html">include</a></li><li class="navelem"><a class="el" href="dir_5df9484ae8cc9cc85687b6e4ac511f1a.html">lmda</a></li><li class="navelem"><a class="el" href="version_8h.html">version.h</a></li>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b0856f6b0d80ccb263b2f415c91f9e17.html">include</a></li><li class="navelem"><a class="el" href="dir_4e4dd790e2c36dacd81b0b00e80dd1d1.html">lmda</a></li><li class="navelem"><a class="el" href="version_8h.html">version.h</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
   </ul>
 </div>

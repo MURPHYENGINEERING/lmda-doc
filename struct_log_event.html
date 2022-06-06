@@ -106,21 +106,24 @@ $(document).ready(function(){initNavTree('struct_log_event.html',''); initResiza
 </div><!--header-->
 <div class="contents">
 
+<p>Represents a log message with associated severity.  
+ <a href="struct_log_event.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="log_8h_source.html">log.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for LogEvent:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="struct_log_event__coll__graph.svg" width="374" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="struct_log_event__coll__graph.svg" width="438" height="142"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:ac6d365edb4ad08564eaa9697319e27aa"><td class="memItemLeft" align="right" valign="top">va_list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#ac6d365edb4ad08564eaa9697319e27aa">ap</a></td></tr>
 <tr class="separator:ac6d365edb4ad08564eaa9697319e27aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a58cc37a45e2b4415da2b588d17660f8c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#a58cc37a45e2b4415da2b588d17660f8c">fmt</a></td></tr>
-<tr class="separator:a58cc37a45e2b4415da2b588d17660f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ace14f5a39d93d6e28b76fce5711d54"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#a0ace14f5a39d93d6e28b76fce5711d54">file</a></td></tr>
-<tr class="separator:a0ace14f5a39d93d6e28b76fce5711d54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec77eef354196b107bc8136954520784"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#aec77eef354196b107bc8136954520784">fmt</a></td></tr>
+<tr class="separator:aec77eef354196b107bc8136954520784"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d94216869167848b18673807991eb13"><td class="memItemLeft" align="right" valign="top">char const  *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#a8d94216869167848b18673807991eb13">file</a></td></tr>
+<tr class="separator:a8d94216869167848b18673807991eb13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5487e4449bb8d6e4010826aec5b6241"><td class="memItemLeft" align="right" valign="top">struct tm *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#af5487e4449bb8d6e4010826aec5b6241">time</a></td></tr>
 <tr class="separator:af5487e4449bb8d6e4010826aec5b6241"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb509bd00295373ed74561e9e3df9b4d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#aeb509bd00295373ed74561e9e3df9b4d">line</a></td></tr>
@@ -128,7 +131,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4a38a30db009ecc71508fb8b934c592b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_log_event.html#a4a38a30db009ecc71508fb8b934c592b">level</a></td></tr>
 <tr class="separator:a4a38a30db009ecc71508fb8b934c592b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Represents a log message with associated severity. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ac6d365edb4ad08564eaa9697319e27aa" name="ac6d365edb4ad08564eaa9697319e27aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6d365edb4ad08564eaa9697319e27aa">&#9670;&nbsp;</a></span>ap</h2>
 
@@ -143,28 +148,28 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a0ace14f5a39d93d6e28b76fce5711d54" name="a0ace14f5a39d93d6e28b76fce5711d54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ace14f5a39d93d6e28b76fce5711d54">&#9670;&nbsp;</a></span>file</h2>
+<a id="a8d94216869167848b18673807991eb13" name="a8d94216869167848b18673807991eb13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d94216869167848b18673807991eb13">&#9670;&nbsp;</a></span>file</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char* LogEvent::file</td>
+          <td class="memname">char const* LogEvent::file</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a58cc37a45e2b4415da2b588d17660f8c" name="a58cc37a45e2b4415da2b588d17660f8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58cc37a45e2b4415da2b588d17660f8c">&#9670;&nbsp;</a></span>fmt</h2>
+<a id="aec77eef354196b107bc8136954520784" name="aec77eef354196b107bc8136954520784"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec77eef354196b107bc8136954520784">&#9670;&nbsp;</a></span>fmt</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const char* LogEvent::fmt</td>
+          <td class="memname">char const* LogEvent::fmt</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -214,7 +219,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/common/include/lmda/<a class="el" href="log_8h_source.html">log.h</a></li>
+<li>src/include/lmda/<a class="el" href="log_8h_source.html">log.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

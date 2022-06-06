@@ -1,4 +1,4 @@
 var platform__mac_8c =
 [
-    [ "lm_platform_init", "platform__mac_8c.html#a6e659ff4e3e831f42d35fdc069eb244c", null ]
+    [ "lm_platform_init", "platform__mac_8c.html#a4e520fb558eda0eed39263ac09665359", null ]
 ];

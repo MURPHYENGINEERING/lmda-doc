@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hotreloadbanner_0',['hotReloadBanner',['../_plugin_8c.html#a0b9cabe945a75de730e279b1647afd3d',1,'Plugin.c']]]
+  ['init_5fplugin_5fstate_5fafter_5fload_0',['init_plugin_state_after_load',['../plugin_8c.html#a56574d23dfab31146b315097ff545bb1',1,'plugin.c']]]
 ];

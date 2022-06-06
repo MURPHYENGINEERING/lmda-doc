@@ -106,11 +106,15 @@ $(document).ready(function(){initNavTree('struct_input_action.html',''); initRes
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_input_action_8h_source.html">InputAction.h</a>&gt;</code></p>
+<p>An input action is triggered by a button binding and may respond to either activation or deactivation.  
+ <a href="struct_input_action.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="input_8h_source.html">input.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for InputAction:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="struct_input_action__coll__graph.svg" width="227" height="127"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="struct_input_action__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
@@ -118,11 +122,13 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad76d39b6fd57d9e53fc0e99fceea6438"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_input_action.html#ad76d39b6fd57d9e53fc0e99fceea6438">name</a></td></tr>
 <tr class="memdesc:ad76d39b6fd57d9e53fc0e99fceea6438"><td class="mdescLeft">&#160;</td><td class="mdescRight">Action name.  <a href="struct_input_action.html#ad76d39b6fd57d9e53fc0e99fceea6438">More...</a><br /></td></tr>
 <tr class="separator:ad76d39b6fd57d9e53fc0e99fceea6438"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac46d4b18200012c5d5473d0d6a6c68c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_input_action_8h.html#a890c8529adafbdea2fff988a0954410c">InputActionCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_input_action.html#ac46d4b18200012c5d5473d0d6a6c68c4">on_update</a></td></tr>
-<tr class="memdesc:ac46d4b18200012c5d5473d0d6a6c68c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the action is activated by its input binding.  <a href="struct_input_action.html#ac46d4b18200012c5d5473d0d6a6c68c4">More...</a><br /></td></tr>
-<tr class="separator:ac46d4b18200012c5d5473d0d6a6c68c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08a90ad5a1d832078a32407dcb4f06b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="input_8h.html#a27102467f31022c4656dd8d262a3b1ee">InputActionCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_input_action.html#a08a90ad5a1d832078a32407dcb4f06b4">on_action</a></td></tr>
+<tr class="memdesc:a08a90ad5a1d832078a32407dcb4f06b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the action is activated by its input binding.  <a href="struct_input_action.html#a08a90ad5a1d832078a32407dcb4f06b4">More...</a><br /></td></tr>
+<tr class="separator:a08a90ad5a1d832078a32407dcb4f06b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Data Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >An input action is triggered by a button binding and may respond to either activation or deactivation. </p>
+</div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad76d39b6fd57d9e53fc0e99fceea6438" name="ad76d39b6fd57d9e53fc0e99fceea6438"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad76d39b6fd57d9e53fc0e99fceea6438">&#9670;&nbsp;</a></span>name</h2>
 
@@ -139,14 +145,14 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac46d4b18200012c5d5473d0d6a6c68c4" name="ac46d4b18200012c5d5473d0d6a6c68c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac46d4b18200012c5d5473d0d6a6c68c4">&#9670;&nbsp;</a></span>on_update</h2>
+<a id="a08a90ad5a1d832078a32407dcb4f06b4" name="a08a90ad5a1d832078a32407dcb4f06b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08a90ad5a1d832078a32407dcb4f06b4">&#9670;&nbsp;</a></span>on_action</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="_input_action_8h.html#a890c8529adafbdea2fff988a0954410c">InputActionCallback</a> InputAction::on_update</td>
+          <td class="memname"><a class="el" href="input_8h.html#a27102467f31022c4656dd8d262a3b1ee">InputActionCallback</a> InputAction::on_action</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -156,7 +162,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src/common/include/lmda/input/<a class="el" href="_input_action_8h_source.html">InputAction.h</a></li>
+<li>src/include/lmda/<a class="el" href="input_8h_source.html">input.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

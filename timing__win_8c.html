@@ -99,100 +99,18 @@ $(document).ready(function(){initNavTree('timing__win_8c.html',''); initResizabl
 </div>
 
 <div class="header">
-  <div class="summary">
-<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">timing_win.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Windows implementation of higher-performance timing.  
+<p>High-resolution timing on Windows.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;<a class="el" href="_app_context_8h_source.html">lmda/app/AppContext.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="timing_8h_source.html">lmda/platform/timing.h</a>&gt;</code><br />
-</div><div class="textblock"><div class="dynheader">
-Include dependency graph for timing_win.c:</div>
-<div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="timing__win_8c__incl.svg" width="396" height="351"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
-</div>
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-Functions</h2></td></tr>
-<tr class="memitem:a4ee0890f749b20bf9460ffced3dcbaf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing__win_8c.html#a4ee0890f749b20bf9460ffced3dcbaf8">lm_time_init_platform</a> ()</td></tr>
-<tr class="separator:a4ee0890f749b20bf9460ffced3dcbaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8b712cfa0890842d4e40048c97749ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing__win_8c.html#af8b712cfa0890842d4e40048c97749ac">lm_time_nanos</a> ()</td></tr>
-<tr class="separator:af8b712cfa0890842d4e40048c97749ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a050f1e19c753340973e45f8f4d922c86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="timing__win_8c.html#a050f1e19c753340973e45f8f4d922c86">lm_time_sleep_for</a> (<a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> time)</td></tr>
-<tr class="separator:a050f1e19c753340973e45f8f4d922c86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >Windows implementation of higher-performance timing. </p>
+<div class="textblock"><p >High-resolution timing on Windows. </p>
 <dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
-<dl class="section date"><dt>Date</dt><dd>2022-05-25</dd></dl>
-<p>Copyright (c) 2022 Murphy Engineering LLC</p>
-<p ><a href="https://docs.microsoft.com/en-us/windows/win32/sysinfo/acquiring-high-resolution-time-stamps">https://docs.microsoft.com/en-us/windows/win32/sysinfo/acquiring-high-resolution-time-stamps</a> Acquiring high-resolution time stamps</p>
-<p >The primary API for native code is QueryPerformanceCounter (QPC). QPC is independent of, and isn't synchronized to, any external time reference.</p>
-<p >To retrieve time stamps that can be synchronized to an external time reference, such as, Coordinated Universal Time (UTC) for use in high-resolution time-of-day measurements, use GetSystemTimePreciseAsFileTime.</p>
-<p ><a href="https://docs.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter?redirectedfrom=MSDN">https://docs.microsoft.com/en-us/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter?redirectedfrom=MSDN</a> QueryPerformanceCounter function (profileapi.h)</p>
-<p >Retrieves the current value of the performance counter, which is a high resolution (&lt;1us) time stamp that can be used for time-interval measurements.</p>
-<p ><a href="https://docs.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime">https://docs.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimepreciseasfiletime</a> GetSystemTimePreciseAsFileTime function (sysinfoapi.h)</p>
-<p >The GetSystemTimePreciseAsFileTime function retrieves the current system date and time with the highest possible level of precision (&lt;1us). The retrieved information is in Coordinated Universal Time (UTC) format.</p>
-<p ><a href="https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime">https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-filetime</a> FILETIME structure (minwinbase.h)</p>
-<p >Contains a 64-bit value representing the number of 100-nanosecond intervals since January 1, 1601 (UTC).</p>
-<p >To convert a FILETIME structure into a time that is easy to display to a user, use the FileTimeToSystemTime function. FileTimeToSystemTime: <a href="https://docs.microsoft.com/en-us/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime">https://docs.microsoft.com/en-us/windows/win32/api/timezoneapi/nf-timezoneapi-filetimetosystemtime</a> SYSTEMTIME: <a href="https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-systemtime">https://docs.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-systemtime</a> </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a4ee0890f749b20bf9460ffced3dcbaf8" name="a4ee0890f749b20bf9460ffced3dcbaf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ee0890f749b20bf9460ffced3dcbaf8">&#9670;&nbsp;</a></span>lm_time_init_platform()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lm_time_init_platform </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af8b712cfa0890842d4e40048c97749ac" name="af8b712cfa0890842d4e40048c97749ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8b712cfa0890842d4e40048c97749ac">&#9670;&nbsp;</a></span>lm_time_nanos()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a> lm_time_nanos </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a050f1e19c753340973e45f8f4d922c86" name="a050f1e19c753340973e45f8f4d922c86"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a050f1e19c753340973e45f8f4d922c86">&#9670;&nbsp;</a></span>lm_time_sleep_for()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lm_time_sleep_for </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="timing_8h.html#a818797d5ea8b3f90df635716268693c5">nanos_t</a>&#160;</td>
-          <td class="paramname"><em>time</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+<dl class="section date"><dt>Date</dt><dd>2022-06-06</dd></dl>
+<p>Copyright (c) 2022 Murphy Engineering LLC </p>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

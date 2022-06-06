@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plugin_0',['Plugin',['../struct_plugin.html',1,'']]]
+  ['keybind_0',['Keybind',['../struct_keybind.html',1,'']]]
 ];

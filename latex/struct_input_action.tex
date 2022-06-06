@@ -2,15 +2,21 @@
 \label{struct_input_action}\index{InputAction@{InputAction}}
 
 
-{\ttfamily \#include $<$Input\+Action.\+h$>$}
+An input action is triggered by a button binding and may respond to either activation or deactivation.  
 
 
 
-Collaboration diagram for Input\+Action\+:\nopagebreak
+
+{\ttfamily \#include $<$input.\+h$>$}
+
+
+
+Collaboration diagram for Input\+Action\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=242pt]{struct_input_action__coll__graph}
+\includegraphics[width=350pt]{struct_input_action__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsection*{Public Attributes}
@@ -18,9 +24,12 @@ Collaboration diagram for Input\+Action\+:\nopagebreak
 \item 
 char $\ast$ \mbox{\hyperlink{struct_input_action_ad76d39b6fd57d9e53fc0e99fceea6438}{name}}
 \begin{DoxyCompactList}\small\item\em Action name. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{_input_action_8h_a890c8529adafbdea2fff988a0954410c}{Input\+Action\+Callback}} \mbox{\hyperlink{struct_input_action_ac46d4b18200012c5d5473d0d6a6c68c4}{on\+\_\+update}}
+\mbox{\hyperlink{input_8h_a27102467f31022c4656dd8d262a3b1ee}{Input\+Action\+Callback}} \mbox{\hyperlink{struct_input_action_a08a90ad5a1d832078a32407dcb4f06b4}{on\+\_\+action}}
 \begin{DoxyCompactList}\small\item\em Called when the action is activated by its input binding. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+An input action is triggered by a button binding and may respond to either activation or deactivation. 
 
 \doxysubsection{Member Data Documentation}
 \mbox{\Hypertarget{struct_input_action_ad76d39b6fd57d9e53fc0e99fceea6438}\label{struct_input_action_ad76d39b6fd57d9e53fc0e99fceea6438}} 
@@ -33,11 +42,11 @@ char $\ast$ \mbox{\hyperlink{struct_input_action_ad76d39b6fd57d9e53fc0e99fceea64
 
 Action name. 
 
-\mbox{\Hypertarget{struct_input_action_ac46d4b18200012c5d5473d0d6a6c68c4}\label{struct_input_action_ac46d4b18200012c5d5473d0d6a6c68c4}} 
-\index{InputAction@{InputAction}!on\_update@{on\_update}}
-\index{on\_update@{on\_update}!InputAction@{InputAction}}
-\doxysubsubsection{\texorpdfstring{on\_update}{on\_update}}
-{\footnotesize\ttfamily \mbox{\hyperlink{_input_action_8h_a890c8529adafbdea2fff988a0954410c}{Input\+Action\+Callback}} Input\+Action\+::on\+\_\+update}
+\mbox{\Hypertarget{struct_input_action_a08a90ad5a1d832078a32407dcb4f06b4}\label{struct_input_action_a08a90ad5a1d832078a32407dcb4f06b4}} 
+\index{InputAction@{InputAction}!on\_action@{on\_action}}
+\index{on\_action@{on\_action}!InputAction@{InputAction}}
+\doxysubsubsection{\texorpdfstring{on\_action}{on\_action}}
+{\footnotesize\ttfamily \mbox{\hyperlink{input_8h_a27102467f31022c4656dd8d262a3b1ee}{Input\+Action\+Callback}} Input\+Action\+::on\+\_\+action}
 
 
 
@@ -47,4 +56,4 @@ Called when the action is activated by its input binding.
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-src/common/include/lmda/input/\mbox{\hyperlink{_input_action_8h}{Input\+Action.\+h}}\end{DoxyCompactItemize}
+src/include/lmda/\mbox{\hyperlink{input_8h}{input.\+h}}\end{DoxyCompactItemize}

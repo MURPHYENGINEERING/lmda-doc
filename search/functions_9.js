@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['restore_5fstate_0',['restore_state',['../_plugin__sdl_8c.html#a5b21c7ba225afa0523371a984de0d450',1,'Plugin_sdl.c']]]
+  ['prepare_5flibrary_5ffile_5ffor_5fload_0',['prepare_library_file_for_load',['../plugin_8c.html#aae848be86b6e8eff637196cbca74daf7',1,'plugin.c']]]
 ];

@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['_5fapp_0',['_app',['../main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9',1,'main.c']]],
-  ['_5fctx_1',['_ctx',['../main_8c.html#a144d0be28da4ea25c5ae85277946fe76',1,'_ctx():&#160;main.c'],['../_plugin__sdl_8c.html#a91422a0029b038a099afdd63878446a4',1,'_ctx():&#160;Plugin_sdl.c']]],
-  ['_5fg_2',['_g',['../_plugin__game_8c.html#a358b8d7a9b9c5fceca9dd2cf0ce1d317',1,'Plugin_game.c']]],
-  ['_5finput_3',['_input',['../_plugin__sdl_8c.html#ae5cc8868722750105c8643df2637b801',1,'Plugin_sdl.c']]],
-  ['_5fplugin_4',['_plugin',['../_plugin__game_8c.html#a864a1455ce03cfe142f29332c0ee8263',1,'_plugin():&#160;Plugin_game.c'],['../_plugin__sdl_8c.html#a864a1455ce03cfe142f29332c0ee8263',1,'_plugin():&#160;Plugin_sdl.c']]],
-  ['_5fstate_5',['_state',['../_plugin__sdl_8c.html#abbcd5f07b0f8c6a18865fd8c989851e6',1,'Plugin_sdl.c']]]
+  ['_5fctx_0',['_ctx',['../main_8c.html#a8cd517cba241773a24c2debc64a2ac52',1,'main.c']]],
+  ['_5fplugin_1',['_plugin',['../main_8c.html#a5c88d7de40ebba530ed0832ae2107f8d',1,'main.c']]]
 ];

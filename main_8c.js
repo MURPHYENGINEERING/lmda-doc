@@ -1,16 +1,13 @@
 var main_8c =
 [
-    [ "Application", "struct_application.html", "struct_application" ],
-    [ "Application", "main_8c.html#a807c40e39d8fc1c930824f73879aa0b3", null ],
-    [ "bind_inputs", "main_8c.html#a7a77bb9e200c540a08b4f6f1b784c1f3", null ],
-    [ "destroy_plugins", "main_8c.html#a5d73d144947018c9ade3e42429ed2908", null ],
-    [ "game_loop", "main_8c.html#a46fea93bf5d63e93090fbb95b742b881", null ],
-    [ "init_context", "main_8c.html#ab068aa01770811978db0efe0e716f94a", null ],
-    [ "load_plugins", "main_8c.html#adbab4979d3670149615e9eecdfbec0d7", null ],
+    [ "emit_app_banner", "main_8c.html#af2179120f2c276a86a0cab778cdcc39c", null ],
+    [ "lm_app_bind_inputs", "main_8c.html#ac2996b69f96ab996b1f4d31806dc5c63", null ],
+    [ "lm_app_game_loop", "main_8c.html#ad197e27823f4790b7bc1c0ab5385aca3", null ],
+    [ "lm_app_init", "main_8c.html#a1d0097e4ba71ebc68f77c0e3a857ee59", null ],
+    [ "lm_app_load_plugin", "main_8c.html#acbc6413707a5a01638a9962235fda65f", null ],
+    [ "lm_app_on_action_quit", "main_8c.html#afc45d4b886970f3ae47bbcdcca8916a2", null ],
+    [ "lm_app_stop_interrupt_handler", "main_8c.html#a01923a7e3793865c023df2e36e9802fc", null ],
     [ "main", "main_8c.html#a0ddf1224851353fc92bfbff6f499fa97", null ],
-    [ "on_action_about", "main_8c.html#a1701f76e4aa77a83ce5280229f854bca", null ],
-    [ "on_action_help", "main_8c.html#abb09e1eb75367f5ff1c01c8c6fe11772", null ],
-    [ "on_action_quit", "main_8c.html#a6880e67ce885dc84909bec505ce4ee10", null ],
-    [ "_app", "main_8c.html#a2a7fcb1b51f9ef29f46e0b4daa6cf5e9", null ],
-    [ "_ctx", "main_8c.html#a144d0be28da4ea25c5ae85277946fe76", null ]
+    [ "_ctx", "main_8c.html#a8cd517cba241773a24c2debc64a2ac52", null ],
+    [ "_plugin", "main_8c.html#a5c88d7de40ebba530ed0832ae2107f8d", null ]
 ];

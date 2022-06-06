@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.c']]]
+  ['needs_5freload_0',['needs_reload',['../plugin_8c.html#a5880f04de59e901ea258921703cc5685',1,'plugin.c']]]
 ];

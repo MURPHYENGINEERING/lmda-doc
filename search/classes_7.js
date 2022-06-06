@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['sdlstate_0',['SdlState',['../struct_sdl_state.html',1,'']]],
-  ['simclock_1',['SimClock',['../struct_sim_clock.html',1,'']]]
+  ['logevent_0',['LogEvent',['../struct_log_event.html',1,'']]],
+  ['logstate_1',['LogState',['../struct_log_state.html',1,'']]]
 ];

@@ -104,24 +104,28 @@ $(document).ready(function(){initNavTree('platform__win_8c.html',''); initResiza
   <div class="headertitle"><div class="title">platform_win.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="stddef_8h_source.html">lmda/stddef.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="platform_8h_source.html">lmda/platform.h</a>&gt;</code><br />
-<code>#include &lt;windows.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
+
+<p>Generic platform initialization on Windows.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="platform_8h_source.html">lmda/platform.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for platform_win.c:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="platform__win_8c__incl.svg" width="526" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="platform__win_8c__incl.svg" width="234" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a30d9071719a68f99b0d7d39183cf1c65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__win_8c.html#a30d9071719a68f99b0d7d39183cf1c65">lm_platform_init_win_allocate_console</a> ()</td></tr>
-<tr class="separator:a30d9071719a68f99b0d7d39183cf1c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e520fb558eda0eed39263ac09665359"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="platform__win_8c.html#a4e520fb558eda0eed39263ac09665359">lm_platform_init</a> ()</td></tr>
+<tr class="memdesc:a4e520fb558eda0eed39263ac09665359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform platform-specific initialization (e.g.  <a href="platform__win_8c.html#a4e520fb558eda0eed39263ac09665359">More...</a><br /></td></tr>
 <tr class="separator:a4e520fb558eda0eed39263ac09665359"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Generic platform initialization on Windows. </p>
+<dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-06-06</dd></dl>
+<p>Copyright (c) 2022 Murphy Engineering LLC </p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="a4e520fb558eda0eed39263ac09665359" name="a4e520fb558eda0eed39263ac09665359"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4e520fb558eda0eed39263ac09665359">&#9670;&nbsp;</a></span>lm_platform_init()</h2>
 
@@ -137,22 +141,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a30d9071719a68f99b0d7d39183cf1c65" name="a30d9071719a68f99b0d7d39183cf1c65"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a30d9071719a68f99b0d7d39183cf1c65">&#9670;&nbsp;</a></span>lm_platform_init_win_allocate_console()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void lm_platform_init_win_allocate_console </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Perform platform-specific initialization (e.g. </p>
+<p >allocate a console on windows) </p>
 
 </div>
 </div>

@@ -104,7 +104,10 @@ $(document).ready(function(){initNavTree('fs__mac_8c.html',''); initResizable();
   <div class="headertitle"><div class="title">fs_mac.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="fs_8h_source.html">lmda/platform/fs.h</a>&gt;</code><br />
+
+<p>Filesystem operations on MacOS.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;<a class="el" href="fs_8h_source.html">lmda/fs.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for fs_mac.c:</div>
 <div class="dyncontent">
@@ -115,8 +118,35 @@ Include dependency graph for fs_mac.c:</div>
 Functions</h2></td></tr>
 <tr class="memitem:a6b4f19a981f9ff913feefde085bd093a"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs__mac_8c.html#a6b4f19a981f9ff913feefde085bd093a">lm_fs_modified_time</a> (char const *path)</td></tr>
 <tr class="separator:a6b4f19a981f9ff913feefde085bd093a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7346aed2fa84c4118762940a59b31f44"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs__mac_8c.html#a7346aed2fa84c4118762940a59b31f44">lm_fs_path_exists</a> (char const *path)</td></tr>
+<tr class="separator:a7346aed2fa84c4118762940a59b31f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fdf22176b1500c6a83bd9836d7d72c8"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fs__mac_8c.html#a0fdf22176b1500c6a83bd9836d7d72c8">lm_fs_get_temp_file</a> (char *outPath)</td></tr>
+<tr class="separator:a0fdf22176b1500c6a83bd9836d7d72c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Filesystem operations on MacOS. </p>
+<dl class="section author"><dt>Author</dt><dd>Matt Murphy (<a href="#" onclick="location.href='mai'+'lto:'+'mat'+'t@'+'mur'+'ph'+'ysy'+'s.'+'com'; return false;">matt@<span class="obfuscator">.nosp@m.</span>murp<span class="obfuscator">.nosp@m.</span>hysys<span class="obfuscator">.nosp@m.</span>.com</a>) </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-06-06</dd></dl>
+<p>Copyright (c) 2022 Murphy Engineering LLC </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a0fdf22176b1500c6a83bd9836d7d72c8" name="a0fdf22176b1500c6a83bd9836d7d72c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fdf22176b1500c6a83bd9836d7d72c8">&#9670;&nbsp;</a></span>lm_fs_get_temp_file()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * lm_fs_get_temp_file </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>outPath</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6b4f19a981f9ff913feefde085bd093a" name="a6b4f19a981f9ff913feefde085bd093a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6b4f19a981f9ff913feefde085bd093a">&#9670;&nbsp;</a></span>lm_fs_modified_time()</h2>
 
@@ -125,6 +155,24 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">time_t lm_fs_modified_time </td>
+          <td>(</td>
+          <td class="paramtype">char const *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7346aed2fa84c4118762940a59b31f44" name="a7346aed2fa84c4118762940a59b31f44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7346aed2fa84c4118762940a59b31f44">&#9670;&nbsp;</a></span>lm_fs_path_exists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lm_fs_path_exists </td>
           <td>(</td>
           <td class="paramtype">char const *&#160;</td>
           <td class="paramname"><em>path</em></td><td>)</td>

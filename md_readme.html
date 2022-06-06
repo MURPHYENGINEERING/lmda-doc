@@ -102,9 +102,9 @@ $(document).ready(function(){initNavTree('md_readme.html',''); initResizable(); 
   <div class="headertitle"><div class="title">λMDA </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md8"></a>
 Code</h1>
-<h2><a class="anchor" id="autotoc_md2"></a>
+<h2><a class="anchor" id="autotoc_md9"></a>
 Naming convention</h2>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -122,50 +122,7 @@ Naming convention</h2>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone"><code>private_function()</code>   </td><td class="markdownTableBodyNone"><code>lm_public_function()</code>   </td></tr>
 </table>
-<p >With the special case of a function that's declared in one module (the <em>interface</em> module) and defined in another (the <em>implementation</em> module): <code>lmda_interface_function_impl()</code>. Here the prefix <code>lmda</code> indicates the broadest scope, and the suffix <code>impl</code> indicates the separated declaration and definition.</p>
-<h2><a class="anchor" id="autotoc_md3"></a>
-Application Design</h2>
-<p >At the first level, the game uses a <b>plugin</b> architecture. The <b>application</b> hosts two plugins: the <b>game plugin</b> simulates the game world, and the <b>presentation plugin</b> represents the game world to the outside world.</p>
-<p >There are two presentation plugins: the <b>SDL plugin</b> implements a 2D game, and the <b>server plugin</b> implements a headless server with a browser-accessible dashboard. The server is headless because it still runs the game plugin, meaning it still constitutes a game client playing the game; but the only inputs and outputs are from and to the network and AI.</p>
-<h2><a class="anchor" id="autotoc_md4"></a>
-Project Structure</h2>
-<div class="fragment"><div class="line">lmda/</div>
-<div class="line">    docs/             Contents of lmda.murphysys.com</div>
-<div class="line"> </div>
-<div class="line">   cmake/             Build utilities, e.g. detecting architecture</div>
-<div class="line">     src/</div>
-<div class="line">        common/       Functionality not unique to any module, e.g. logging, </div>
-<div class="line">                      networking, filesystem, etc.</div>
-<div class="line"> </div>
-<div class="line">            input/    Platform-independent input system with interfaces for</div>
-<div class="line">                      platform-depenendent sourcing (e.g. from SDL).</div>
-<div class="line">         </div>
-<div class="line">              net/    Client/server TCP connections</div>
-<div class="line">         </div>
-<div class="line">         platform/    Declarations of platform-specific functionality that will</div>
-<div class="line">                           be implemented in another module.</div>
-<div class="line"> </div>
-<div class="line">        platform/          Definitions of platform-specific functionality from the</div>
-<div class="line">                           common module. One of these is statically linked with common.</div>
-<div class="line"> </div>
-<div class="line">             mac/     MacOS implementations</div>
-<div class="line"> </div>
-<div class="line">             win/     Windows 10-11 implementations (and maybe earlier)</div>
-<div class="line"> </div>
-<div class="line">        game/         Implements the game plugin, constructing and simulating the</div>
-<div class="line">                      game world (strictly non-graphically; this plugin is common</div>
-<div class="line">                      to clients and headless servers).</div>
-<div class="line"> </div>
-<div class="line">        sdl/          Implements the presentation plugin as a 2D top-down game</div>
-<div class="line">                      using SDL2 for graphics, audio, and input.</div>
-<div class="line"> </div>
-<div class="line">        app/          Dynamically loads the game and presentation plugins,</div>
-<div class="line">                      provides them with persistent state, and updates them in a </div>
-<div class="line">                      rate-controlled loop. Plugins can be hot-reloaded to update</div>
-<div class="line">                      code in-place without affecting state, which resides</div>
-<div class="line">                      in the application.</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md5"></a>
-Build System</h2>
+<p >With the special case of a function that's declared in one module (the <em>interface</em> module) and defined in another (the <em>implementation</em> module): <code>lmda_interface_function_impl()</code>. Here the prefix <code>lmda</code> indicates the broadest scope, and the suffix <code>impl</code> indicates the separated declaration and definition. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
